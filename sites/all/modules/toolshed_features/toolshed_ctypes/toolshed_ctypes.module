@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Toolshed Ctypes feature.
+ */
+
+include_once 'toolshed_ctypes.features.inc';

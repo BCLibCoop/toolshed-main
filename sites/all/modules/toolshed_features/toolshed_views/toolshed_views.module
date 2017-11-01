@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Toolshed Views feature.
+ */
+
+include_once 'toolshed_views.features.inc';

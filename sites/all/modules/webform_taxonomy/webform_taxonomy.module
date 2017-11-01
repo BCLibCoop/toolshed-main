@@ -1,0 +1,67 @@
+<?php
+/**
+ * Webform Taxonomy Module
+ * Created at Pacific Northwest National Laboratory for the Building Energy Codes Program
+ * Copyright 2011 Battelle Memorial Institute
+ * Authors: Michael Madison and Peter Ellis
+ * Author Emails: michael.madison@pnnl.gov and peter.ellis@pnnl.gov
+ * Note: Based on direction from http://drupal.org/node/775394#comment-4342282
+ *
+ */
+
+
+
+function webform_taxonomy_webform_select_options_info(){
+ 
+  $items = array();
+  $taxonomy = array();
+	
+   //Grab all of the parent vocabularies on the site. Uses - http://api.drupal.org/api/drupal/modules--taxonomy--taxonomy.module/function/taxonomy_get_vocabularies
+   $taxonomy = taxonomy_get_vocabularies();
+	
+		foreach ($taxonomy as $term) {
+			//For each of those vocabularies, add them to the $items array and...
+			$items[$term->name] = array(
+				//Set the name
+				'title' => t($term->name),
+				//Pass the data into the webform_taxonomy function
+				'options callback' => 'webform_taxonomy',
+				'options arguments' => $term,
+ 			);
+		}
+			
+  return $items;
+}
+
+function webform_taxonomy($copy){
+	//We had trouble getting the data to pass properly, so we had to iterate through again quickly.
+	$taxonomy = taxonomy_get_vocabularies();
+	$vid = "";
+	foreach ($taxonomy as $term) {
+		//Check to make sure we're at the correct point in the array
+		if ($term->name == $copy['extra']['options_source']) {
+			//Grab the vocabulary id (vid)
+			$vid = $term->vid;
+			break;
+		} else {
+			
+		}
+	}
+	//ensure that there is a vid
+	if (empty($vid)) {
+		return array();
+	}
+ //Grab the children of the vid. Uses - http://api.drupal.org/api/drupal/modules--taxonomy--taxonomy.module/function/taxonomy_get_tree/7
+ $taxonomy = taxonomy_get_tree($vid);
+
+  $items = array();
+  foreach ($taxonomy as $item){
+	//Create a safe version of the name
+	$safe_name = strtolower($item->name);
+	$safe_name = str_replace(" ","_",$safe_name);
+	//Add the children to the items array
+	$items["$safe_name"] = $item->name;
+  }
+  return $items;
+}
+?>

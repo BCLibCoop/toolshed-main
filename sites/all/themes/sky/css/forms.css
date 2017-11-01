@@ -1,0 +1,94 @@
+form {
+  margin: 0 0 0 6.25em;
+  max-width: 38.75em;
+}
+form.fivestar-widget,
+form#user-pass,
+form#user-login {
+  margin-left: 0;
+}
+form label {
+  font-weight: normal;
+}
+form input {
+  background: #ffffff;
+  border: 0.15em solid #a0a0a0;
+  font-size: 0.87rem;
+}
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #a4dac9;
+}
+form#user-pass input,
+form#user-login input,
+form.user-info-from-cookie input {
+  padding: 0.75em;
+  width: 96%;
+}
+.form-type-select {
+  position: relative;
+}
+.form-type-select  select {
+  width: 100%;
+  height: 2em;
+  background: #ffffff;
+  font-size: 0.8em;
+  border-radius: 0;
+  -webkit-appearance: none;
+  padding: 0 1em;
+}
+.form-type-select:after {
+  font-family: "Fontawesome";
+  content: '\f0dc';
+  font-size: 1.2em;
+  color: #a0a0a0;
+  position: absolute;
+  right: 1em;
+  top: 0.5em;
+  pointer-events: none;
+}
+.section-node-add .form-type-select:after {
+ top: 1.25em;
+}
+.fivestar-widget .form-type-select {
+  height: auto;
+  padding: 0;
+}
+.fivestar-widget .form-type-select:after {
+  content: none;
+}
+form.user-info-from-cookie .form-type-select:after {
+  top: 1.5em;
+}
+form#user-pass input[type="submit"],
+form#user-login input[type="submit"],
+form input[type="submit"] {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  background: #ffb53e;
+  color: #ffffff;
+  border-radius: 0.5em;
+  cursor: pointer;
+  width: auto;
+  font-size: 0.87rem;
+  border: 0;
+}
+form#user-pass input[type="submit"],
+form#user-login input[type="submit"]{
+  background: #424242;
+}
+form .description {
+  font-style: italic;
+  font-size: 0.75em;
+  margin: 1em 0;
+  color: #7b7b7b;
+}
+.login_footer {
+  margin-top: -1.8em;
+}
+.login_footer a {
+  font-style: italic;
+  color: #424242!important;
+  font-size: 0.87em;
+}

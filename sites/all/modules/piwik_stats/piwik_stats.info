@@ -1,0 +1,6 @@
+name = Piwik Statistical Field
+description = Integrates piwik statistics as entity field.
+package = Statistics
+core = 7.x
+configure = admin/config/system/piwik
+dependencies[] = piwik

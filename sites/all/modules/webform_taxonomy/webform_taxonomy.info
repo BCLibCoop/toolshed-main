@@ -1,0 +1,6 @@
+; $Id: webform_taxonomy.info $
+name = Webform Taxonomy
+description = "This module will make taxonomies available as select options to the webform module."
+core = 7.x
+dependencies[] = webform
+package = Webform

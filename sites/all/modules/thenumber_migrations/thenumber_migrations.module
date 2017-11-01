@@ -1,0 +1,254 @@
+<?php
+/*
+ * MIGRATION FROM TEXT LIST TO TAXONOMY MODULE
+ * this helps go from text lists to something hierarchical which can be more easily organized
+ * with select2 (currently applies to libraries).
+ *
+ * it assumes that the taxonomy has already been created for source library but there are no existing terms.
+ * it will create the terms and tag the training resources accordingly.
+ *
+ * after running this script you need to manually associate libraries with hierarchical categories for them to show up.
+ *
+ * just comment this whole block when not using it
+ *
+ * and clear cache before and after doing so
+ *
+ * set the migrate variable in either function to true to have it run on the DB
+ * otherwise it'll dry-run showing what it's gonna do
+ *
+ * set the GET variable to have the individual funciton work:
+ *  - import_bc_libraries
+ *  - migrate_libs_to_terms
+ */
+/*
+
+function thenumber_migrations_help($path, $arg) {
+
+  $migrate = false; //set this to true to run the migration on page load. otherwise it's a dry run
+
+  //vocabulary id for the source library
+  $vocabulary_id = 6; //check the `drupal_taxonomy_vocabulary` table for this value
+
+  $libraries = array();
+
+  //grab all the posts
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type','node')
+        ->propertyCondition('type','training_resource');
+  $result = $query->execute();
+  if (isset($result['node'])) {
+    $nids = array_keys($result['node']);
+    $posts = entity_load('node',$nids);
+  }
+  if ($_GET['migrate_libs_to_terms']) {
+    echo "<H1>POSTS</H1>";
+    foreach($posts as $post) {
+      echo "<p>$post->title: {$post->field_source_library_['und'][0]['value']}</p>";
+
+      //grab the FIRST LIBRARY REFERENCED ONLY for now
+      $libname = $post->field_source_library_['und'][0]['value'];
+
+      //keep track of the training resources that attribute this library
+      if (array_key_exists($libname,$libraries))
+        $libraries[$libname][] = $post->nid;
+      else 
+        $libraries[$libname] = array($post->nid);
+    }
+    echo "<PRE>";
+    var_dump($libraries);
+  }
+
+  //insert each library into the taxonomy terms, and tag all the associated resources
+  foreach($libraries as $library => $resources) {
+    $term = new stdClass();
+    $term->vid = $vocabulary_id;
+    $term->name = $library;
+    $term->format = "filtered_html";
+    echo "<p>Saving term: $term->name </p>";
+    if ($migrate)
+      taxonomy_term_save($term);
+
+    foreach($resources as $entity_id) {
+      //tag the resource with the term (this assumes only one source library per resource)
+      foreach($posts as $post) {
+        if($post->nid == $entity_id) { 
+          $post->field_source_library_region = array('und' => array( array('tid' => $term->tid) ) );
+          echo "<p> Tagging training resource $post->nid with term: $term->tid </p>";
+          if ($migrate)
+            node_save($post);
+        }
+      }
+      
+    }
+  }
+
+  echo "<PRE>";
+  var_dump($posts);
+  die;
+  
+  migrate_libraries();
+}
+
+
+
+//migrate bc libraries as terms and set the parents accordingly
+function migrate_libraries() {
+
+  $migrate = false; //set this to true to run the migration on page load. otherwise it's a dry run
+
+  if ($_GET['import_bc_libraries']) {
+
+  //copying this straight from the download CSV to make this as fast as possible....
+  //http://bc.libraries.coop/our-members/ 
+  $libraries_import = "Thompson Nicola Regional District Library
+    Spruce Library Cooperative
+    Somerset Library
+    Glenwood and Souris Regional Library
+    South Interlake Regional Library
+    South Central Regional Library
+    Ste. Rose Regional Library
+    Boissevain and Morton Regional Library
+    Manitou Regional Library
+    Border Regional Library
+    Volunteer Manitoba Resource Centre Library
+    Columbia Bible College
+    Shilo Community Library
+    Bibliotheque St. Claude Library
+    Russell & District Regional Library
+    Terrace Public Library
+    Squamish Public Library
+    Beaver Valley Public Library
+    Sechelt Public Library
+    Creston Public Library
+    Coquitlam Public Library
+    Cariboo Regional District Library
+    North Coast Library Federation
+    MacKenzie Public Library
+    Port Moody Public Library
+    Vancouver Public Library
+    Southern Gulf Islands Community Libraries
+    Pender Island Public Library Association
+    Invermere Public Library
+    Fort Nelson Public Library
+    Portage La Prairie Regional Library
+    Chalo School
+    Alberta Municipal Affairs, Public Library Services Branch
+    Nova Scotia Provincial Library
+    Whistler Public Library
+    North Vancouver District Library
+    Libraries and Literacy, BC
+    BC College and Institute Library Services
+    Vanderhoof Public Library
+    Smithers Public Library
+    Bren Del Win Centennial Library
+    Nicola Valley Institute of Technology
+    University College of the North
+    Salt Spring Island Public Library
+    Simon Fraser University
+    Okanagan Regional Library
+    Pentiction Public Library
+    Saskatchewan Provincial Library and Literacy Office
+    West Vancouver Memorial
+    Kootenay Library Federation
+    Bowen Island Public Library
+    Greater Victoria Public Library
+    North East Library Federation
+    Fernie Heritage Library
+    Tumbler Ridge Public Library
+    Pemberton Public Library
+    University Canada West
+    Nakusp Public Library
+    Nelson Municipal Library
+    New Brunswick Public Library Service
+    Bibliothèque et Archives nationales du Québec
+    Newfoundland and Labrador Public Libraries
+    NWT Public Library Services
+    Manitoba Public Library Services
+    New Westminster Public Library
+    Government of Manitoba Legislative Library
+    Kitimat Public Library
+    College of the Rockies Library
+    Kimberly Public Library
+    Nunavut Public Library Services
+    Elkford Public Library
+    Emily Carr University
+    Hudson's Hope Public Library
+    Prince George Public Library
+    British Columbia Legislative Library
+    Vancouver Community College
+    Lillooet and Area Public Library Association
+    Gibsons & District Public Library
+    Trail and District Public Library
+    Rossland Public Library
+    Test Group
+    Fraser Valley Regional Library
+    McBride & District Public Library
+    School District 10
+    Grand Forks Public Library
+    Radium Public Library
+    Fort St James Public Library
+    Castlegar Public Library
+    Prince Rupert Public Library
+    Kaslo and District Public Library
+    British Columbia Library Trustees' Association
+    Burns Lake Public Library
+    Powell River Public Library
+    Richmond Public Library
+    Surrey Public Library
+    Valemount Public Library
+    Chetwynd Public Library
+    Vancouver Island Regional Library
+    North Vancouver City Library
+    Fraser Lake Public Library
+    Burnaby Public Library
+    Fort St. John Public Library
+    Yukon Public Library
+    University of British Columbia
+    Sparwood Public Library
+    Stewart Public Library
+    Taylor Public Library
+    Public Library InterLink
+    Quest University Canada Library
+    Salmo Public Library
+    School District 43 (Coquitlam)
+    Pouce Coupe Public Library
+    North Central Library Federation
+    Okanagan College Library
+    Houston Public Library
+    Island Link Library Federation
+    Midway Public Library
+    Granisle Public Library
+    Greenwood Public Library
+    Hazelton & District Public Library
+    Dawson Creek Municipal Public Library
+    Cranbrook Public Library
+    Alert Bay Public Library";
+
+  $libs = explode("\n",$libraries_import);
+  //strip whitespace
+  foreach($libs as $i=>$lib) {
+    $libs[$i] = trim($lib);
+  }
+
+  foreach($libs as $library) {
+    //now import them as terms
+    $vocabulary_id = 6; //check the `drupal_taxonomy_vocabulary` table for this value
+    $bc_term_id = 25; //same here
+    $term = new stdClass();
+    $term->vid = $vocabulary_id;
+    $term->name = $library;
+    $term->format = "filtered_html";
+    $term->parent = $bc_term_id;
+    //set the term parent appropriately
+    echo "<p>Saving term: $term->name with parent $term->parent</p>";
+
+    if ($migrate)
+      taxonomy_term_save($term);
+  }
+
+  die;
+  }
+
+}
+
+//*/
