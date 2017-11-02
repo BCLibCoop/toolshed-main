@@ -19,6 +19,3 @@ LICENSE.txt
 MAINTAINERS.txt
 README.txt
 UPGRADE.txt
-
-# Ignore the sass-cache directory
-sites/all/themes/toolshed/.sass-cache/*
