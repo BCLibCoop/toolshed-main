@@ -1,0 +1,4 @@
+name = Toolshed support module
+description = Tweaks and modifiers
+package = Custom
+core = 7.x
