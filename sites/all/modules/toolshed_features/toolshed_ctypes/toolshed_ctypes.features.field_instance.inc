@@ -66,7 +66,7 @@ function toolshed_ctypes_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -118,7 +118,7 @@ function toolshed_ctypes_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -160,7 +160,7 @@ function toolshed_ctypes_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 4,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -648,6 +648,12 @@ function toolshed_ctypes_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 11,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 16,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -687,6 +693,12 @@ function toolshed_ctypes_field_default_field_instances() {
         'settings' => array(),
         'type' => 'file_default',
         'weight' => 9,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -732,6 +744,12 @@ function toolshed_ctypes_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 12,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -773,6 +791,12 @@ function toolshed_ctypes_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 12,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -812,6 +836,12 @@ function toolshed_ctypes_field_default_field_instances() {
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 7,
+      ),
+      'search_result' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -853,6 +883,12 @@ function toolshed_ctypes_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 13,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -889,7 +925,13 @@ function toolshed_ctypes_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 12,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 22,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -956,6 +998,13 @@ function toolshed_ctypes_field_default_field_instances() {
         'type' => 'list_default',
         'weight' => 9,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 1,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -998,6 +1047,12 @@ function toolshed_ctypes_field_default_field_instances() {
         'type' => 'number_integer',
         'weight' => 7,
       ),
+      'search_result' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1036,7 +1091,27 @@ function toolshed_ctypes_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 13,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'module' => 'piwik_stats',
+        'settings' => array(
+          'visibility' => array(
+            'bounce_rate' => TRUE,
+            'entry_bounce_count' => TRUE,
+            'entry_nb_actions' => TRUE,
+            'entry_nb_visits' => TRUE,
+            'entry_sum_visit_length' => TRUE,
+            'exit_nb_visits' => TRUE,
+            'exit_rate' => TRUE,
+            'nb_hits' => TRUE,
+            'nb_visits' => TRUE,
+            'sum_time_spent' => TRUE,
+          ),
+        ),
+        'type' => 'piwik_stats_list',
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1074,6 +1149,12 @@ function toolshed_ctypes_field_default_field_instances() {
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 6,
+      ),
+      'search_result' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1115,6 +1196,13 @@ function toolshed_ctypes_field_default_field_instances() {
         'type' => 'list_default',
         'weight' => 6,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1153,11 +1241,25 @@ function toolshed_ctypes_field_default_field_instances() {
           'style' => 'average',
           'text' => 'average',
           'widget' => array(
-            'fivestar_widget' => 'sites/all/modules/fivestar/widgets/outlinecolor/outlinecolor.css',
+            'fivestar_widget' => 'sites/all/modules/fivestar/widgets/basic/basic.css',
           ),
         ),
         'type' => 'fivestar_formatter_default',
         'weight' => 2,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'module' => 'fivestar',
+        'settings' => array(
+          'expose' => 1,
+          'style' => 'average',
+          'text' => 'average',
+          'widget' => array(
+            'fivestar_widget' => 'sites/all/modules/fivestar/widgets/basic/basic.css',
+          ),
+        ),
+        'type' => 'fivestar_formatter_default',
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1171,7 +1273,7 @@ function toolshed_ctypes_field_default_field_instances() {
     'label' => 'Rating',
     'required' => 0,
     'settings' => array(
-      'allow_clear' => 1,
+      'allow_clear' => 0,
       'allow_ownvote' => 1,
       'allow_revote' => 1,
       'stars' => 5,
@@ -1200,6 +1302,12 @@ function toolshed_ctypes_field_default_field_instances() {
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 13,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 23,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1241,6 +1349,12 @@ function toolshed_ctypes_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 1,
       ),
+      'search_result' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1281,6 +1395,12 @@ function toolshed_ctypes_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 11,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1319,6 +1439,12 @@ function toolshed_ctypes_field_default_field_instances() {
         'settings' => array(),
         'type' => 'custom_formatters_clone_of_example_token_image',
         'weight' => 8,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1363,6 +1489,12 @@ function toolshed_ctypes_field_default_field_instances() {
         'type' => 'custom_formatters_file_type',
         'weight' => 1,
       ),
+      'search_result' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1405,6 +1537,12 @@ function toolshed_ctypes_field_default_field_instances() {
         'settings' => array(),
         'type' => 'link_default',
         'weight' => 2,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1464,6 +1602,12 @@ function toolshed_ctypes_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 10,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1504,6 +1648,12 @@ function toolshed_ctypes_field_default_field_instances() {
         'type' => 'list_default',
         'weight' => 7,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1541,6 +1691,13 @@ function toolshed_ctypes_field_default_field_instances() {
         'type' => 'list_default',
         'weight' => 8,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 2,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1576,7 +1733,14 @@ function toolshed_ctypes_field_default_field_instances() {
         'module' => 'custom_formatters',
         'settings' => array(),
         'type' => 'custom_formatters_more_resources',
-        'weight' => 11,
+        'weight' => 10,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'module' => 'custom_formatters',
+        'settings' => array(),
+        'type' => 'custom_formatters_more_resources',
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1615,6 +1779,12 @@ function toolshed_ctypes_field_default_field_instances() {
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 14,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 24,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1737,7 +1907,7 @@ function toolshed_ctypes_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 12,
       ),
       'rss' => array(
         'label' => 'above',
@@ -1783,7 +1953,7 @@ function toolshed_ctypes_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 10,
       ),
       'rss' => array(
         'label' => 'above',
@@ -1830,7 +2000,7 @@ function toolshed_ctypes_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 6,
       ),
       'rss' => array(
         'label' => 'above',
@@ -1921,7 +2091,7 @@ function toolshed_ctypes_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 9,
       ),
       'rss' => array(
         'label' => 'above',
@@ -1990,7 +2160,7 @@ function toolshed_ctypes_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 14,
       ),
       'rss' => array(
         'label' => 'above',
@@ -2040,7 +2210,7 @@ function toolshed_ctypes_field_default_field_instances() {
           ),
         ),
         'type' => 'fivestar_formatter_default',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'rss' => array(
         'label' => 'above',
@@ -2095,7 +2265,7 @@ function toolshed_ctypes_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 11,
       ),
       'rss' => array(
         'label' => 'above',
@@ -2140,7 +2310,7 @@ function toolshed_ctypes_field_default_field_instances() {
         'module' => 'custom_formatters',
         'settings' => array(),
         'type' => 'custom_formatters_more_resources',
-        'weight' => 5,
+        'weight' => 7,
       ),
       'rss' => array(
         'label' => 'above',
@@ -2182,7 +2352,7 @@ function toolshed_ctypes_field_default_field_instances() {
         'module' => 'custom_formatters',
         'settings' => array(),
         'type' => 'custom_formatters_file_type',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'rss' => array(
         'label' => 'above',
@@ -2205,7 +2375,7 @@ function toolshed_ctypes_field_default_field_instances() {
     'settings' => array(
       'description_field' => 0,
       'file_directory' => 'Training Resources',
-      'file_extensions' => 'txt doc docx pdf ppt pptx zip pub rtf',
+      'file_extensions' => 'txt doc docx pdf ppt pptx zip pub rtf xls xlsx',
       'max_filesize' => '50 MB',
       'user_register_form' => FALSE,
     ),
@@ -2231,7 +2401,7 @@ function toolshed_ctypes_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 13,
       ),
       'rss' => array(
         'label' => 'above',
@@ -2332,7 +2502,7 @@ function toolshed_ctypes_field_default_field_instances() {
         'module' => 'custom_formatters',
         'settings' => array(),
         'type' => 'custom_formatters_web_link',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'rss' => array(
         'label' => 'above',

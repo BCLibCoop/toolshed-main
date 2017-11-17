@@ -605,9 +605,8 @@ function toolshed_views_views_default_views() {
     'field_primary_audience' => 'field_primary_audience',
     'field_length_of_program_session2' => 'field_length_of_program_session2',
     'field_session_frequency' => 'field_session_frequency',
-    'field_rating' => 'field_rating',
+    'field_prog_rating' => 'field_prog_rating',
     'field_source_library_region' => 'field_source_library_region',
-    'field_piwik_node_views_nb_hits' => 'field_piwik_node_views_nb_hits',
     'field_piwik_node_views_nb_visits' => 'field_piwik_node_views_nb_visits',
   );
   $handler->display->display_options['style_options']['default'] = 'title';
@@ -638,7 +637,7 @@ function toolshed_views_views_default_views() {
       'separator' => '',
       'empty_column' => 0,
     ),
-    'field_rating' => array(
+    'field_prog_rating' => array(
       'sortable' => 1,
       'default_sort_order' => 'desc',
       'align' => '',
@@ -646,13 +645,6 @@ function toolshed_views_views_default_views() {
       'empty_column' => 0,
     ),
     'field_source_library_region' => array(
-      'sortable' => 1,
-      'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'field_piwik_node_views_nb_hits' => array(
       'sortable' => 1,
       'default_sort_order' => 'asc',
       'align' => '',
@@ -687,11 +679,11 @@ function toolshed_views_views_default_views() {
   $handler->display->display_options['fields']['field_session_frequency']['table'] = 'field_data_field_session_frequency';
   $handler->display->display_options['fields']['field_session_frequency']['field'] = 'field_session_frequency';
   /* Field: Content: Rating */
-  $handler->display->display_options['fields']['field_rating']['id'] = 'field_rating';
-  $handler->display->display_options['fields']['field_rating']['table'] = 'field_data_field_rating';
-  $handler->display->display_options['fields']['field_rating']['field'] = 'field_rating';
-  $handler->display->display_options['fields']['field_rating']['click_sort_column'] = 'rating';
-  $handler->display->display_options['fields']['field_rating']['settings'] = array(
+  $handler->display->display_options['fields']['field_prog_rating']['id'] = 'field_prog_rating';
+  $handler->display->display_options['fields']['field_prog_rating']['table'] = 'field_data_field_prog_rating';
+  $handler->display->display_options['fields']['field_prog_rating']['field'] = 'field_prog_rating';
+  $handler->display->display_options['fields']['field_prog_rating']['click_sort_column'] = 'rating';
+  $handler->display->display_options['fields']['field_prog_rating']['settings'] = array(
     'widget' => array(
       'fivestar_widget' => 'sites/all/modules/fivestar/widgets/basic/basic.css',
     ),
@@ -4474,7 +4466,12 @@ function toolshed_views_views_default_views() {
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['row_plugin'] = 'node';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -4482,6 +4479,28 @@ function toolshed_views_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Post date */
+  $handler->display->display_options['fields']['created']['id'] = 'created';
+  $handler->display->display_options['fields']['created']['table'] = 'node';
+  $handler->display->display_options['fields']['created']['field'] = 'created';
+  $handler->display->display_options['fields']['created']['label'] = '';
+  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['created']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['created']['custom_date_format'] = 'j F, Y';
+  $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['max_length'] = '400';
+  $handler->display->display_options['fields']['body']['alter']['more_link'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['more_link_text'] = 'Read more';
+  $handler->display->display_options['fields']['body']['alter']['more_link_path'] = '/node/[nid]';
+  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['html'] = TRUE;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';

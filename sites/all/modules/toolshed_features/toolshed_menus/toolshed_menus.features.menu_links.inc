@@ -118,72 +118,6 @@ function toolshed_menus_menu_default_menu_links() {
     'customized' => 1,
     'parent_identifier' => 'main-menu_add-content:<nolink>',
   );
-  // Exported menu link: main-menu_all-presentations:conference-presentations.
-  $menu_links['main-menu_all-presentations:conference-presentations'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'conference-presentations',
-    'router_path' => 'conference-presentations',
-    'link_title' => 'All Presentations',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'main-menu_all-presentations:conference-presentations',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -48,
-    'customized' => 1,
-    'parent_identifier' => 'main-menu_browse:<nolink>',
-  );
-  // Exported menu link: main-menu_all-programs:all-programs.
-  $menu_links['main-menu_all-programs:all-programs'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'all-programs',
-    'router_path' => 'all-programs',
-    'link_title' => 'All Programs',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'main-menu_all-programs:all-programs',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -49,
-    'customized' => 1,
-    'parent_identifier' => 'main-menu_browse:<nolink>',
-  );
-  // Exported menu link: main-menu_all-resources:allresources.
-  $menu_links['main-menu_all-resources:allresources'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'allresources',
-    'router_path' => 'allresources',
-    'link_title' => 'All Resources',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'main-menu_all-resources:allresources',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -50,
-    'customized' => 1,
-    'parent_identifier' => 'main-menu_browse:<nolink>',
-  );
   // Exported menu link: main-menu_blog:toolshed-blog.
   $menu_links['main-menu_blog:toolshed-blog'] = array(
     'menu_name' => 'main-menu',
@@ -198,7 +132,7 @@ function toolshed_menus_menu_default_menu_links() {
       'identifier' => 'main-menu_blog:toolshed-blog',
     ),
     'module' => 'menu',
-    'hidden' => 0,
+    'hidden' => 1,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
@@ -255,8 +189,8 @@ function toolshed_menus_menu_default_menu_links() {
     'router_path' => '',
     'link_title' => 'Home',
     'options' => array(
-      'alter' => TRUE,
       'identifier' => 'main-menu_home:<front>',
+      'alter' => TRUE,
     ),
     'module' => 'menu',
     'hidden' => 1,
@@ -304,27 +238,6 @@ function toolshed_menus_menu_default_menu_links() {
     'has_children' => 0,
     'expanded' => 0,
     'weight' => -45,
-    'customized' => 1,
-  );
-  // Exported menu link: main-menu_regional-projects:regional-projects .
-  $menu_links['main-menu_regional-projects:regional-projects '] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'regional-projects ',
-    'router_path' => 'regional-projects',
-    'link_title' => 'Regional Projects',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'main-menu_regional-projects:regional-projects ',
-    ),
-    'module' => 'menu',
-    'hidden' => 1,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -41,
     'customized' => 1,
   );
   // Exported menu link: main-menu_summer-reading-contest-2016:http://librarytoolshed.ca/content/library-toolshed-src-2016-contest.
@@ -378,16 +291,12 @@ function toolshed_menus_menu_default_menu_links() {
   t('Add a Conference Presentation');
   t('Add a Program');
   t('Add content');
-  t('All Presentations');
-  t('All Programs');
-  t('All Resources');
   t('Blog');
   t('Browse');
   t('Guides');
   t('Home');
   t('New TAL Online');
   t('Q & A');
-  t('Regional Projects');
   t('Summer Reading Contest 2016');
   t('Videos');
 

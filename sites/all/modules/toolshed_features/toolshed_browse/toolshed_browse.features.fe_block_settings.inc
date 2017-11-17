@@ -1,54 +1,25 @@
 <?php
 /**
  * @file
- * toolshed_blocks.features.fe_block_settings.inc
+ * toolshed_browse.features.fe_block_settings.inc
  */
 
 /**
  * Implements hook_default_fe_block_settings().
  */
-function toolshed_blocks_default_fe_block_settings() {
+function toolshed_browse_default_fe_block_settings() {
   $export = array();
 
   $export['version'] = '2.0';
 
-  $export['block-account_link'] = array(
+  $export['facetapi-6S5wpE0cK7z7jYNwqphrA1jmTGH8C7Bb'] = array(
     'cache' => -1,
-    'css_class' => 'login-link account',
+    'css_class' => '',
     'custom' => 0,
-    'machine_name' => 'account_link',
-    'module' => 'block',
+    'delta' => '6S5wpE0cK7z7jYNwqphrA1jmTGH8C7Bb',
+    'module' => 'facetapi',
     'node_types' => array(),
-    'pages' => '',
-    'roles' => array(
-      'authenticated user' => 2,
-    ),
-    'themes' => array(
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => 0,
-      ),
-      'toolshed' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'toolshed',
-        'weight' => -52,
-      ),
-    ),
-    'title' => '',
-    'visibility' => 0,
-  );
-
-  $export['block-copyright'] = array(
-    'cache' => -1,
-    'css_class' => 'copyright',
-    'custom' => 0,
-    'machine_name' => 'copyright',
-    'module' => 'block',
-    'node_types' => array(),
-    'pages' => '',
+    'pages' => 'browse/programs',
     'roles' => array(),
     'themes' => array(
       'seven' => array(
@@ -58,24 +29,25 @@ function toolshed_blocks_default_fe_block_settings() {
         'weight' => 0,
       ),
       'toolshed' => array(
-        'region' => 'footer',
+        'region' => 'content',
         'status' => 1,
         'theme' => 'toolshed',
-        'weight' => -50,
+        'weight' => -42,
       ),
     ),
-    'title' => '',
-    'visibility' => 0,
+    'title' => '<none>',
+    'visibility' => 1,
   );
 
-  $export['block-creative_commons'] = array(
+  $export['facetapi-Ew8gdR5YB9GZmLZqbI28GbKa7flcsxmz'] = array(
     'cache' => -1,
-    'css_class' => 'creativec',
+    'css_class' => '',
     'custom' => 0,
-    'machine_name' => 'creative_commons',
-    'module' => 'block',
+    'delta' => 'Ew8gdR5YB9GZmLZqbI28GbKa7flcsxmz',
+    'module' => 'facetapi',
     'node_types' => array(),
-    'pages' => '',
+    'pages' => 'browse/resources
+browse/presentations',
     'roles' => array(),
     'themes' => array(
       'seven' => array(
@@ -85,24 +57,24 @@ function toolshed_blocks_default_fe_block_settings() {
         'weight' => 0,
       ),
       'toolshed' => array(
-        'region' => 'footer',
+        'region' => 'content',
         'status' => 1,
         'theme' => 'toolshed',
-        'weight' => -51,
+        'weight' => -43,
       ),
     ),
-    'title' => '',
-    'visibility' => 0,
+    'title' => '<none>',
+    'visibility' => 1,
   );
 
-  $export['block-custom_search_block'] = array(
+  $export['facetapi-Nei9k1pkBblurMjjnV2seIeqy8NR02PE'] = array(
     'cache' => -1,
-    'css_class' => 'search-bar',
+    'css_class' => '',
     'custom' => 0,
-    'machine_name' => 'custom_search_block',
-    'module' => 'block',
+    'delta' => 'Nei9k1pkBblurMjjnV2seIeqy8NR02PE',
+    'module' => 'facetapi',
     'node_types' => array(),
-    'pages' => '<front>',
+    'pages' => 'browse/presentations',
     'roles' => array(),
     'themes' => array(
       'seven' => array(
@@ -112,53 +84,24 @@ function toolshed_blocks_default_fe_block_settings() {
         'weight' => 0,
       ),
       'toolshed' => array(
-        'region' => 'header',
+        'region' => 'content',
         'status' => 1,
         'theme' => 'toolshed',
-        'weight' => -39,
+        'weight' => -46,
       ),
     ),
-    'title' => '',
-    'visibility' => 0,
+    'title' => '<none>',
+    'visibility' => 1,
   );
 
-  $export['block-login_link'] = array(
+  $export['facetapi-bwSt4KPUHR6OZhVMiQDGZQVGOMJQgqOZ'] = array(
     'cache' => -1,
-    'css_class' => 'login-link',
+    'css_class' => '',
     'custom' => 0,
-    'machine_name' => 'login_link',
-    'module' => 'block',
+    'delta' => 'bwSt4KPUHR6OZhVMiQDGZQVGOMJQgqOZ',
+    'module' => 'facetapi',
     'node_types' => array(),
-    'pages' => '',
-    'roles' => array(
-      'anonymous user' => 1,
-    ),
-    'themes' => array(
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => 0,
-      ),
-      'toolshed' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'toolshed',
-        'weight' => -27,
-      ),
-    ),
-    'title' => 'Login link',
-    'visibility' => 0,
-  );
-
-  $export['block-sponsor_logos'] = array(
-    'cache' => -1,
-    'css_class' => 'brought-to',
-    'custom' => 0,
-    'machine_name' => 'sponsor_logos',
-    'module' => 'block',
-    'node_types' => array(),
-    'pages' => '',
+    'pages' => 'browse/programs',
     'roles' => array(),
     'themes' => array(
       'seven' => array(
@@ -168,24 +111,80 @@ function toolshed_blocks_default_fe_block_settings() {
         'weight' => 0,
       ),
       'toolshed' => array(
-        'region' => 'footer',
+        'region' => 'content',
         'status' => 1,
         'theme' => 'toolshed',
-        'weight' => -52,
+        'weight' => -41,
       ),
     ),
-    'title' => 'Brought to you by: ',
-    'visibility' => 0,
+    'title' => '<none>',
+    'visibility' => 1,
   );
 
-  $export['block-toolshed_logo'] = array(
+  $export['facetapi-ny4PB36Xs6ldCAeg9re47Hrv16bhoBF2'] = array(
     'cache' => -1,
-    'css_class' => 'front-logo',
+    'css_class' => '',
     'custom' => 0,
-    'machine_name' => 'toolshed_logo',
-    'module' => 'block',
+    'delta' => 'ny4PB36Xs6ldCAeg9re47Hrv16bhoBF2',
+    'module' => 'facetapi',
     'node_types' => array(),
-    'pages' => '<front>',
+    'pages' => 'browse/presentations',
+    'roles' => array(),
+    'themes' => array(
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+      'toolshed' => array(
+        'region' => 'content',
+        'status' => 1,
+        'theme' => 'toolshed',
+        'weight' => -45,
+      ),
+    ),
+    'title' => '<none>',
+    'visibility' => 1,
+  );
+
+  $export['facetapi-pmJDx1bktrlXOUOvk3dmJ2Nzuf1mXpaZ'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'pmJDx1bktrlXOUOvk3dmJ2Nzuf1mXpaZ',
+    'module' => 'facetapi',
+    'node_types' => array(),
+    'pages' => 'browse/presentations
+browse/programs
+browse/resources',
+    'roles' => array(),
+    'themes' => array(
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+      'toolshed' => array(
+        'region' => 'content',
+        'status' => 1,
+        'theme' => 'toolshed',
+        'weight' => -40,
+      ),
+    ),
+    'title' => '<none>',
+    'visibility' => 1,
+  );
+
+  $export['facetapi-szkopraY3UT0Yf7W9c45i0Uff9eQnJxP'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'szkopraY3UT0Yf7W9c45i0Uff9eQnJxP',
+    'module' => 'facetapi',
+    'node_types' => array(),
+    'pages' => '',
     'roles' => array(),
     'themes' => array(
       'seven' => array(
@@ -202,15 +201,15 @@ function toolshed_blocks_default_fe_block_settings() {
       ),
     ),
     'title' => '',
-    'visibility' => 1,
+    'visibility' => 0,
   );
 
-  $export['superfish-1'] = array(
+  $export['facetapi-vthVBf2pBg6rowsRhv5hELOdXMWH1yXC'] = array(
     'cache' => -1,
     'css_class' => '',
     'custom' => 0,
-    'delta' => 1,
-    'module' => 'superfish',
+    'delta' => 'vthVBf2pBg6rowsRhv5hELOdXMWH1yXC',
+    'module' => 'facetapi',
     'node_types' => array(),
     'pages' => '',
     'roles' => array(),
@@ -222,24 +221,51 @@ function toolshed_blocks_default_fe_block_settings() {
         'weight' => 0,
       ),
       'toolshed' => array(
-        'region' => 'header',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'toolshed',
-        'weight' => -38,
+        'weight' => -41,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['facetapi-yAft0GXXM1GQg0Zk8oUWQxAHub2CMkGv'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'yAft0GXXM1GQg0Zk8oUWQxAHub2CMkGv',
+    'module' => 'facetapi',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+      'toolshed' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'toolshed',
+        'weight' => -42,
       ),
     ),
     'title' => '<none>',
     'visibility' => 0,
   );
 
-  $export['superfish-2'] = array(
+  $export['facetapi-yI3Qwke4KC40mDKP1efzWWV5thRP6CKx'] = array(
     'cache' => -1,
     'css_class' => '',
     'custom' => 0,
-    'delta' => 2,
-    'module' => 'superfish',
+    'delta' => 'yI3Qwke4KC40mDKP1efzWWV5thRP6CKx',
+    'module' => 'facetapi',
     'node_types' => array(),
-    'pages' => '',
+    'pages' => 'browse/resources',
     'roles' => array(),
     'themes' => array(
       'seven' => array(
@@ -249,68 +275,14 @@ function toolshed_blocks_default_fe_block_settings() {
         'weight' => 0,
       ),
       'toolshed' => array(
-        'region' => '',
-        'status' => 0,
+        'region' => 'content',
+        'status' => 1,
         'theme' => 'toolshed',
-        'weight' => -7,
+        'weight' => -44,
       ),
     ),
-    'title' => '',
-    'visibility' => 0,
-  );
-
-  $export['superfish-3'] = array(
-    'cache' => -1,
-    'css_class' => '',
-    'custom' => 0,
-    'delta' => 3,
-    'module' => 'superfish',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => 0,
-      ),
-      'toolshed' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'toolshed',
-        'weight' => -6,
-      ),
-    ),
-    'title' => '',
-    'visibility' => 0,
-  );
-
-  $export['superfish-4'] = array(
-    'cache' => -1,
-    'css_class' => '',
-    'custom' => 0,
-    'delta' => 4,
-    'module' => 'superfish',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => 0,
-      ),
-      'toolshed' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'toolshed',
-        'weight' => -5,
-      ),
-    ),
-    'title' => '',
-    'visibility' => 0,
+    'title' => '<none>',
+    'visibility' => 1,
   );
 
   return $export;

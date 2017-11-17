@@ -76,7 +76,7 @@ function toolshed_ctypes_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Materials',
-    'weight' => '6',
+    'weight' => '7',
     'children' => array(
       0 => 'field_training_doc_file',
       1 => 'field_video_link',
@@ -253,7 +253,7 @@ function toolshed_ctypes_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'file-rating',
+    'label' => 'File Rating',
     'weight' => '0',
     'children' => array(
       0 => 'field_prog_rating',
@@ -261,7 +261,7 @@ function toolshed_ctypes_field_group_info() {
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
-      'label' => 'file-rating',
+      'label' => 'File Rating',
       'instance_settings' => array(
         'id' => '',
         'classes' => 'file-rating',
@@ -269,9 +269,7 @@ function toolshed_ctypes_field_group_info() {
         'show_label' => '0',
         'label_element' => 'div',
         'attributes' => '',
-        'required_fields' => 1,
       ),
-      'formatter' => '',
     ),
   );
   $field_groups[''] = $field_group;
@@ -286,7 +284,7 @@ function toolshed_ctypes_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'file-rating',
+    'label' => 'File Rating',
     'weight' => '0',
     'children' => array(
       0 => 'field_rating',
@@ -295,7 +293,7 @@ function toolshed_ctypes_field_group_info() {
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
-      'label' => 'file-rating',
+      'label' => 'File Rating',
       'instance_settings' => array(
         'id' => '',
         'classes' => 'file-rating',
@@ -321,10 +319,10 @@ function toolshed_ctypes_field_group_info() {
     'label' => 'Evaluation',
     'weight' => '10',
     'children' => array(
-      0 => 'field_feedback_from_participants',
+      0 => 'field_program_goals',
       1 => 'field_highlights',
-      2 => 'field_program_goals',
-      3 => 'field_what_would_you_change',
+      2 => 'field_what_would_you_change',
+      3 => 'field_feedback_from_participants',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -412,11 +410,11 @@ function toolshed_ctypes_field_group_info() {
     'label' => 'Resources',
     'weight' => '9',
     'children' => array(
-      0 => 'field_community_partners_',
-      1 => 'field_funding_grants_foundations',
-      2 => 'field_guest_speakers',
+      0 => 'field_resources_required_materia',
+      1 => 'field_guest_speakers',
+      2 => 'field_funding_grants_foundations',
       3 => 'field_program_budget',
-      4 => 'field_resources_required_materia',
+      4 => 'field_community_partners_',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -473,7 +471,6 @@ function toolshed_ctypes_field_group_info() {
   t('Presenters');
   t('Resources');
   t('Stats');
-  t('file-rating');
 
   return $field_groups;
 }
