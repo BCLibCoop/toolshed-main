@@ -5,4 +5,5 @@
 
 function toolshed_support_form_views_exposed_form_alter(&$form, &$form_state, $form_id) {
   drupal_add_js(drupal_get_path('module', 'toolshed_support') . '/js/toolshed_support_select2.js');
+  $form['submit']['#value'] = 'Go';
 }
