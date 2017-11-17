@@ -1970,7 +1970,7 @@ function toolshed_solr_search_views_default_views() {
   $handler->display->display_options['fields']['node_title']['field'] = 'node_title';
   $handler->display->display_options['fields']['node_title']['label'] = 'Title';
   $handler->display->display_options['fields']['node_title']['link_to_entity'] = 0;
-  /* Field: Node: Training Topic */
+  /* Field: Node: Presentation Topic */
   $handler->display->display_options['fields']['field_training_topic']['id'] = 'field_training_topic';
   $handler->display->display_options['fields']['field_training_topic']['table'] = 'entity_node';
   $handler->display->display_options['fields']['field_training_topic']['field'] = 'field_training_topic';
@@ -2121,7 +2121,7 @@ function toolshed_solr_search_views_default_views() {
     3 => 0,
     5 => 0,
   );
-  /* Filter criterion: Node: Training Topic (indexed) */
+  /* Filter criterion: Node: Presentation Topic (indexed) */
   $handler->display->display_options['filters']['node_field_training_topic']['id'] = 'node_field_training_topic';
   $handler->display->display_options['filters']['node_field_training_topic']['table'] = 'search_api_index_toolshed_content';
   $handler->display->display_options['filters']['node_field_training_topic']['field'] = 'node_field_training_topic';
@@ -2431,7 +2431,7 @@ function toolshed_solr_search_views_default_views() {
   $handler->display->display_options['fields']['node_title']['field'] = 'node_title';
   $handler->display->display_options['fields']['node_title']['label'] = 'Title';
   $handler->display->display_options['fields']['node_title']['link_to_entity'] = 1;
-  /* Field: Node: Training Topic */
+  /* Field: Node: Presentation Topic */
   $handler->display->display_options['fields']['field_training_topic']['id'] = 'field_training_topic';
   $handler->display->display_options['fields']['field_training_topic']['table'] = 'entity_node';
   $handler->display->display_options['fields']['field_training_topic']['field'] = 'field_training_topic';
@@ -2504,6 +2504,7 @@ function toolshed_solr_search_views_default_views() {
   );
   $handler->display->display_options['filters']['search_api_views_fulltext']['min_length'] = '3';
   $handler->display->display_options['filters']['search_api_views_fulltext']['fields'] = array(
+    'node:field_authot' => 'node:field_authot',
     'node:field_conference_name:name' => 'node:field_conference_name:name',
     'node:field_project_description' => 'node:field_project_description',
     'node:title' => 'node:title',
@@ -2524,7 +2525,7 @@ function toolshed_solr_search_views_default_views() {
     1 => 0,
     4 => 0,
     3 => 0,
-    5 => 0,
+    6 => 0,
   );
   $handler->display->display_options['filters']['node_field_source_library_region_parents_all']['expose']['reduce'] = 0;
   $handler->display->display_options['filters']['node_field_source_library_region_parents_all']['type'] = 'select';
@@ -2560,7 +2561,7 @@ function toolshed_solr_search_views_default_views() {
     2 => array(),
     3 => array(),
   );
-  /* Filter criterion: Node: Training Topic (indexed) */
+  /* Filter criterion: Node: Presentation Topic (indexed) */
   $handler->display->display_options['filters']['node_field_training_topic']['id'] = 'node_field_training_topic';
   $handler->display->display_options['filters']['node_field_training_topic']['table'] = 'search_api_index_toolshed_content';
   $handler->display->display_options['filters']['node_field_training_topic']['field'] = 'node_field_training_topic';
@@ -2576,7 +2577,7 @@ function toolshed_solr_search_views_default_views() {
     1 => 0,
     4 => 0,
     3 => 0,
-    5 => 0,
+    6 => 0,
   );
   $handler->display->display_options['filters']['node_field_training_topic']['expose']['reduce'] = 0;
   /* Filter criterion: Node: Primary Audience (indexed) */
@@ -2595,7 +2596,7 @@ function toolshed_solr_search_views_default_views() {
     1 => 0,
     4 => 0,
     3 => 0,
-    5 => 0,
+    6 => 0,
   );
   $handler->display->display_options['filters']['node_field_primary_audience']['expose']['reduce'] = 0;
   /* Filter criterion: Node: Length of program session (indexed) */
@@ -2678,7 +2679,7 @@ function toolshed_solr_search_views_default_views() {
   $handler->display->display_options['fields']['node_title']['field'] = 'node_title';
   $handler->display->display_options['fields']['node_title']['label'] = 'Title';
   $handler->display->display_options['fields']['node_title']['link_to_entity'] = 0;
-  /* Field: Node: Training Topic (indexed) */
+  /* Field: Node: Presentation Topic (indexed) */
   $handler->display->display_options['fields']['node_field_training_topic']['id'] = 'node_field_training_topic';
   $handler->display->display_options['fields']['node_field_training_topic']['table'] = 'search_api_index_toolshed_content';
   $handler->display->display_options['fields']['node_field_training_topic']['field'] = 'node_field_training_topic';
