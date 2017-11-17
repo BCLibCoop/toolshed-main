@@ -7,53 +7,6 @@ html {
   box-sizing: inherit;
 }
 
-body:before {
-  background-image: -webkit-linear-gradient(left, transparent 0, #eee 0, #eee 20%, transparent 20%, transparent 26.6666666667%, #eee 26.6666666667%, #eee 46.6666666667%, transparent 46.6666666667%, transparent 53.3333333333%, #eee 53.3333333333%, #eee 73.3333333333%, transparent 73.3333333333%, transparent 80%, #eee 80%, #eee 100%, transparent 100%);
-  background-image: -moz-linear-gradient(left, transparent 0, #eee 0, #eee 20%, transparent 20%, transparent 26.6666666667%, #eee 26.6666666667%, #eee 46.6666666667%, transparent 46.6666666667%, transparent 53.3333333333%, #eee 53.3333333333%, #eee 73.3333333333%, transparent 73.3333333333%, transparent 80%, #eee 80%, #eee 100%, transparent 100%);
-  background-image: -ms-linear-gradient(left, transparent 0, #eee 0, #eee 20%, transparent 20%, transparent 26.6666666667%, #eee 26.6666666667%, #eee 46.6666666667%, transparent 46.6666666667%, transparent 53.3333333333%, #eee 53.3333333333%, #eee 73.3333333333%, transparent 73.3333333333%, transparent 80%, #eee 80%, #eee 100%, transparent 100%);
-  background-image: -o-linear-gradient(left, transparent 0, #eee 0, #eee 20%, transparent 20%, transparent 26.6666666667%, #eee 26.6666666667%, #eee 46.6666666667%, transparent 46.6666666667%, transparent 53.3333333333%, #eee 53.3333333333%, #eee 73.3333333333%, transparent 73.3333333333%, transparent 80%, #eee 80%, #eee 100%, transparent 100%);
-  background-image: linear-gradient(to left, transparent 0, #eee 0, #eee 20%, transparent 20%, transparent 26.6666666667%, #eee 26.6666666667%, #eee 46.6666666667%, transparent 46.6666666667%, transparent 53.3333333333%, #eee 53.3333333333%, #eee 73.3333333333%, transparent 73.3333333333%, transparent 80%, #eee 80%, #eee 100%, transparent 100%);
-  content: "";
-  display: inline-block;
-  height: 100%;
-  left: 0;
-  margin: 0 auto;
-  max-width: 68em;
-  opacity: 0.4;
-  pointer-events: none;
-  position: fixed;
-  right: 0;
-  width: 100%;
-  z-index: -1;
-}
-@media screen and (min-width: 20em) {
-  body:before {
-    background-image: -webkit-linear-gradient(left, transparent 0, #eee 0, #eee 20%, transparent 20%, transparent 26.6666666667%, #eee 26.6666666667%, #eee 46.6666666667%, transparent 46.6666666667%, transparent 53.3333333333%, #eee 53.3333333333%, #eee 73.3333333333%, transparent 73.3333333333%, transparent 80%, #eee 80%, #eee 100%, transparent 100%);
-    background-image: -moz-linear-gradient(left, transparent 0, #eee 0, #eee 20%, transparent 20%, transparent 26.6666666667%, #eee 26.6666666667%, #eee 46.6666666667%, transparent 46.6666666667%, transparent 53.3333333333%, #eee 53.3333333333%, #eee 73.3333333333%, transparent 73.3333333333%, transparent 80%, #eee 80%, #eee 100%, transparent 100%);
-    background-image: -ms-linear-gradient(left, transparent 0, #eee 0, #eee 20%, transparent 20%, transparent 26.6666666667%, #eee 26.6666666667%, #eee 46.6666666667%, transparent 46.6666666667%, transparent 53.3333333333%, #eee 53.3333333333%, #eee 73.3333333333%, transparent 73.3333333333%, transparent 80%, #eee 80%, #eee 100%, transparent 100%);
-    background-image: -o-linear-gradient(left, transparent 0, #eee 0, #eee 20%, transparent 20%, transparent 26.6666666667%, #eee 26.6666666667%, #eee 46.6666666667%, transparent 46.6666666667%, transparent 53.3333333333%, #eee 53.3333333333%, #eee 73.3333333333%, transparent 73.3333333333%, transparent 80%, #eee 80%, #eee 100%, transparent 100%);
-    background-image: linear-gradient(to left, transparent 0, #eee 0, #eee 20%, transparent 20%, transparent 26.6666666667%, #eee 26.6666666667%, #eee 46.6666666667%, transparent 46.6666666667%, transparent 53.3333333333%, #eee 53.3333333333%, #eee 73.3333333333%, transparent 73.3333333333%, transparent 80%, #eee 80%, #eee 100%, transparent 100%);
-  }
-}
-@media screen and (min-width: 45em) {
-  body:before {
-    background-image: -webkit-linear-gradient(left, transparent 0, #eee 0, #eee 9.6774193548%, transparent 9.6774193548%, transparent 12.9032258065%, #eee 12.9032258065%, #eee 22.5806451613%, transparent 22.5806451613%, transparent 25.8064516129%, #eee 25.8064516129%, #eee 35.4838709677%, transparent 35.4838709677%, transparent 38.7096774194%, #eee 38.7096774194%, #eee 48.3870967742%, transparent 48.3870967742%, transparent 51.6129032258%, #eee 51.6129032258%, #eee 61.2903225806%, transparent 61.2903225806%, transparent 64.5161290323%, #eee 64.5161290323%, #eee 74.1935483871%, transparent 74.1935483871%, transparent 77.4193548387%, #eee 77.4193548387%, #eee 87.0967741935%, transparent 87.0967741935%, transparent 90.3225806452%, #eee 90.3225806452%, #eee 100%, transparent 100%);
-    background-image: -moz-linear-gradient(left, transparent 0, #eee 0, #eee 9.6774193548%, transparent 9.6774193548%, transparent 12.9032258065%, #eee 12.9032258065%, #eee 22.5806451613%, transparent 22.5806451613%, transparent 25.8064516129%, #eee 25.8064516129%, #eee 35.4838709677%, transparent 35.4838709677%, transparent 38.7096774194%, #eee 38.7096774194%, #eee 48.3870967742%, transparent 48.3870967742%, transparent 51.6129032258%, #eee 51.6129032258%, #eee 61.2903225806%, transparent 61.2903225806%, transparent 64.5161290323%, #eee 64.5161290323%, #eee 74.1935483871%, transparent 74.1935483871%, transparent 77.4193548387%, #eee 77.4193548387%, #eee 87.0967741935%, transparent 87.0967741935%, transparent 90.3225806452%, #eee 90.3225806452%, #eee 100%, transparent 100%);
-    background-image: -ms-linear-gradient(left, transparent 0, #eee 0, #eee 9.6774193548%, transparent 9.6774193548%, transparent 12.9032258065%, #eee 12.9032258065%, #eee 22.5806451613%, transparent 22.5806451613%, transparent 25.8064516129%, #eee 25.8064516129%, #eee 35.4838709677%, transparent 35.4838709677%, transparent 38.7096774194%, #eee 38.7096774194%, #eee 48.3870967742%, transparent 48.3870967742%, transparent 51.6129032258%, #eee 51.6129032258%, #eee 61.2903225806%, transparent 61.2903225806%, transparent 64.5161290323%, #eee 64.5161290323%, #eee 74.1935483871%, transparent 74.1935483871%, transparent 77.4193548387%, #eee 77.4193548387%, #eee 87.0967741935%, transparent 87.0967741935%, transparent 90.3225806452%, #eee 90.3225806452%, #eee 100%, transparent 100%);
-    background-image: -o-linear-gradient(left, transparent 0, #eee 0, #eee 9.6774193548%, transparent 9.6774193548%, transparent 12.9032258065%, #eee 12.9032258065%, #eee 22.5806451613%, transparent 22.5806451613%, transparent 25.8064516129%, #eee 25.8064516129%, #eee 35.4838709677%, transparent 35.4838709677%, transparent 38.7096774194%, #eee 38.7096774194%, #eee 48.3870967742%, transparent 48.3870967742%, transparent 51.6129032258%, #eee 51.6129032258%, #eee 61.2903225806%, transparent 61.2903225806%, transparent 64.5161290323%, #eee 64.5161290323%, #eee 74.1935483871%, transparent 74.1935483871%, transparent 77.4193548387%, #eee 77.4193548387%, #eee 87.0967741935%, transparent 87.0967741935%, transparent 90.3225806452%, #eee 90.3225806452%, #eee 100%, transparent 100%);
-    background-image: linear-gradient(to left, transparent 0, #eee 0, #eee 9.6774193548%, transparent 9.6774193548%, transparent 12.9032258065%, #eee 12.9032258065%, #eee 22.5806451613%, transparent 22.5806451613%, transparent 25.8064516129%, #eee 25.8064516129%, #eee 35.4838709677%, transparent 35.4838709677%, transparent 38.7096774194%, #eee 38.7096774194%, #eee 48.3870967742%, transparent 48.3870967742%, transparent 51.6129032258%, #eee 51.6129032258%, #eee 61.2903225806%, transparent 61.2903225806%, transparent 64.5161290323%, #eee 64.5161290323%, #eee 74.1935483871%, transparent 74.1935483871%, transparent 77.4193548387%, #eee 77.4193548387%, #eee 87.0967741935%, transparent 87.0967741935%, transparent 90.3225806452%, #eee 90.3225806452%, #eee 100%, transparent 100%);
-  }
-}
-@media screen and (min-width: 60em) {
-  body:before {
-    background-image: -webkit-linear-gradient(left, transparent 0, #eee 0, #eee 6.3829787234%, transparent 6.3829787234%, transparent 8.5106382979%, #eee 8.5106382979%, #eee 14.8936170213%, transparent 14.8936170213%, transparent 17.0212765957%, #eee 17.0212765957%, #eee 23.4042553191%, transparent 23.4042553191%, transparent 25.5319148936%, #eee 25.5319148936%, #eee 31.914893617%, transparent 31.914893617%, transparent 34.0425531915%, #eee 34.0425531915%, #eee 40.4255319149%, transparent 40.4255319149%, transparent 42.5531914894%, #eee 42.5531914894%, #eee 48.9361702128%, transparent 48.9361702128%, transparent 51.0638297872%, #eee 51.0638297872%, #eee 57.4468085106%, transparent 57.4468085106%, transparent 59.5744680851%, #eee 59.5744680851%, #eee 65.9574468085%, transparent 65.9574468085%, transparent 68.085106383%, #eee 68.085106383%, #eee 74.4680851064%, transparent 74.4680851064%, transparent 76.5957446809%, #eee 76.5957446809%, #eee 82.9787234043%, transparent 82.9787234043%, transparent 85.1063829787%, #eee 85.1063829787%, #eee 91.4893617021%, transparent 91.4893617021%, transparent 93.6170212766%, #eee 93.6170212766%, #eee 100%, transparent 100%);
-    background-image: -moz-linear-gradient(left, transparent 0, #eee 0, #eee 6.3829787234%, transparent 6.3829787234%, transparent 8.5106382979%, #eee 8.5106382979%, #eee 14.8936170213%, transparent 14.8936170213%, transparent 17.0212765957%, #eee 17.0212765957%, #eee 23.4042553191%, transparent 23.4042553191%, transparent 25.5319148936%, #eee 25.5319148936%, #eee 31.914893617%, transparent 31.914893617%, transparent 34.0425531915%, #eee 34.0425531915%, #eee 40.4255319149%, transparent 40.4255319149%, transparent 42.5531914894%, #eee 42.5531914894%, #eee 48.9361702128%, transparent 48.9361702128%, transparent 51.0638297872%, #eee 51.0638297872%, #eee 57.4468085106%, transparent 57.4468085106%, transparent 59.5744680851%, #eee 59.5744680851%, #eee 65.9574468085%, transparent 65.9574468085%, transparent 68.085106383%, #eee 68.085106383%, #eee 74.4680851064%, transparent 74.4680851064%, transparent 76.5957446809%, #eee 76.5957446809%, #eee 82.9787234043%, transparent 82.9787234043%, transparent 85.1063829787%, #eee 85.1063829787%, #eee 91.4893617021%, transparent 91.4893617021%, transparent 93.6170212766%, #eee 93.6170212766%, #eee 100%, transparent 100%);
-    background-image: -ms-linear-gradient(left, transparent 0, #eee 0, #eee 6.3829787234%, transparent 6.3829787234%, transparent 8.5106382979%, #eee 8.5106382979%, #eee 14.8936170213%, transparent 14.8936170213%, transparent 17.0212765957%, #eee 17.0212765957%, #eee 23.4042553191%, transparent 23.4042553191%, transparent 25.5319148936%, #eee 25.5319148936%, #eee 31.914893617%, transparent 31.914893617%, transparent 34.0425531915%, #eee 34.0425531915%, #eee 40.4255319149%, transparent 40.4255319149%, transparent 42.5531914894%, #eee 42.5531914894%, #eee 48.9361702128%, transparent 48.9361702128%, transparent 51.0638297872%, #eee 51.0638297872%, #eee 57.4468085106%, transparent 57.4468085106%, transparent 59.5744680851%, #eee 59.5744680851%, #eee 65.9574468085%, transparent 65.9574468085%, transparent 68.085106383%, #eee 68.085106383%, #eee 74.4680851064%, transparent 74.4680851064%, transparent 76.5957446809%, #eee 76.5957446809%, #eee 82.9787234043%, transparent 82.9787234043%, transparent 85.1063829787%, #eee 85.1063829787%, #eee 91.4893617021%, transparent 91.4893617021%, transparent 93.6170212766%, #eee 93.6170212766%, #eee 100%, transparent 100%);
-    background-image: -o-linear-gradient(left, transparent 0, #eee 0, #eee 6.3829787234%, transparent 6.3829787234%, transparent 8.5106382979%, #eee 8.5106382979%, #eee 14.8936170213%, transparent 14.8936170213%, transparent 17.0212765957%, #eee 17.0212765957%, #eee 23.4042553191%, transparent 23.4042553191%, transparent 25.5319148936%, #eee 25.5319148936%, #eee 31.914893617%, transparent 31.914893617%, transparent 34.0425531915%, #eee 34.0425531915%, #eee 40.4255319149%, transparent 40.4255319149%, transparent 42.5531914894%, #eee 42.5531914894%, #eee 48.9361702128%, transparent 48.9361702128%, transparent 51.0638297872%, #eee 51.0638297872%, #eee 57.4468085106%, transparent 57.4468085106%, transparent 59.5744680851%, #eee 59.5744680851%, #eee 65.9574468085%, transparent 65.9574468085%, transparent 68.085106383%, #eee 68.085106383%, #eee 74.4680851064%, transparent 74.4680851064%, transparent 76.5957446809%, #eee 76.5957446809%, #eee 82.9787234043%, transparent 82.9787234043%, transparent 85.1063829787%, #eee 85.1063829787%, #eee 91.4893617021%, transparent 91.4893617021%, transparent 93.6170212766%, #eee 93.6170212766%, #eee 100%, transparent 100%);
-    background-image: linear-gradient(to left, transparent 0, #eee 0, #eee 6.3829787234%, transparent 6.3829787234%, transparent 8.5106382979%, #eee 8.5106382979%, #eee 14.8936170213%, transparent 14.8936170213%, transparent 17.0212765957%, #eee 17.0212765957%, #eee 23.4042553191%, transparent 23.4042553191%, transparent 25.5319148936%, #eee 25.5319148936%, #eee 31.914893617%, transparent 31.914893617%, transparent 34.0425531915%, #eee 34.0425531915%, #eee 40.4255319149%, transparent 40.4255319149%, transparent 42.5531914894%, #eee 42.5531914894%, #eee 48.9361702128%, transparent 48.9361702128%, transparent 51.0638297872%, #eee 51.0638297872%, #eee 57.4468085106%, transparent 57.4468085106%, transparent 59.5744680851%, #eee 59.5744680851%, #eee 65.9574468085%, transparent 65.9574468085%, transparent 68.085106383%, #eee 68.085106383%, #eee 74.4680851064%, transparent 74.4680851064%, transparent 76.5957446809%, #eee 76.5957446809%, #eee 82.9787234043%, transparent 82.9787234043%, transparent 85.1063829787%, #eee 85.1063829787%, #eee 91.4893617021%, transparent 91.4893617021%, transparent 93.6170212766%, #eee 93.6170212766%, #eee 100%, transparent 100%);
-  }
-}
-
 body {
   margin: 0;
   font-size: 16px;
@@ -88,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 2.2em;
   font-weight: 300;
-  padding: 0 0 0.5em;
+  padding: 0.5em 0 0.5em;
   margin: 0;
 }
 
@@ -278,6 +231,10 @@ div.status {
   border: none;
 }
 
+.feed-icon {
+  display: none;
+}
+
 .page-taxonomy-term article {
   margin: 2em 0 2em 0;
 }
@@ -333,20 +290,20 @@ div.status {
   padding-top: 0.2em;
   border-radius: 1em;
   background: #ffb53e;
-  color: #ffffff;
+  color: white;
   display: block;
   text-align: center;
   text-transform: uppercase;
   margin: 0 auto 0.25em auto;
 }
 
-.node-type-program-info .node-file .node-header:before,
+.node-type-program-info .node-file .node-header::before,
 .node-type-program-info .field-name-field-web-link a,
 .node-type-program-info .field-type-file .file-download {
   background: #ef4a23;
 }
 
-.node-type-conference-presentation .node-file .node-header:before,
+.node-type-conference-presentation .node-file .node-header::before,
 .node-type-conference-presentation .field-name-field-web-link a,
 .node-type-conference-presentation .field-type-file .file-download {
   background: #1d467d;
@@ -401,7 +358,7 @@ div.field.field-name-field-source-library-region {
 }
 .view-frontpage .all-buttons a {
   font-weight: 500;
-  margin: 0.5em 0 0.5em 0;
+  margin: 1.5em 0 0.5em 0;
   text-align: center;
   text-decoration: none;
   transition: all 0.2s linear;
@@ -433,7 +390,7 @@ div.field.field-name-field-source-library-region {
   color: #7b7b7b;
   background: #fff;
 }
-.view-frontpage .search-block-form:before {
+.view-frontpage .search-block-form::before {
   font-family: "Fontawesome";
   content: "";
   font-size: 1.5em;
@@ -477,6 +434,12 @@ div.field.field-name-field-source-library-region {
   font-size: 1.2em;
 }
 
+.page-browse .form-submit {
+  border-radius: 8px;
+  background-color: #424242;
+  color: white;
+}
+
 .form-item-search-api-views-fulltext::before {
   font-family: "Fontawesome";
   content: "";
@@ -485,13 +448,58 @@ div.field.field-name-field-source-library-region {
   display: inline-block;
   position: relative;
   right: 1em;
-  top: 0.15em;
   z-index: 1;
   margin: -0.5em -3em 0 2em;
 }
 
 .form-item-search-api-views-fulltext #edit-search-api-views-fulltext {
   text-indent: 2.2em;
+}
+
+.page-search .views-exposed-widget {
+  float: none;
+}
+.page-search .views-exposed-form .description {
+  display: none;
+}
+.page-search .views-exposed-form .bef-secondary-options .form-item {
+  margin: 0.5em;
+}
+.page-search .form-submit {
+  color: white;
+  border-radius: 6px;
+  padding: 0.75em 1.5em;
+  border: 0;
+  min-width: 10em;
+}
+.page-search .views-reset-button, .page-search .views-submit-button {
+  display: inline-block;
+}
+.page-search .views-exposed-form .form-item {
+  display: inline-block;
+}
+.page-search .views-reset-button {
+  float: left;
+}
+.page-search .views-submit-button {
+  float: right;
+}
+.page-search .views-reset-button .form-submit {
+  background-color: #ffb53e;
+}
+.page-search .views-submit-button .form-submit {
+  background-color: #424242;
+}
+.page-search #edit-field-training-topic-value, .page-search #edit-field-primary-audience-value, .page-search #edit-field-length-of-program-session2-value,
+.page-search #edit-field-conference-name-value, .page-search #edit-field-conference-year-value, .page-search #edit-field-source-library-region {
+  width: 20em;
+}
+.page-search .select2-container .select2-search--inline .select2-search__field {
+  margin: 10px 0 0 0;
+}
+
+.select2-selection--multiple .select2-search--inline .select2-search__field {
+  width: auto !important;
 }
 
 @media screen and (min-width: 20em) {
@@ -508,7 +516,7 @@ div.field.field-name-field-source-library-region {
   }
 
   #header .container #logo img {
-    padding: 2em 0 0 0;
+    padding: 2em 0 0.5em 0;
     text-align: center;
   }
 
@@ -547,56 +555,103 @@ div.field.field-name-field-source-library-region {
   .block-blurb {
     padding: 5px 0;
   }
-}
-.page-taxonomy-term article h1 {
-  font-size: 16px;
-  padding: 0;
-}
-.page-taxonomy-term article .submitted {
-  font-size: 14px;
-}
-.page-taxonomy-term .view-training-resources .views-table .views-field-field-resource-type, .page-taxonomy-term .view-training-resources .views-table .views-field-created, .page-taxonomy-term .view-training-resources .views-table .views-field-field-source-library-region, .page-taxonomy-term .view-training-resources .views-table .views-field-field-piwik-node-views-nb-visits {
-  display: none;
-}
-.page-taxonomy-term .view-all-programs .views-table .views-field-field-primary-audience, .page-taxonomy-term .view-all-programs .views-table .views-field-field-session-frequency, .page-taxonomy-term .view-all-programs .views-table .views-field-field-source-library-region, .page-taxonomy-term .view-all-programs .views-table .views-field-field-piwik-node-views-nb-visits {
-  display: none;
-}
-.page-taxonomy-term .view-conference-presentations .views-table .views-field-field-source-library-region, .page-taxonomy-term .view-conference-presentations .views-table .views-field-field-conference-name, .page-taxonomy-term .view-conference-presentations .views-table .views-field-field-conference-year, .page-taxonomy-term .view-conference-presentations .views-table .views-field-field-piwik-node-views-nb-visits {
-  display: none;
-}
-.page-taxonomy-term div .file-rating,
-.page-taxonomy-term div .field {
-  margin: 1em 0 1em 0;
-}
 
-.embedded-video .player {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
-}
+  .view-frontpage .all-buttons {
+    max-width: 14em;
+  }
 
-.embedded-video .player iframe,
-.embedded-video .player object,
-.embedded-video .player embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
+  .view-search-solr .views-reset-button, .view-search-solr .views-submit-button {
+    padding: 0;
+  }
 
+  .page-taxonomy-term article h1 {
+    font-size: 16px;
+    padding: 0;
+  }
+  .page-taxonomy-term .submitted {
+    font-size: 14px;
+  }
+
+  .view-browse .views-table .views-field-field-resource-type, .view-browse .views-table .views-field-created, .view-browse .views-table .views-field-field-source-library-region, .view-browse .views-table .views-field-field-piwik-node-views-nb-visits,
+  .view-browse .views-table .views-field-field-primary-audience, .view-browse .views-table .views-field-field-session-frequency, .view-browse .views-table .views-field-field-source-library-region, .view-browse .views-table .views-field-field-piwik-node-views-nb-visits,
+  .view-browse .views-table .views-field-field-source-library-region, .view-browse .views-table .views-field-field-conference-name, .view-browse .views-table .views-field-field-conference-year, .view-browse .views-table .views-field-field-piwik-node-views-nb-visits {
+    display: none;
+  }
+
+  .view-search-solr .views-table .views-field-field-rating, .view-search-solr .views-table .views-field-created, .view-search-solr .views-table .views-field-node-field-source-library-region {
+    display: none;
+  }
+
+  div .file-rating,
+  div .field {
+    margin: 1em 0 1em 0;
+  }
+
+  .embedded-video .player {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+  }
+
+  .embedded-video .player iframe,
+  .embedded-video .player object,
+  .embedded-video .player embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
 @media screen and (min-width: 45em) {
-  .view-training-resources .views-table .views-field-field-resource-type, .view-training-resources .views-table .views-field-created, .view-training-resources .views-table .views-field-field-source-library-region {
+  #site-name, .breadcrumb {
+    display: none;
+  }
+
+  .search-bar {
+    display: inline-block;
+    float: right;
+  }
+  .search-bar .form-text {
+    border-radius: 3em;
+    border: 0;
+    padding: 0.5em 5em 0.8em 3em;
+    width: 16.75em;
+    font-size: 1em;
+  }
+  .search-bar .form-submit {
+    background: #1d467d;
+    color: white;
+    border: 0;
+    border-radius: 2em;
+    font-size: 0.8em;
+    margin: 0 0 0 -5.2em;
+    padding: 0.5em 0.75em;
+    position: relative;
+    top: 2px;
+  }
+
+  .block-superfish {
+    display: inline-block;
+    float: left;
+    width: 50%;
+  }
+
+  .page-browse-presentations .views-table .views-field-field-conference-name, .page-browse-presentations .views-table .views-field-field-conference-year {
     display: table-cell;
   }
 
-  .view-all-programs .views-table .views-field-field-primary-audience, .view-all-programs .views-table .views-field-field-session-frequency {
+  .page-browse-resources .views-table .views-field-field-resource-type, .page-browse-resources .views-table .views-field-created, .page-browse-resources .views-table .views-field-field-source-library-region {
     display: table-cell;
   }
 
-  .view-conference-presentations .views-table .views-field-field-conference-name, .view-conference-presentations .views-table .views-field-field-conference-year {
+  .page-browse-programs .views-table .views-field-field-primary-audience, .page-browse-programs .views-table .views-field-field-session-frequency {
+    display: table-cell;
+  }
+
+  .view-search-solr .views-table .views-field-field-rating, .view-search-solr .views-table .views-field-node-field-source-library-region {
     display: table-cell;
   }
 
@@ -610,6 +665,28 @@ div.field.field-name-field-source-library-region {
 
   article > header {
     position: relative;
+  }
+
+  .view-frontpage .view-content .outter-wrapper {
+    text-align: center;
+  }
+  .view-frontpage .view-content .field-inner-wrapper {
+    display: inline-block;
+    margin: 2em 1em 2em 1em;
+    max-width: 12em;
+    vertical-align: top;
+  }
+  .view-frontpage .view-content .views-row {
+    display: inline;
+  }
+  .view-frontpage .all-buttons {
+    max-width: none;
+    text-align: center;
+    margin-top: 2em;
+  }
+  .view-frontpage .all-buttons a {
+    display: inline;
+    margin: 0 1em 0 1em;
   }
 
   .page-node .content img {
@@ -633,7 +710,7 @@ div.field.field-name-field-source-library-region {
     float: left;
     padding: 2em 0 0 2em;
   }
-  .node-file .node-header:before {
+  .node-file .node-header::before {
     font-family: "Fontawesome";
     content: "";
     font-size: 2.875em;
@@ -641,7 +718,7 @@ div.field.field-name-field-source-library-region {
     margin-right: 0.4em;
     margin-bottom: 1em;
     background: #ffb53e;
-    color: #ffffff;
+    color: white;
     float: left;
   }
   .node-file h1 {
@@ -658,19 +735,19 @@ div.field.field-name-field-source-library-region {
     text-align: center;
   }
 
-  .node-file.null .node-header:before {
+  .node-file.null .node-header::before {
     content: "";
   }
 
-  .node-file.DOCX .node-header:before {
+  .node-file.DOCX .node-header::before {
     content: "";
   }
 
-  .node-file.pdf .node-header:before {
+  .node-file.pdf .node-header::before {
     content: "";
   }
 
-  .node-file.ppt .node-header:before {
+  .node-file.ppt .node-header::before {
     content: "";
   }
 
@@ -726,14 +803,14 @@ div.field.field-name-field-source-library-region {
     width: 100%;
     display: block;
   }
-  article.node-file fieldset.collapsible .fieldset-legend a:before {
+  article.node-file fieldset.collapsible .fieldset-legend a::before {
     font-family: "Fontawesome";
     content: "";
     margin-right: 0.25em;
     color: #424242;
   }
 
-  article.node-file fieldset.collapsible.collapsed .fieldset-legend a:before {
+  article.node-file fieldset.collapsible.collapsed .fieldset-legend a::before {
     content: "";
   }
 
@@ -765,15 +842,41 @@ div.field.field-name-field-source-library-region {
   }
 }
 @media screen and (min-width: 60em) {
-  .view-training-resources .views-table .views-field-field-piwik-node-views-nb-visits {
+  .view-frontpage .view-content .outter-wrapper {
+    text-align: center;
+  }
+  .view-frontpage .view-content .field-inner-wrapper {
+    display: inline-block;
+    margin: 2em 1em 2em 1em;
+    max-width: 220px;
+    vertical-align: top;
+  }
+  .view-frontpage .view-content .views-row {
+    display: inline;
+  }
+  .view-frontpage .all-buttons {
+    max-width: none;
+    text-align: center;
+    margin-top: 2em;
+  }
+  .view-frontpage .all-buttons a {
+    display: inline;
+    margin: 0 1em 0 1em;
+  }
+
+  .page-browse-resources .views-table .views-field-field-piwik-node-views-nb-visits {
     display: table-cell;
   }
 
-  .view-all-programs .views-table .views-field-field-source-library-region, .view-all-programs .views-table .views-field-field-piwik-node-views-nb-visits {
+  .page-browse-programs .views-table .views-field-field-source-library-region, .page-browse-programs .views-table .views-field-field-piwik-node-views-nb-visits {
     display: table-cell;
   }
 
-  .view-conference-presentations .views-table .views-field-field-source-library-region, .view-conference-presentations .views-table .views-field-field-piwik-node-views-nb-visits {
+  .page-browse-presentations .views-table .views-field-field-source-library-region, .page-browse-presentations .views-table .views-field-field-piwik-node-views-nb-visits {
+    display: table-cell;
+  }
+
+  .view-search-solr .views-table .views-field-created {
     display: table-cell;
   }
 }
@@ -792,53 +895,6 @@ html {
 
 *, *::after, *::before {
   box-sizing: inherit;
-}
-
-body:before {
-  background-image: -webkit-linear-gradient(left, transparent 0, #eee 0, #eee 20%, transparent 20%, transparent 26.6666666667%, #eee 26.6666666667%, #eee 46.6666666667%, transparent 46.6666666667%, transparent 53.3333333333%, #eee 53.3333333333%, #eee 73.3333333333%, transparent 73.3333333333%, transparent 80%, #eee 80%, #eee 100%, transparent 100%);
-  background-image: -moz-linear-gradient(left, transparent 0, #eee 0, #eee 20%, transparent 20%, transparent 26.6666666667%, #eee 26.6666666667%, #eee 46.6666666667%, transparent 46.6666666667%, transparent 53.3333333333%, #eee 53.3333333333%, #eee 73.3333333333%, transparent 73.3333333333%, transparent 80%, #eee 80%, #eee 100%, transparent 100%);
-  background-image: -ms-linear-gradient(left, transparent 0, #eee 0, #eee 20%, transparent 20%, transparent 26.6666666667%, #eee 26.6666666667%, #eee 46.6666666667%, transparent 46.6666666667%, transparent 53.3333333333%, #eee 53.3333333333%, #eee 73.3333333333%, transparent 73.3333333333%, transparent 80%, #eee 80%, #eee 100%, transparent 100%);
-  background-image: -o-linear-gradient(left, transparent 0, #eee 0, #eee 20%, transparent 20%, transparent 26.6666666667%, #eee 26.6666666667%, #eee 46.6666666667%, transparent 46.6666666667%, transparent 53.3333333333%, #eee 53.3333333333%, #eee 73.3333333333%, transparent 73.3333333333%, transparent 80%, #eee 80%, #eee 100%, transparent 100%);
-  background-image: linear-gradient(to left, transparent 0, #eee 0, #eee 20%, transparent 20%, transparent 26.6666666667%, #eee 26.6666666667%, #eee 46.6666666667%, transparent 46.6666666667%, transparent 53.3333333333%, #eee 53.3333333333%, #eee 73.3333333333%, transparent 73.3333333333%, transparent 80%, #eee 80%, #eee 100%, transparent 100%);
-  content: "";
-  display: inline-block;
-  height: 100%;
-  left: 0;
-  margin: 0 auto;
-  max-width: 68em;
-  opacity: 0.4;
-  pointer-events: none;
-  position: fixed;
-  right: 0;
-  width: 100%;
-  z-index: -1;
-}
-@media screen and (min-width: 20em) {
-  body:before {
-    background-image: -webkit-linear-gradient(left, transparent 0, #eee 0, #eee 20%, transparent 20%, transparent 26.6666666667%, #eee 26.6666666667%, #eee 46.6666666667%, transparent 46.6666666667%, transparent 53.3333333333%, #eee 53.3333333333%, #eee 73.3333333333%, transparent 73.3333333333%, transparent 80%, #eee 80%, #eee 100%, transparent 100%);
-    background-image: -moz-linear-gradient(left, transparent 0, #eee 0, #eee 20%, transparent 20%, transparent 26.6666666667%, #eee 26.6666666667%, #eee 46.6666666667%, transparent 46.6666666667%, transparent 53.3333333333%, #eee 53.3333333333%, #eee 73.3333333333%, transparent 73.3333333333%, transparent 80%, #eee 80%, #eee 100%, transparent 100%);
-    background-image: -ms-linear-gradient(left, transparent 0, #eee 0, #eee 20%, transparent 20%, transparent 26.6666666667%, #eee 26.6666666667%, #eee 46.6666666667%, transparent 46.6666666667%, transparent 53.3333333333%, #eee 53.3333333333%, #eee 73.3333333333%, transparent 73.3333333333%, transparent 80%, #eee 80%, #eee 100%, transparent 100%);
-    background-image: -o-linear-gradient(left, transparent 0, #eee 0, #eee 20%, transparent 20%, transparent 26.6666666667%, #eee 26.6666666667%, #eee 46.6666666667%, transparent 46.6666666667%, transparent 53.3333333333%, #eee 53.3333333333%, #eee 73.3333333333%, transparent 73.3333333333%, transparent 80%, #eee 80%, #eee 100%, transparent 100%);
-    background-image: linear-gradient(to left, transparent 0, #eee 0, #eee 20%, transparent 20%, transparent 26.6666666667%, #eee 26.6666666667%, #eee 46.6666666667%, transparent 46.6666666667%, transparent 53.3333333333%, #eee 53.3333333333%, #eee 73.3333333333%, transparent 73.3333333333%, transparent 80%, #eee 80%, #eee 100%, transparent 100%);
-  }
-}
-@media screen and (min-width: 45em) {
-  body:before {
-    background-image: -webkit-linear-gradient(left, transparent 0, #eee 0, #eee 9.6774193548%, transparent 9.6774193548%, transparent 12.9032258065%, #eee 12.9032258065%, #eee 22.5806451613%, transparent 22.5806451613%, transparent 25.8064516129%, #eee 25.8064516129%, #eee 35.4838709677%, transparent 35.4838709677%, transparent 38.7096774194%, #eee 38.7096774194%, #eee 48.3870967742%, transparent 48.3870967742%, transparent 51.6129032258%, #eee 51.6129032258%, #eee 61.2903225806%, transparent 61.2903225806%, transparent 64.5161290323%, #eee 64.5161290323%, #eee 74.1935483871%, transparent 74.1935483871%, transparent 77.4193548387%, #eee 77.4193548387%, #eee 87.0967741935%, transparent 87.0967741935%, transparent 90.3225806452%, #eee 90.3225806452%, #eee 100%, transparent 100%);
-    background-image: -moz-linear-gradient(left, transparent 0, #eee 0, #eee 9.6774193548%, transparent 9.6774193548%, transparent 12.9032258065%, #eee 12.9032258065%, #eee 22.5806451613%, transparent 22.5806451613%, transparent 25.8064516129%, #eee 25.8064516129%, #eee 35.4838709677%, transparent 35.4838709677%, transparent 38.7096774194%, #eee 38.7096774194%, #eee 48.3870967742%, transparent 48.3870967742%, transparent 51.6129032258%, #eee 51.6129032258%, #eee 61.2903225806%, transparent 61.2903225806%, transparent 64.5161290323%, #eee 64.5161290323%, #eee 74.1935483871%, transparent 74.1935483871%, transparent 77.4193548387%, #eee 77.4193548387%, #eee 87.0967741935%, transparent 87.0967741935%, transparent 90.3225806452%, #eee 90.3225806452%, #eee 100%, transparent 100%);
-    background-image: -ms-linear-gradient(left, transparent 0, #eee 0, #eee 9.6774193548%, transparent 9.6774193548%, transparent 12.9032258065%, #eee 12.9032258065%, #eee 22.5806451613%, transparent 22.5806451613%, transparent 25.8064516129%, #eee 25.8064516129%, #eee 35.4838709677%, transparent 35.4838709677%, transparent 38.7096774194%, #eee 38.7096774194%, #eee 48.3870967742%, transparent 48.3870967742%, transparent 51.6129032258%, #eee 51.6129032258%, #eee 61.2903225806%, transparent 61.2903225806%, transparent 64.5161290323%, #eee 64.5161290323%, #eee 74.1935483871%, transparent 74.1935483871%, transparent 77.4193548387%, #eee 77.4193548387%, #eee 87.0967741935%, transparent 87.0967741935%, transparent 90.3225806452%, #eee 90.3225806452%, #eee 100%, transparent 100%);
-    background-image: -o-linear-gradient(left, transparent 0, #eee 0, #eee 9.6774193548%, transparent 9.6774193548%, transparent 12.9032258065%, #eee 12.9032258065%, #eee 22.5806451613%, transparent 22.5806451613%, transparent 25.8064516129%, #eee 25.8064516129%, #eee 35.4838709677%, transparent 35.4838709677%, transparent 38.7096774194%, #eee 38.7096774194%, #eee 48.3870967742%, transparent 48.3870967742%, transparent 51.6129032258%, #eee 51.6129032258%, #eee 61.2903225806%, transparent 61.2903225806%, transparent 64.5161290323%, #eee 64.5161290323%, #eee 74.1935483871%, transparent 74.1935483871%, transparent 77.4193548387%, #eee 77.4193548387%, #eee 87.0967741935%, transparent 87.0967741935%, transparent 90.3225806452%, #eee 90.3225806452%, #eee 100%, transparent 100%);
-    background-image: linear-gradient(to left, transparent 0, #eee 0, #eee 9.6774193548%, transparent 9.6774193548%, transparent 12.9032258065%, #eee 12.9032258065%, #eee 22.5806451613%, transparent 22.5806451613%, transparent 25.8064516129%, #eee 25.8064516129%, #eee 35.4838709677%, transparent 35.4838709677%, transparent 38.7096774194%, #eee 38.7096774194%, #eee 48.3870967742%, transparent 48.3870967742%, transparent 51.6129032258%, #eee 51.6129032258%, #eee 61.2903225806%, transparent 61.2903225806%, transparent 64.5161290323%, #eee 64.5161290323%, #eee 74.1935483871%, transparent 74.1935483871%, transparent 77.4193548387%, #eee 77.4193548387%, #eee 87.0967741935%, transparent 87.0967741935%, transparent 90.3225806452%, #eee 90.3225806452%, #eee 100%, transparent 100%);
-  }
-}
-@media screen and (min-width: 60em) {
-  body:before {
-    background-image: -webkit-linear-gradient(left, transparent 0, #eee 0, #eee 6.3829787234%, transparent 6.3829787234%, transparent 8.5106382979%, #eee 8.5106382979%, #eee 14.8936170213%, transparent 14.8936170213%, transparent 17.0212765957%, #eee 17.0212765957%, #eee 23.4042553191%, transparent 23.4042553191%, transparent 25.5319148936%, #eee 25.5319148936%, #eee 31.914893617%, transparent 31.914893617%, transparent 34.0425531915%, #eee 34.0425531915%, #eee 40.4255319149%, transparent 40.4255319149%, transparent 42.5531914894%, #eee 42.5531914894%, #eee 48.9361702128%, transparent 48.9361702128%, transparent 51.0638297872%, #eee 51.0638297872%, #eee 57.4468085106%, transparent 57.4468085106%, transparent 59.5744680851%, #eee 59.5744680851%, #eee 65.9574468085%, transparent 65.9574468085%, transparent 68.085106383%, #eee 68.085106383%, #eee 74.4680851064%, transparent 74.4680851064%, transparent 76.5957446809%, #eee 76.5957446809%, #eee 82.9787234043%, transparent 82.9787234043%, transparent 85.1063829787%, #eee 85.1063829787%, #eee 91.4893617021%, transparent 91.4893617021%, transparent 93.6170212766%, #eee 93.6170212766%, #eee 100%, transparent 100%);
-    background-image: -moz-linear-gradient(left, transparent 0, #eee 0, #eee 6.3829787234%, transparent 6.3829787234%, transparent 8.5106382979%, #eee 8.5106382979%, #eee 14.8936170213%, transparent 14.8936170213%, transparent 17.0212765957%, #eee 17.0212765957%, #eee 23.4042553191%, transparent 23.4042553191%, transparent 25.5319148936%, #eee 25.5319148936%, #eee 31.914893617%, transparent 31.914893617%, transparent 34.0425531915%, #eee 34.0425531915%, #eee 40.4255319149%, transparent 40.4255319149%, transparent 42.5531914894%, #eee 42.5531914894%, #eee 48.9361702128%, transparent 48.9361702128%, transparent 51.0638297872%, #eee 51.0638297872%, #eee 57.4468085106%, transparent 57.4468085106%, transparent 59.5744680851%, #eee 59.5744680851%, #eee 65.9574468085%, transparent 65.9574468085%, transparent 68.085106383%, #eee 68.085106383%, #eee 74.4680851064%, transparent 74.4680851064%, transparent 76.5957446809%, #eee 76.5957446809%, #eee 82.9787234043%, transparent 82.9787234043%, transparent 85.1063829787%, #eee 85.1063829787%, #eee 91.4893617021%, transparent 91.4893617021%, transparent 93.6170212766%, #eee 93.6170212766%, #eee 100%, transparent 100%);
-    background-image: -ms-linear-gradient(left, transparent 0, #eee 0, #eee 6.3829787234%, transparent 6.3829787234%, transparent 8.5106382979%, #eee 8.5106382979%, #eee 14.8936170213%, transparent 14.8936170213%, transparent 17.0212765957%, #eee 17.0212765957%, #eee 23.4042553191%, transparent 23.4042553191%, transparent 25.5319148936%, #eee 25.5319148936%, #eee 31.914893617%, transparent 31.914893617%, transparent 34.0425531915%, #eee 34.0425531915%, #eee 40.4255319149%, transparent 40.4255319149%, transparent 42.5531914894%, #eee 42.5531914894%, #eee 48.9361702128%, transparent 48.9361702128%, transparent 51.0638297872%, #eee 51.0638297872%, #eee 57.4468085106%, transparent 57.4468085106%, transparent 59.5744680851%, #eee 59.5744680851%, #eee 65.9574468085%, transparent 65.9574468085%, transparent 68.085106383%, #eee 68.085106383%, #eee 74.4680851064%, transparent 74.4680851064%, transparent 76.5957446809%, #eee 76.5957446809%, #eee 82.9787234043%, transparent 82.9787234043%, transparent 85.1063829787%, #eee 85.1063829787%, #eee 91.4893617021%, transparent 91.4893617021%, transparent 93.6170212766%, #eee 93.6170212766%, #eee 100%, transparent 100%);
-    background-image: -o-linear-gradient(left, transparent 0, #eee 0, #eee 6.3829787234%, transparent 6.3829787234%, transparent 8.5106382979%, #eee 8.5106382979%, #eee 14.8936170213%, transparent 14.8936170213%, transparent 17.0212765957%, #eee 17.0212765957%, #eee 23.4042553191%, transparent 23.4042553191%, transparent 25.5319148936%, #eee 25.5319148936%, #eee 31.914893617%, transparent 31.914893617%, transparent 34.0425531915%, #eee 34.0425531915%, #eee 40.4255319149%, transparent 40.4255319149%, transparent 42.5531914894%, #eee 42.5531914894%, #eee 48.9361702128%, transparent 48.9361702128%, transparent 51.0638297872%, #eee 51.0638297872%, #eee 57.4468085106%, transparent 57.4468085106%, transparent 59.5744680851%, #eee 59.5744680851%, #eee 65.9574468085%, transparent 65.9574468085%, transparent 68.085106383%, #eee 68.085106383%, #eee 74.4680851064%, transparent 74.4680851064%, transparent 76.5957446809%, #eee 76.5957446809%, #eee 82.9787234043%, transparent 82.9787234043%, transparent 85.1063829787%, #eee 85.1063829787%, #eee 91.4893617021%, transparent 91.4893617021%, transparent 93.6170212766%, #eee 93.6170212766%, #eee 100%, transparent 100%);
-    background-image: linear-gradient(to left, transparent 0, #eee 0, #eee 6.3829787234%, transparent 6.3829787234%, transparent 8.5106382979%, #eee 8.5106382979%, #eee 14.8936170213%, transparent 14.8936170213%, transparent 17.0212765957%, #eee 17.0212765957%, #eee 23.4042553191%, transparent 23.4042553191%, transparent 25.5319148936%, #eee 25.5319148936%, #eee 31.914893617%, transparent 31.914893617%, transparent 34.0425531915%, #eee 34.0425531915%, #eee 40.4255319149%, transparent 40.4255319149%, transparent 42.5531914894%, #eee 42.5531914894%, #eee 48.9361702128%, transparent 48.9361702128%, transparent 51.0638297872%, #eee 51.0638297872%, #eee 57.4468085106%, transparent 57.4468085106%, transparent 59.5744680851%, #eee 59.5744680851%, #eee 65.9574468085%, transparent 65.9574468085%, transparent 68.085106383%, #eee 68.085106383%, #eee 74.4680851064%, transparent 74.4680851064%, transparent 76.5957446809%, #eee 76.5957446809%, #eee 82.9787234043%, transparent 82.9787234043%, transparent 85.1063829787%, #eee 85.1063829787%, #eee 91.4893617021%, transparent 91.4893617021%, transparent 93.6170212766%, #eee 93.6170212766%, #eee 100%, transparent 100%);
-  }
 }
 
 label {
@@ -911,53 +967,6 @@ html {
 
 *, *::after, *::before {
   box-sizing: inherit;
-}
-
-body:before {
-  background-image: -webkit-linear-gradient(left, transparent 0, #eee 0, #eee 20%, transparent 20%, transparent 26.6666666667%, #eee 26.6666666667%, #eee 46.6666666667%, transparent 46.6666666667%, transparent 53.3333333333%, #eee 53.3333333333%, #eee 73.3333333333%, transparent 73.3333333333%, transparent 80%, #eee 80%, #eee 100%, transparent 100%);
-  background-image: -moz-linear-gradient(left, transparent 0, #eee 0, #eee 20%, transparent 20%, transparent 26.6666666667%, #eee 26.6666666667%, #eee 46.6666666667%, transparent 46.6666666667%, transparent 53.3333333333%, #eee 53.3333333333%, #eee 73.3333333333%, transparent 73.3333333333%, transparent 80%, #eee 80%, #eee 100%, transparent 100%);
-  background-image: -ms-linear-gradient(left, transparent 0, #eee 0, #eee 20%, transparent 20%, transparent 26.6666666667%, #eee 26.6666666667%, #eee 46.6666666667%, transparent 46.6666666667%, transparent 53.3333333333%, #eee 53.3333333333%, #eee 73.3333333333%, transparent 73.3333333333%, transparent 80%, #eee 80%, #eee 100%, transparent 100%);
-  background-image: -o-linear-gradient(left, transparent 0, #eee 0, #eee 20%, transparent 20%, transparent 26.6666666667%, #eee 26.6666666667%, #eee 46.6666666667%, transparent 46.6666666667%, transparent 53.3333333333%, #eee 53.3333333333%, #eee 73.3333333333%, transparent 73.3333333333%, transparent 80%, #eee 80%, #eee 100%, transparent 100%);
-  background-image: linear-gradient(to left, transparent 0, #eee 0, #eee 20%, transparent 20%, transparent 26.6666666667%, #eee 26.6666666667%, #eee 46.6666666667%, transparent 46.6666666667%, transparent 53.3333333333%, #eee 53.3333333333%, #eee 73.3333333333%, transparent 73.3333333333%, transparent 80%, #eee 80%, #eee 100%, transparent 100%);
-  content: "";
-  display: inline-block;
-  height: 100%;
-  left: 0;
-  margin: 0 auto;
-  max-width: 68em;
-  opacity: 0.4;
-  pointer-events: none;
-  position: fixed;
-  right: 0;
-  width: 100%;
-  z-index: -1;
-}
-@media screen and (min-width: 20em) {
-  body:before {
-    background-image: -webkit-linear-gradient(left, transparent 0, #eee 0, #eee 20%, transparent 20%, transparent 26.6666666667%, #eee 26.6666666667%, #eee 46.6666666667%, transparent 46.6666666667%, transparent 53.3333333333%, #eee 53.3333333333%, #eee 73.3333333333%, transparent 73.3333333333%, transparent 80%, #eee 80%, #eee 100%, transparent 100%);
-    background-image: -moz-linear-gradient(left, transparent 0, #eee 0, #eee 20%, transparent 20%, transparent 26.6666666667%, #eee 26.6666666667%, #eee 46.6666666667%, transparent 46.6666666667%, transparent 53.3333333333%, #eee 53.3333333333%, #eee 73.3333333333%, transparent 73.3333333333%, transparent 80%, #eee 80%, #eee 100%, transparent 100%);
-    background-image: -ms-linear-gradient(left, transparent 0, #eee 0, #eee 20%, transparent 20%, transparent 26.6666666667%, #eee 26.6666666667%, #eee 46.6666666667%, transparent 46.6666666667%, transparent 53.3333333333%, #eee 53.3333333333%, #eee 73.3333333333%, transparent 73.3333333333%, transparent 80%, #eee 80%, #eee 100%, transparent 100%);
-    background-image: -o-linear-gradient(left, transparent 0, #eee 0, #eee 20%, transparent 20%, transparent 26.6666666667%, #eee 26.6666666667%, #eee 46.6666666667%, transparent 46.6666666667%, transparent 53.3333333333%, #eee 53.3333333333%, #eee 73.3333333333%, transparent 73.3333333333%, transparent 80%, #eee 80%, #eee 100%, transparent 100%);
-    background-image: linear-gradient(to left, transparent 0, #eee 0, #eee 20%, transparent 20%, transparent 26.6666666667%, #eee 26.6666666667%, #eee 46.6666666667%, transparent 46.6666666667%, transparent 53.3333333333%, #eee 53.3333333333%, #eee 73.3333333333%, transparent 73.3333333333%, transparent 80%, #eee 80%, #eee 100%, transparent 100%);
-  }
-}
-@media screen and (min-width: 45em) {
-  body:before {
-    background-image: -webkit-linear-gradient(left, transparent 0, #eee 0, #eee 9.6774193548%, transparent 9.6774193548%, transparent 12.9032258065%, #eee 12.9032258065%, #eee 22.5806451613%, transparent 22.5806451613%, transparent 25.8064516129%, #eee 25.8064516129%, #eee 35.4838709677%, transparent 35.4838709677%, transparent 38.7096774194%, #eee 38.7096774194%, #eee 48.3870967742%, transparent 48.3870967742%, transparent 51.6129032258%, #eee 51.6129032258%, #eee 61.2903225806%, transparent 61.2903225806%, transparent 64.5161290323%, #eee 64.5161290323%, #eee 74.1935483871%, transparent 74.1935483871%, transparent 77.4193548387%, #eee 77.4193548387%, #eee 87.0967741935%, transparent 87.0967741935%, transparent 90.3225806452%, #eee 90.3225806452%, #eee 100%, transparent 100%);
-    background-image: -moz-linear-gradient(left, transparent 0, #eee 0, #eee 9.6774193548%, transparent 9.6774193548%, transparent 12.9032258065%, #eee 12.9032258065%, #eee 22.5806451613%, transparent 22.5806451613%, transparent 25.8064516129%, #eee 25.8064516129%, #eee 35.4838709677%, transparent 35.4838709677%, transparent 38.7096774194%, #eee 38.7096774194%, #eee 48.3870967742%, transparent 48.3870967742%, transparent 51.6129032258%, #eee 51.6129032258%, #eee 61.2903225806%, transparent 61.2903225806%, transparent 64.5161290323%, #eee 64.5161290323%, #eee 74.1935483871%, transparent 74.1935483871%, transparent 77.4193548387%, #eee 77.4193548387%, #eee 87.0967741935%, transparent 87.0967741935%, transparent 90.3225806452%, #eee 90.3225806452%, #eee 100%, transparent 100%);
-    background-image: -ms-linear-gradient(left, transparent 0, #eee 0, #eee 9.6774193548%, transparent 9.6774193548%, transparent 12.9032258065%, #eee 12.9032258065%, #eee 22.5806451613%, transparent 22.5806451613%, transparent 25.8064516129%, #eee 25.8064516129%, #eee 35.4838709677%, transparent 35.4838709677%, transparent 38.7096774194%, #eee 38.7096774194%, #eee 48.3870967742%, transparent 48.3870967742%, transparent 51.6129032258%, #eee 51.6129032258%, #eee 61.2903225806%, transparent 61.2903225806%, transparent 64.5161290323%, #eee 64.5161290323%, #eee 74.1935483871%, transparent 74.1935483871%, transparent 77.4193548387%, #eee 77.4193548387%, #eee 87.0967741935%, transparent 87.0967741935%, transparent 90.3225806452%, #eee 90.3225806452%, #eee 100%, transparent 100%);
-    background-image: -o-linear-gradient(left, transparent 0, #eee 0, #eee 9.6774193548%, transparent 9.6774193548%, transparent 12.9032258065%, #eee 12.9032258065%, #eee 22.5806451613%, transparent 22.5806451613%, transparent 25.8064516129%, #eee 25.8064516129%, #eee 35.4838709677%, transparent 35.4838709677%, transparent 38.7096774194%, #eee 38.7096774194%, #eee 48.3870967742%, transparent 48.3870967742%, transparent 51.6129032258%, #eee 51.6129032258%, #eee 61.2903225806%, transparent 61.2903225806%, transparent 64.5161290323%, #eee 64.5161290323%, #eee 74.1935483871%, transparent 74.1935483871%, transparent 77.4193548387%, #eee 77.4193548387%, #eee 87.0967741935%, transparent 87.0967741935%, transparent 90.3225806452%, #eee 90.3225806452%, #eee 100%, transparent 100%);
-    background-image: linear-gradient(to left, transparent 0, #eee 0, #eee 9.6774193548%, transparent 9.6774193548%, transparent 12.9032258065%, #eee 12.9032258065%, #eee 22.5806451613%, transparent 22.5806451613%, transparent 25.8064516129%, #eee 25.8064516129%, #eee 35.4838709677%, transparent 35.4838709677%, transparent 38.7096774194%, #eee 38.7096774194%, #eee 48.3870967742%, transparent 48.3870967742%, transparent 51.6129032258%, #eee 51.6129032258%, #eee 61.2903225806%, transparent 61.2903225806%, transparent 64.5161290323%, #eee 64.5161290323%, #eee 74.1935483871%, transparent 74.1935483871%, transparent 77.4193548387%, #eee 77.4193548387%, #eee 87.0967741935%, transparent 87.0967741935%, transparent 90.3225806452%, #eee 90.3225806452%, #eee 100%, transparent 100%);
-  }
-}
-@media screen and (min-width: 60em) {
-  body:before {
-    background-image: -webkit-linear-gradient(left, transparent 0, #eee 0, #eee 6.3829787234%, transparent 6.3829787234%, transparent 8.5106382979%, #eee 8.5106382979%, #eee 14.8936170213%, transparent 14.8936170213%, transparent 17.0212765957%, #eee 17.0212765957%, #eee 23.4042553191%, transparent 23.4042553191%, transparent 25.5319148936%, #eee 25.5319148936%, #eee 31.914893617%, transparent 31.914893617%, transparent 34.0425531915%, #eee 34.0425531915%, #eee 40.4255319149%, transparent 40.4255319149%, transparent 42.5531914894%, #eee 42.5531914894%, #eee 48.9361702128%, transparent 48.9361702128%, transparent 51.0638297872%, #eee 51.0638297872%, #eee 57.4468085106%, transparent 57.4468085106%, transparent 59.5744680851%, #eee 59.5744680851%, #eee 65.9574468085%, transparent 65.9574468085%, transparent 68.085106383%, #eee 68.085106383%, #eee 74.4680851064%, transparent 74.4680851064%, transparent 76.5957446809%, #eee 76.5957446809%, #eee 82.9787234043%, transparent 82.9787234043%, transparent 85.1063829787%, #eee 85.1063829787%, #eee 91.4893617021%, transparent 91.4893617021%, transparent 93.6170212766%, #eee 93.6170212766%, #eee 100%, transparent 100%);
-    background-image: -moz-linear-gradient(left, transparent 0, #eee 0, #eee 6.3829787234%, transparent 6.3829787234%, transparent 8.5106382979%, #eee 8.5106382979%, #eee 14.8936170213%, transparent 14.8936170213%, transparent 17.0212765957%, #eee 17.0212765957%, #eee 23.4042553191%, transparent 23.4042553191%, transparent 25.5319148936%, #eee 25.5319148936%, #eee 31.914893617%, transparent 31.914893617%, transparent 34.0425531915%, #eee 34.0425531915%, #eee 40.4255319149%, transparent 40.4255319149%, transparent 42.5531914894%, #eee 42.5531914894%, #eee 48.9361702128%, transparent 48.9361702128%, transparent 51.0638297872%, #eee 51.0638297872%, #eee 57.4468085106%, transparent 57.4468085106%, transparent 59.5744680851%, #eee 59.5744680851%, #eee 65.9574468085%, transparent 65.9574468085%, transparent 68.085106383%, #eee 68.085106383%, #eee 74.4680851064%, transparent 74.4680851064%, transparent 76.5957446809%, #eee 76.5957446809%, #eee 82.9787234043%, transparent 82.9787234043%, transparent 85.1063829787%, #eee 85.1063829787%, #eee 91.4893617021%, transparent 91.4893617021%, transparent 93.6170212766%, #eee 93.6170212766%, #eee 100%, transparent 100%);
-    background-image: -ms-linear-gradient(left, transparent 0, #eee 0, #eee 6.3829787234%, transparent 6.3829787234%, transparent 8.5106382979%, #eee 8.5106382979%, #eee 14.8936170213%, transparent 14.8936170213%, transparent 17.0212765957%, #eee 17.0212765957%, #eee 23.4042553191%, transparent 23.4042553191%, transparent 25.5319148936%, #eee 25.5319148936%, #eee 31.914893617%, transparent 31.914893617%, transparent 34.0425531915%, #eee 34.0425531915%, #eee 40.4255319149%, transparent 40.4255319149%, transparent 42.5531914894%, #eee 42.5531914894%, #eee 48.9361702128%, transparent 48.9361702128%, transparent 51.0638297872%, #eee 51.0638297872%, #eee 57.4468085106%, transparent 57.4468085106%, transparent 59.5744680851%, #eee 59.5744680851%, #eee 65.9574468085%, transparent 65.9574468085%, transparent 68.085106383%, #eee 68.085106383%, #eee 74.4680851064%, transparent 74.4680851064%, transparent 76.5957446809%, #eee 76.5957446809%, #eee 82.9787234043%, transparent 82.9787234043%, transparent 85.1063829787%, #eee 85.1063829787%, #eee 91.4893617021%, transparent 91.4893617021%, transparent 93.6170212766%, #eee 93.6170212766%, #eee 100%, transparent 100%);
-    background-image: -o-linear-gradient(left, transparent 0, #eee 0, #eee 6.3829787234%, transparent 6.3829787234%, transparent 8.5106382979%, #eee 8.5106382979%, #eee 14.8936170213%, transparent 14.8936170213%, transparent 17.0212765957%, #eee 17.0212765957%, #eee 23.4042553191%, transparent 23.4042553191%, transparent 25.5319148936%, #eee 25.5319148936%, #eee 31.914893617%, transparent 31.914893617%, transparent 34.0425531915%, #eee 34.0425531915%, #eee 40.4255319149%, transparent 40.4255319149%, transparent 42.5531914894%, #eee 42.5531914894%, #eee 48.9361702128%, transparent 48.9361702128%, transparent 51.0638297872%, #eee 51.0638297872%, #eee 57.4468085106%, transparent 57.4468085106%, transparent 59.5744680851%, #eee 59.5744680851%, #eee 65.9574468085%, transparent 65.9574468085%, transparent 68.085106383%, #eee 68.085106383%, #eee 74.4680851064%, transparent 74.4680851064%, transparent 76.5957446809%, #eee 76.5957446809%, #eee 82.9787234043%, transparent 82.9787234043%, transparent 85.1063829787%, #eee 85.1063829787%, #eee 91.4893617021%, transparent 91.4893617021%, transparent 93.6170212766%, #eee 93.6170212766%, #eee 100%, transparent 100%);
-    background-image: linear-gradient(to left, transparent 0, #eee 0, #eee 6.3829787234%, transparent 6.3829787234%, transparent 8.5106382979%, #eee 8.5106382979%, #eee 14.8936170213%, transparent 14.8936170213%, transparent 17.0212765957%, #eee 17.0212765957%, #eee 23.4042553191%, transparent 23.4042553191%, transparent 25.5319148936%, #eee 25.5319148936%, #eee 31.914893617%, transparent 31.914893617%, transparent 34.0425531915%, #eee 34.0425531915%, #eee 40.4255319149%, transparent 40.4255319149%, transparent 42.5531914894%, #eee 42.5531914894%, #eee 48.9361702128%, transparent 48.9361702128%, transparent 51.0638297872%, #eee 51.0638297872%, #eee 57.4468085106%, transparent 57.4468085106%, transparent 59.5744680851%, #eee 59.5744680851%, #eee 65.9574468085%, transparent 65.9574468085%, transparent 68.085106383%, #eee 68.085106383%, #eee 74.4680851064%, transparent 74.4680851064%, transparent 76.5957446809%, #eee 76.5957446809%, #eee 82.9787234043%, transparent 82.9787234043%, transparent 85.1063829787%, #eee 85.1063829787%, #eee 91.4893617021%, transparent 91.4893617021%, transparent 93.6170212766%, #eee 93.6170212766%, #eee 100%, transparent 100%);
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

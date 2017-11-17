@@ -10,7 +10,7 @@
 
   <header id="header">
     <div class="container">
-      <?php if (($logo) && (!$variables['is_front'])): ?>
+      <?php if ($logo): ?>
         <a href="<?php print $front_page; ?>" title="<?php print $site_name; ?>" rel="home" id="logo">
           <img src="<?php print $logo; ?>" alt="<?php print $site_name; ?>"/>
         </a>

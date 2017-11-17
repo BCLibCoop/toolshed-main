@@ -35,13 +35,13 @@ h1, h2, h3, h4, h5, h6
 h1
   font-size: 2.2em
   font-weight: 300
-  padding: 0 0 0.5em
+  padding: 0.5em 0 0.5em
   margin: 0
 
 h1.title
   font-weight: 700
   font-size: 2em
-  color: #424242
+  color: $dark_highlight
   margin-top: 0.5em
 
 h2
@@ -197,6 +197,10 @@ div.status
   border-radius: 6px
   border: none
 
+// RSS Feed
+.feed-icon
+  display: none
+
 // Taxonomy Pages
 .page-taxonomy-term
   article
@@ -248,22 +252,22 @@ div.status
   width: 10.36em
   padding-top: 0.2em
   border-radius: 1em
-  background: #ffb53e
-  color: #ffffff
+  background: $orange 
+  color: white
   display: block
   text-align: center
   text-transform: uppercase
   margin: 0 auto 0.25em auto
 
-.node-type-program-info .node-file .node-header:before,
+.node-type-program-info .node-file .node-header::before,
 .node-type-program-info .field-name-field-web-link a,
 .node-type-program-info .field-type-file .file-download
     background: #ef4a23
 
-.node-type-conference-presentation .node-file .node-header:before,
+.node-type-conference-presentation .node-file .node-header::before,
 .node-type-conference-presentation .field-name-field-web-link a,
 .node-type-conference-presentation .field-type-file .file-download
-    background: #1d467d
+    background: $dark_blue 
 
 // Link to library region
 div.field.field-name-field-source-library-region
@@ -279,7 +283,7 @@ div.field.field-name-field-source-library-region
   display: block
   text-align: center
   a
-    color: #424242
+    color: $dark_highlight
     font-family: "WeissenhofGrotesk-Medium",Helvetica,Arial,sans-serif
     font-style: normal
 
@@ -311,7 +315,7 @@ div.field.field-name-field-source-library-region
 
     a
       font-weight: 500
-      margin: .5em 0 .5em 0
+      margin: 1.5em 0 0.5em 0
       text-align: center
       text-decoration: none
       transition: all 0.2s linear
@@ -323,11 +327,11 @@ div.field.field-name-field-source-library-region
       display: block
 
   .presentation
-    background: #1d467d
+    background: $dark_blue 
   .programs
     background: #ef4a23
   .resources
-    background: #ffb53e
+    background: $orange
 
   .block-search
     text-align: center
@@ -340,11 +344,11 @@ div.field.field-name-field-source-library-region
       color: #7b7b7b
       background: #fff
 
-  .search-block-form:before
+  .search-block-form::before
     font-family: 'Fontawesome'
     content: '\f002'
     font-size: 1.5em
-    color: #424242
+    color: $dark_highlight
     margin-right: -1.7em
     position: relative
     z-index: 1
@@ -374,20 +378,25 @@ div.field.field-name-field-source-library-region
   border: 0 !important
 .select2-container--default span .select2-selection--multiple,
 .views-exposed-form .form-item .form-text
-    border: 0.1em solid $search_icon_color
-    border-radius: 1em
-    padding: 5px
-    margin: 1px
-    font-size: 1.2em
+  border: 0.1em solid $search_icon_color
+  border-radius: 1em
+  padding: 5px
+  margin: 1px
+  font-size: 1.2em
+.page-browse
+  .form-submit
+    border-radius: 8px
+    background-color: $dark_highlight
+    color: white
+
 .form-item-search-api-views-fulltext::before
   font-family: 'Fontawesome'
   content: '\f002'
   font-size: 1.2em
-  color: #424242
+  color: $dark_highlight
   display: inline-block
   position: relative
   right: 1em
-  top: 0.15em
   z-index: 1
   margin: -0.5em -3em 0 2em
 .form-item-search-api-views-fulltext #edit-search-api-views-fulltext
@@ -395,6 +404,45 @@ div.field.field-name-field-source-library-region
 
 
 // Search
+.page-search
+  .views-exposed-widget
+    float: none
+  .views-exposed-form
+    .description
+      display: none
+    .bef-secondary-options
+      .form-item
+        margin: 0.5em
+  .form-submit
+    color: white 
+    border-radius: 6px
+    padding: 0.75em 1.5em
+    border: 0
+    min-width: 10em
+  .views-reset-button, .views-submit-button
+    display: inline-block
+  .views-exposed-form .form-item
+    display: inline-block
+  .views-reset-button
+    float: left
+  .views-submit-button
+    float: right
+  .views-reset-button .form-submit
+    background-color: $orange
+  .views-submit-button .form-submit
+    background-color: $dark_highlight
+  #edit-field-training-topic-value, #edit-field-primary-audience-value, #edit-field-length-of-program-session2-value,
+  #edit-field-conference-name-value, #edit-field-conference-year-value, #edit-field-source-library-region
+    width: 20em
+  .select2-container .select2-search--inline .select2-search__field
+    margin: 10px 0 0 0
+
+
+// Select2 fix placeholder text from being cut off
+.select2-selection--multiple .select2-search--inline .select2-search__field
+  width: auto !important
+
+
 
 
 
@@ -408,7 +456,7 @@ div.field.field-name-field-source-library-region
   .container
     padding: 0 5px
   #header .container #logo img
-    padding: 2em 0 0 0 
+    padding: 2em 0 0.5em 0 
     text-align: center
   footer
     font-size: 0.75em
@@ -438,60 +486,97 @@ div.field.field-name-field-source-library-region
   .block-blurb
     padding: 5px 0
 
-// Taxonomy Pages
-.page-taxonomy-term
-  article
-    h1
+
+  .view-frontpage
+    .all-buttons
+      max-width: 14em
+  .view-search-solr
+    .views-reset-button, .views-submit-button
+      padding: 0
+
+  // Taxonomy Pages
+  .page-taxonomy-term
+    article h1
       font-size: 16px 
       padding: 0
     .submitted
       font-size: 14px
 
   // Hide table rows
-  .view-training-resources .views-table
-    .views-field-field-resource-type, .views-field-created, .views-field-field-source-library-region, .views-field-field-piwik-node-views-nb-visits
-      display: none
-  .view-all-programs .views-table
-    .views-field-field-primary-audience, .views-field-field-session-frequency, .views-field-field-source-library-region, .views-field-field-piwik-node-views-nb-visits 
-      display: none
-  .view-conference-presentations .views-table
+  .view-browse .views-table
+    .views-field-field-resource-type, .views-field-created, .views-field-field-source-library-region, .views-field-field-piwik-node-views-nb-visits,
+    .views-field-field-primary-audience, .views-field-field-session-frequency, .views-field-field-source-library-region, .views-field-field-piwik-node-views-nb-visits,
     .views-field-field-source-library-region, .views-field-field-conference-name, .views-field-field-conference-year, .views-field-field-piwik-node-views-nb-visits 
+      display: none
+
+  .view-search-solr .views-table
+    .views-field-field-rating, .views-field-created, .views-field-node-field-source-library-region
       display: none
 
   div .file-rating,
   div .field
     margin: 1em 0 1em 0
 
-// Video player
-.embedded-video .player
-  position: relative
-  padding-bottom: 56.25%
-  height: 0
-  overflow: hidden
-  max-width: 100%
-
-.embedded-video .player iframe,
-.embedded-video .player object,
-.embedded-video .player embed
-  position: absolute
-  top: 0
-  left: 0
-  width: 100%
-  height: 100%
+  // Video player
+  .embedded-video .player
+    position: relative
+    padding-bottom: 56.25%
+    height: 0
+    overflow: hidden
+    max-width: 100%
+  
+  .embedded-video .player iframe,
+  .embedded-video .player object,
+  .embedded-video .player embed
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
 
 // Tablet
 @include media($tablet)
+  #site-name, .breadcrumb
+    display: none 
+  .search-bar
+    display: inline-block
+    float: right
+    .form-text
+      border-radius: 3em
+      border: 0
+      padding: 0.5em 5em 0.8em 3em
+      width: 16.75em
+      font-size: 1em
+    .form-submit
+      background: $dark_blue
+      color: white 
+      border: 0
+      border-radius: 2em
+      font-size: 0.8em
+      margin: 0 0 0 -5.2em
+      padding: 0.5em 0.75em
+      position: relative
+      top: 2px
+
+  .block-superfish
+    display: inline-block
+    float: left
+    width: 50%
 
   // Show Browse results columns previously hidden for mobile
-  .view-training-resources .views-table
-    .views-field-field-resource-type, .views-field-created, .views-field-field-source-library-region
-      display: table-cell 
-  .view-all-programs .views-table
-    .views-field-field-primary-audience, .views-field-field-session-frequency, 
-      display: table-cell 
-  .view-conference-presentations .views-table
+  .page-browse-presentations .views-table
     .views-field-field-conference-name, .views-field-field-conference-year
       display: table-cell 
+  .page-browse-resources .views-table
+    .views-field-field-resource-type, .views-field-created, .views-field-field-source-library-region
+      display: table-cell 
+  .page-browse-programs .views-table
+    .views-field-field-primary-audience, .views-field-field-session-frequency, 
+      display: table-cell 
+  .view-search-solr .views-table
+    .views-field-field-rating, .views-field-node-field-source-library-region
+      display: table-cell 
+
   .node-file
     border: 0.1em solid #a0a0a0
     position: relative
@@ -501,6 +586,26 @@ div.field.field-name-field-source-library-region
 
   article > header
     position: relative
+
+  // Frontpage
+  .view-frontpage
+    .view-content
+      .outter-wrapper
+        text-align: center
+      .field-inner-wrapper
+        display: inline-block
+        margin: 2em 1em 2em 1em 
+        max-width: 12em
+        vertical-align: top
+      .views-row
+        display: inline
+    .all-buttons
+      max-width: none 
+      text-align: center
+      margin-top: 2em
+      a
+        display: inline
+        margin: 0 1em 0 1em
 
   // Nodes
   .page-node
@@ -526,7 +631,7 @@ div.field.field-name-field-source-library-region
       width: 70%
       float: left
       padding: 2em 0 0 2em
-    .node-header:before
+    .node-header::before
       font-family: 'Fontawesome'
       content: '\f1c2'
       font-size: 2.875em
@@ -534,13 +639,13 @@ div.field.field-name-field-source-library-region
       margin-right: 0.4em
       margin-bottom: 1em
       background: #ffb53e
-      color: #ffffff
+      color: white
       float: left
     h1
       margin: 0 0 0.5em 0
       font-size: 1.5em
       font-weight: bold
-      color: #424242
+      color: $dark_highlight
     .file-rating
       position: absolute
       top: 0
@@ -548,16 +653,16 @@ div.field.field-name-field-source-library-region
       padding: 2em 2em 0em 0em
       text-align: center
 
-  .node-file.null .node-header:before,
+  .node-file.null .node-header::before,
       content: '\f1c9'
 
-  .node-file.DOCX .node-header:before,
+  .node-file.DOCX .node-header::before,
       content: '\f1c2'
 
-  .node-file.pdf .node-header:before,
+  .node-file.pdf .node-header::before,
       content: '\f1c1'
 
-  .node-file.ppt .node-header:before,
+  .node-file.ppt .node-header::before,
       content: '\f1c4'
 
   .node-file .content
@@ -605,16 +710,16 @@ div.field.field-name-field-source-library-region
       letter-spacing: 0.10em
       padding-left: 15px
       a
-        color: #424242
+        color: $dark_highlight
         width: 100%
         display: block
-      a:before
+      a::before
         font-family: 'Fontawesome'
         content: '\f056'
         margin-right: 0.25em
-        color: #424242
+        color: $dark_highlight
 
-  article.node-file fieldset.collapsible.collapsed .fieldset-legend a:before
+  article.node-file fieldset.collapsible.collapsed .fieldset-legend a::before
     content: '\f055'
     
   .fieldset-legend span.summary
@@ -640,16 +745,39 @@ div.field.field-name-field-source-library-region
 
 // Desktop
 @include media($desktop)
-  .view-training-resources .views-table
+
+  // Frontpage
+  .view-frontpage
+    .view-content
+      .outter-wrapper
+        text-align: center
+      .field-inner-wrapper
+        display: inline-block
+        margin: 2em 1em 2em 1em 
+        max-width: 220px 
+        vertical-align: top
+      .views-row
+        display: inline
+    .all-buttons
+      max-width: none 
+      text-align: center
+      margin-top: 2em
+      a
+        display: inline
+        margin: 0 1em 0 1em
+
+  .page-browse-resources .views-table
     .views-field-field-piwik-node-views-nb-visits
       display: table-cell 
-  .view-all-programs .views-table
+  .page-browse-programs .views-table
     .views-field-field-source-library-region, .views-field-field-piwik-node-views-nb-visits 
       display: table-cell 
-  .view-conference-presentations .views-table
+  .page-browse-presentations .views-table
     .views-field-field-source-library-region, .views-field-field-piwik-node-views-nb-visits 
       display: table-cell 
-
+  .view-search-solr .views-table
+    .views-field-created, 
+      display: table-cell 
 
 // Superfish changes
 .sf-menu.sf-style-toolshed li 
