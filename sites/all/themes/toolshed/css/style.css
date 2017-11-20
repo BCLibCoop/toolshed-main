@@ -502,7 +502,7 @@ div.field.field-name-field-source-library-region {
   width: auto !important;
 }
 
-@media screen and (min-width: 20em) {
+@media screen and (min-width: 16.25em) {
   #site-name, .search-bar, .breadcrumb {
     display: none;
   }
