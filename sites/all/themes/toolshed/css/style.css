@@ -572,6 +572,10 @@ div.field.field-name-field-source-library-region {
     font-size: 14px;
   }
 
+  .facetapi-multiselect {
+    width: 95%;
+  }
+
   .view-browse .views-table .views-field-field-resource-type, .view-browse .views-table .views-field-created, .view-browse .views-table .views-field-field-source-library-region, .view-browse .views-table .views-field-field-piwik-node-views-nb-visits,
   .view-browse .views-table .views-field-field-primary-audience, .view-browse .views-table .views-field-field-session-frequency, .view-browse .views-table .views-field-field-source-library-region, .view-browse .views-table .views-field-field-piwik-node-views-nb-visits,
   .view-browse .views-table .views-field-field-source-library-region, .view-browse .views-table .views-field-field-conference-name, .view-browse .views-table .views-field-field-conference-year, .view-browse .views-table .views-field-field-piwik-node-views-nb-visits {
