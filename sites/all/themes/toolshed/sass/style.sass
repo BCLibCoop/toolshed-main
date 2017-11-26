@@ -539,9 +539,12 @@ div.field.field-name-field-source-library-region
 
 // Tablet
 @include media($tablet)
-  #site-name, .breadcrumb
+  #site-name
     display: none 
-  .search-bar
+  .breadcrumb
+    display: inline-block 
+    padding-top: 1em
+  .search-bar,
     display: inline-block
     float: right
     .form-text
@@ -560,6 +563,7 @@ div.field.field-name-field-source-library-region
       padding: 0.5em 0.75em
       position: relative
       top: 2px
+      min-width: unset
 
   .block-superfish
     display: inline-block
