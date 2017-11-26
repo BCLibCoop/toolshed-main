@@ -691,12 +691,13 @@ div.field.field-name-field-source-library-region {
   }
   .view-frontpage .all-buttons {
     max-width: none;
+    min-width: 14em;
     text-align: center;
     margin-top: 2em;
   }
   .view-frontpage .all-buttons a {
     display: inline;
-    margin: 0 1em 0 1em;
+    margin: 0 1.7em 0 1.7em;
   }
 
   .page-node .content img {
@@ -871,7 +872,7 @@ div.field.field-name-field-source-library-region {
   }
   .view-frontpage .all-buttons a {
     display: inline;
-    margin: 0 1em 0 1em;
+    margin: 0 2.8em 0 2.8em;
   }
 
   .page-browse-resources .views-table .views-field-field-piwik-node-views-nb-visits {
