@@ -230,6 +230,9 @@ function toolshed_ctypes_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -264,9 +267,12 @@ function toolshed_ctypes_strongarm() {
         'custom_settings' => FALSE,
       ),
       'search_result' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_standard' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -279,7 +285,18 @@ function toolshed_ctypes_strongarm() {
           'weight' => '30',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'facebook_comments' => array(
+          'default' => array(
+            'weight' => '11',
+            'visible' => TRUE,
+          ),
+          'search_result' => array(
+            'weight' => '17',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__program_info'] = $strongarm;
@@ -331,6 +348,9 @@ function toolshed_ctypes_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -344,7 +364,14 @@ function toolshed_ctypes_strongarm() {
           'weight' => '15',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'facebook_comments' => array(
+          'default' => array(
+            'weight' => '8',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__training_resource'] = $strongarm;

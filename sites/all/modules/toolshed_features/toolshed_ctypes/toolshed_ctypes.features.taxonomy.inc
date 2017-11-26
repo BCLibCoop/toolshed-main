@@ -12,8 +12,8 @@ function toolshed_ctypes_taxonomy_default_vocabularies() {
     'conferences' => array(
       'name' => 'Conferences',
       'machine_name' => 'conferences',
-      'description' => '',
-      'hierarchy' => 0,
+      'description' => 'Atlantic Provinces',
+      'hierarchy' => 1,
       'module' => 'taxonomy',
       'weight' => 0,
       'rdf_mapping' => array(

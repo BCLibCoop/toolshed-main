@@ -1,0 +1,803 @@
+@import "_config.sass"
+
+// Font styles.
+body
+  margin: 0
+  // Setting up font size, leading and font family
+  //  http://www.markboulton.co.uk/journal/comments/five-simple-steps-to-better-typography
+  font-size: $font-size
+  line-height: 1.5em
+  font-family: "WeissenhofGrotesk-Regular", Helvetica, Arial,sans-serif
+  letter-spacing: 0.03em
+
+// Links
+a
+  &:link, &:visited
+    color: $link 
+    text-decoration: none 
+a
+  &:hover, &:active
+    color: $link_hover
+    text-decoration: none 
+
+// Titles.
+#site-name
+  font-size: 2.2em
+  line-height: 1.3em
+  font-weight: 300
+  padding: 0 0 0.5em
+  margin: 0
+
+h1, h2, h3, h4, h5, h6
+  line-height: 1.3em
+  font-family: "Trebuchet MS", "Helvetica Neue", Arial, Helvetica, sans-serif
+
+h1
+  font-size: 2.2em
+  font-weight: 300
+  padding: 0.5em 0 0.5em
+  margin: 0
+
+h1.title
+  font-weight: 700
+  font-size: 2em
+  color: $dark_highlight
+  margin-top: 0.5em
+
+h2
+  font-size: 1.8em
+  font-weight: 300
+  margin-bottom: 0.75em
+
+h3
+  font-size: 1.4em
+  margin-bottom: 1em
+
+h4
+  font-size: 1.2em
+  margin-bottom: 0.8em
+
+h5
+  font-size: 1.1em
+  font-weight: 600
+  margin-bottom: 0
+
+h6
+  font-size: 1em
+  font-weight: bold
+
+// Paragraph styles.
+p
+  margin: 0 0 1em 0
+
+// List styles.
+ul, ol
+  margin-left: 0
+  padding-left: 0
+
+// Table styles.
+table
+  width: 100%
+
+tr.even,
+tr.odd
+  td
+    padding: 10px 5px
+  td.active
+    background-color: transparent
+
+tr.odd
+  background-color: white
+
+// Code.
+pre, code, tt
+  font: 1em "andale mono", "lucida console", monospace
+  line-height: 1.5
+
+pre
+  background-color: #efefef
+  display: block
+  padding: 5px
+  margin: 5px 0
+  border: 1px solid #aaaaaa
+
+// List styles.
+ul
+  list-style-type: disc
+  ul
+    list-style-type: circle
+    ul
+      list-style-type: square
+      ul
+        list-style-type: circle
+
+ol
+  list-style-type: decimal
+  ol
+    list-style-type: lower-alpha
+    ol
+      list-style-type: decimal
+
+// Abbreviation.
+abbr
+  border-bottom: 1px dotted #666666
+  cursor: help
+  white-space: nowrap
+
+// Images.
+img
+  max-width: 100%
+  height: auto
+  vertical-align: top
+
+// UI improvments.
+#edit-title
+  font-size: 24px
+  width: 99%
+
+#system-themes-form img
+  width: 100px
+
+.form-item .description
+  font-style: italic
+  line-height: 1.2em
+  font-size: 0.8em
+  margin-top: 5px
+  color: #777777
+
+#edit-delete
+  color: #cc0000
+
+// Console, style from slate theme.
+div.messages
+  padding: 9px
+  margin: 1em 0
+  color: #003366
+  background: #bbddff
+  border: 1px solid #aaccee
+  word-wrap: break-word
+
+div.warning
+  color: #884400
+  background: #ffee66
+  border-color: #eedd55
+
+div.error
+  color: white
+  background: #ee6633
+  border-color: #dd5522
+
+div.status
+  color: #336600
+  background: #ccff88
+  border-color: #bbee77
+
+// Region Colors. delete when starting a new theme.
+#sidebar-first,
+#sidebar-second,
+#navigation
+  background: rgba(#aaa, 0.2)
+
+#header
+  background: $green
+  background-image: url('/sites/all/themes/toolshed/images/grid-back.png')
+
+#footer
+  background: $tan
+
+.block-masquerade
+  background: $dark_highlight
+  color: #fff 
+  text-align: center
+  font-size: 0.8em
+.block-masquerade .form-submit
+  display: inline-block
+  padding: 0.75em 1.5em
+  background: $orange
+  border-radius: 6px
+  border: none
+
+// RSS Feed
+.feed-icon
+  display: none
+
+// Taxonomy Pages
+.page-taxonomy-term
+  article
+    margin: 2em 0 2em 0
+    .node-title-a
+      display: none
+    h1
+      font-size: 16px 
+    .submitted
+      font-style: italic
+      font-size: $font-size 8 
+      color: $dark_grey 
+
+
+// Nodes
+
+.page-node
+  .content > div,
+  .content >fieldset
+    margin-top: 1em
+    margin-bottom: 1em
+
+// Hide normal title output
+.node-type-conference-presentation h1.title,
+.node-type-program-info h1.title,
+.node-type-training-resource h1.title
+  display: none
+
+.node-file .comment_forbidden
+  display: none
+
+.node-file .author *
+  display: inline-block
+  vertical-align: top
+  margin: 0 0 0 0
+
+.node-file .author .field-name-field-source-library-region
+    background: none
+    padding: 0
+    border-top: 0
+
+.node-type-program-info .field-type-file .file-download
+      background: #ef4a23
+
+.field-name-field-web-link a,
+.field-type-file .file-download
+  font-family: "WeissenhofGrotesk-Medium", Helvetica, Arial,sans-serif
+  font-size: .875em
+  width: 10.36em
+  padding-top: 0.2em
+  border-radius: 1em
+  background: $orange 
+  color: white
+  display: block
+  text-align: center
+  text-transform: uppercase
+  margin: 0 auto 0.25em auto
+
+.node-type-program-info .node-file .node-header::before,
+.node-type-program-info .field-name-field-web-link a,
+.node-type-program-info .field-type-file .file-download
+    background: #ef4a23
+
+.node-type-conference-presentation .node-file .node-header::before,
+.node-type-conference-presentation .field-name-field-web-link a,
+.node-type-conference-presentation .field-type-file .file-download
+    background: $dark_blue 
+
+// Link to library region
+div.field.field-name-field-source-library-region
+  margin-bottom: 0
+.node-conference-presentation .field-name-field-source-library-region
+  background: #c6d1de
+.field-name-field-source-library-region
+  background: #ffeccf
+  padding: 1em 2em
+  border: 0
+  border-top: 0.1em solid #7b7b7b
+  margin: 0
+  display: block
+  text-align: center
+  a
+    color: $dark_highlight
+    font-family: "WeissenhofGrotesk-Medium",Helvetica,Arial,sans-serif
+    font-style: normal
+
+// Front page
+
+.view-frontpage
+  font-family: "Roboto", Trebuchet, sans-serif
+  padding: 0.5em
+
+  .views-row
+    margin: 2em 0 2em 0
+
+    .views-field
+      text-align: center
+
+  .views-field-type
+    text-transform: uppercase
+    color: #7b7b7b
+    font-weight: bold
+    font-size: 0.8em
+
+  .views-field-title span a
+    color: $dark_highlight
+    font-weight: bold
+
+  .all-buttons
+    max-width: 14em
+    margin: auto
+
+    a
+      font-weight: 500
+      margin: 1.5em 0 0.5em 0
+      text-align: center
+      text-decoration: none
+      transition: all 0.2s linear
+      border-radius: 0.25em
+      color: #fff
+      padding: 0.5em 1em
+      font-size: 0.875em
+      cursor: pointer
+      display: block
+
+  .presentation
+    background: $dark_blue 
+  .programs
+    background: #ef4a23
+  .resources
+    background: $orange
+
+  .block-search
+    text-align: center
+    .form-text
+      border: .1em solid #7b7b7b
+      border-radius: 99em
+      font-size: 1.5em
+      font-weight: 500
+      padding: .2em .5em .2em 2em
+      color: #7b7b7b
+      background: #fff
+
+  .search-block-form::before
+    font-family: 'Fontawesome'
+    content: '\f002'
+    font-size: 1.5em
+    color: $dark_highlight
+    margin-right: -1.7em
+    position: relative
+    z-index: 1
+
+// Toolshed-Blog
+.view-toolshed-blog
+  .views-row
+    margin-bottom: 3em
+
+  .views-field-title a
+    font-size: 1.8em
+    font-weight: 700
+    line-height: 1.2em
+    margin-bottom: 0.75em
+    &:link, &:visited
+      color: $blog_link
+    &:hover, &:active
+      color: $blog_link_hover
+
+  .views-field-created
+    color: #666
+    font-style: italic
+    font-size: 0.8em
+
+// Browsing
+.views-exposed-form .form-item
+  border: 0 !important
+.select2-container--default span .select2-selection--multiple,
+.views-exposed-form .form-item .form-text
+  border: 0.1em solid $search_icon_color
+  border-radius: 1em
+  padding: 5px
+  margin: 1px
+  font-size: 1.2em
+.page-browse
+  .form-submit
+    border-radius: 8px
+    background-color: $dark_highlight
+    color: white
+
+.form-item-search-api-views-fulltext::before
+  font-family: 'Fontawesome'
+  content: '\f002'
+  font-size: 1.2em
+  color: $dark_highlight
+  display: inline-block
+  position: relative
+  right: 1em
+  z-index: 1
+  margin: -0.5em -3em 0 2em
+.form-item-search-api-views-fulltext #edit-search-api-views-fulltext
+    text-indent: 2.2em
+
+
+// Search
+.page-search
+  .views-exposed-widget
+    float: none
+  .views-exposed-form
+    .description
+      display: none
+    .bef-secondary-options
+      .form-item
+        margin: 0.5em
+  .form-submit
+    color: white 
+    border-radius: 6px
+    padding: 0.75em 1.5em
+    border: 0
+    min-width: 10em
+  .views-reset-button, .views-submit-button
+    display: inline-block
+  .views-exposed-form .form-item
+    display: inline-block
+  .views-reset-button
+    float: left
+  .views-submit-button
+    float: right
+  .views-reset-button .form-submit
+    background-color: $orange
+  .views-submit-button .form-submit
+    background-color: $dark_highlight
+  #edit-field-training-topic-value, #edit-field-primary-audience-value, #edit-field-length-of-program-session2-value,
+  #edit-field-conference-name-value, #edit-field-conference-year-value, #edit-field-source-library-region
+    width: 20em
+  .select2-container .select2-search--inline .select2-search__field
+    margin: 10px 0 0 0
+
+
+// Select2 fix placeholder text from being cut off
+.select2-selection--multiple .select2-search--inline .select2-search__field
+  width: auto !important
+
+
+
+
+
+
+// Mobile
+@include media($mobile)
+  #site-name, .search-bar, .breadcrumb
+    display: none 
+  #header .container
+    text-align: center
+  .container
+    padding: 0 5px
+  #header .container #logo img
+    padding: 2em 0 0.5em 0 
+    text-align: center
+  footer
+    font-size: 0.75em
+    padding: 3em 0 2em 0
+  .brought-to
+    h3
+      text-align: center
+      text-transform: uppercase
+      font-size: 1.16em
+    img
+      display: block
+      margin: 10px auto 10px auto
+  footer
+    .creativec, .copyright
+      p
+        margin: 1em 1.5em 1em 1.5em
+        font-size: 1em
+        line-height: 1em
+        text-align: center
+  .front header
+    padding: 1em 1em 0 0 !important
+    .toolshed-logo img
+      height: auto !important
+      padding: 0 0 0 1em
+      margin-left: auto
+      margin-right: auto
+  .block-blurb
+    padding: 5px 0
+
+
+  .view-frontpage
+    .all-buttons
+      max-width: 14em
+  .view-search-solr
+    .views-reset-button, .views-submit-button
+      padding: 0
+
+  // Taxonomy Pages
+  .page-taxonomy-term
+    article h1
+      font-size: 16px 
+      padding: 0
+    .submitted
+      font-size: 14px
+
+  // Form width on Browse pages
+  .facetapi-multiselect
+    width: 95%
+  // Hide table rows
+  .view-browse .views-table
+    .views-field-field-resource-type, .views-field-created, .views-field-field-source-library-region, .views-field-field-piwik-node-views-nb-visits,
+    .views-field-field-primary-audience, .views-field-field-session-frequency, .views-field-field-source-library-region, .views-field-field-piwik-node-views-nb-visits,
+    .views-field-field-source-library-region, .views-field-field-conference-name, .views-field-field-conference-year, .views-field-field-piwik-node-views-nb-visits 
+      display: none
+
+  .view-search-solr .views-table
+    .views-field-field-rating, .views-field-created, .views-field-node-field-source-library-region
+      display: none
+
+  div .file-rating,
+  div .field
+    margin: 1em 0 1em 0
+
+  // Video player
+  .embedded-video .player
+    position: relative
+    padding-bottom: 56.25%
+    height: 0
+    overflow: hidden
+    max-width: 100%
+  
+  .embedded-video .player iframe,
+  .embedded-video .player object,
+  .embedded-video .player embed
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+// Tablet
+@include media($tablet)
+  #site-name
+    display: none 
+  .breadcrumb
+    display: inline-block 
+    padding-top: 1em
+  .search-bar,
+    display: inline-block
+    float: right
+    .form-text
+      border-radius: 3em
+      border: 0
+      padding: 0.5em 5em 0.8em 3em
+      width: 16.75em
+      font-size: 1em
+    .form-submit
+      background: $dark_blue
+      color: white 
+      border: 0
+      border-radius: 2em
+      font-size: 0.8em
+      margin: 0 0 0 -5.2em
+      padding: 0.5em 0.75em
+      position: relative
+      top: 2px
+      min-width: unset
+
+  .block-superfish
+    display: inline-block
+    float: left
+    width: 50%
+
+  // Show Browse results columns previously hidden for mobile
+  .page-browse-presentations .views-table
+    .views-field-field-conference-name, .views-field-field-conference-year
+      display: table-cell 
+  .page-browse-resources .views-table
+    .views-field-field-resource-type, .views-field-created, .views-field-field-source-library-region
+      display: table-cell 
+  .page-browse-programs .views-table
+    .views-field-field-primary-audience, .views-field-field-session-frequency, 
+      display: table-cell 
+  .view-search-solr .views-table
+    .views-field-field-rating, .views-field-node-field-source-library-region
+      display: table-cell 
+
+  .node-file
+    border: 0.1em solid #a0a0a0
+    position: relative
+    //padding: 1em 2em
+    .field-name-field-program-description
+      display: inline-block
+
+  article > header
+    position: relative
+
+  // Frontpage
+  .view-frontpage
+    .view-content
+      .outter-wrapper
+        text-align: center
+      .field-inner-wrapper
+        display: inline-block
+        margin: 2em 1em 2em 1em 
+        max-width: 12em
+        vertical-align: top
+      .views-row
+        display: inline
+    .all-buttons
+      max-width: none 
+      min-width: 14em
+      text-align: center
+      margin-top: 2em
+      a
+        display: inline
+        margin: 0 1.7em 0 1.7em
+
+  // Nodes
+  .page-node
+    .content
+      img
+        border: solid 1px $grey
+        padding: 0.5em
+
+  // Taxonomy pages
+  .page-taxonomy-term
+    .node-file
+      .node-header
+        float: none
+      .links
+        padding-bottom: 2em
+
+  div
+    display: block
+
+  // File type icon
+  .node-file
+    .node-header
+      width: 70%
+      float: left
+      padding: 2em 0 0 2em
+    .node-header::before
+      font-family: 'Fontawesome'
+      content: '\f1c2'
+      font-size: 2.875em
+      padding: 0.6em 0.4em
+      margin-right: 0.4em
+      margin-bottom: 1em
+      background: #ffb53e
+      color: white
+      float: left
+    h1
+      margin: 0 0 0.5em 0
+      font-size: 1.5em
+      font-weight: bold
+      color: $dark_highlight
+    .file-rating
+      position: absolute
+      top: 0
+      right: 0
+      padding: 2em 2em 0em 0em
+      text-align: center
+
+  .node-file.null .node-header::before,
+      content: '\f1c9'
+
+  .node-file.DOCX .node-header::before,
+      content: '\f1c2'
+
+  .node-file.pdf .node-header::before,
+      content: '\f1c1'
+
+  .node-file.ppt .node-header::before,
+      content: '\f1c4'
+
+  .node-file .content
+    .field-name-field-description,
+    .field-name-field-program-description,
+    .field-name-field-primary-audience,
+    .field-name-field-secondary-audience,
+    .field-name-field-resources-required-materia,
+    .field-name-field-community-partners-,
+    .field-name-field-project-link,
+    .field-name-field-funding-grants-foundations,
+    .field-name-field-program-budget,
+    .field-name-field-program-goals,
+    .field-name-field-feedback-from-participants,
+    .field-name-field-highlights,
+    .field-name-field-what-would-you-change,
+    .field-name-field-program-photos,
+    .field-name-field-video-link
+      padding: 1em 2em
+      clear: both
+
+  .node-file .inline-group
+    width: 40%
+    display: inline-block
+    vertical-align: top
+    padding: 0 2em 2em 2em
+
+  // Collapsible
+  article.node-file fieldset.collapsible
+    padding: 0
+    margin: 0
+    border: 0
+    min-height: 3.25em
+    legend
+      background: #d9d9d9
+      display: block
+      width: 98%
+      margin: 0
+      padding: 0.5em
+    .fieldset-legend
+      background: none
+      font-family: "Roboto",Trebuchet,sans-serif
+      font-weight: bold
+      text-transform: uppercase
+      letter-spacing: 0.10em
+      padding-left: 15px
+      a
+        color: $dark_highlight
+        width: 100%
+        display: block
+      a::before
+        font-family: 'Fontawesome'
+        content: '\f056'
+        margin-right: 0.25em
+        color: $dark_highlight
+
+  article.node-file fieldset.collapsible.collapsed .fieldset-legend a::before
+    content: '\f055'
+    
+  .fieldset-legend span.summary
+    display: none
+
+  fieldset.collapsible
+    position: relative
+    .fieldset-legend
+      display: block
+
+  fieldset.group-conf-materials
+    .field-name-field-training-doc-file,
+      padding: 1em 2em 0 2em
+  .field-name-field-training-topic
+      padding: 0.5em 2em 0 2em
+
+  // Footer
+  .brought-to 
+    text-align: center
+    img
+      display: inline
+      margin: 2em
+
+// Desktop
+@include media($desktop)
+
+  // Frontpage
+  .view-frontpage
+    .view-content
+      .outter-wrapper
+        text-align: center
+      .field-inner-wrapper
+        display: inline-block
+        margin: 2em 1em 2em 1em 
+        max-width: 220px 
+        vertical-align: top
+      .views-row
+        display: inline
+    .all-buttons
+      max-width: none 
+      text-align: center
+      margin-top: 2em
+      a
+        display: inline
+        margin: 0 2.8em 0 2.8em
+
+  .page-browse-resources .views-table
+    .views-field-field-piwik-node-views-nb-visits
+      display: table-cell 
+  .page-browse-programs .views-table
+    .views-field-field-source-library-region, .views-field-field-piwik-node-views-nb-visits 
+      display: table-cell 
+  .page-browse-presentations .views-table
+    .views-field-field-source-library-region, .views-field-field-piwik-node-views-nb-visits 
+      display: table-cell 
+  .view-search-solr .views-table
+    .views-field-created, 
+      display: table-cell 
+
+// Superfish changes
+.sf-menu.sf-style-toolshed li 
+  background: $dark_green
+.sf-menu.sf-style-toolshed li:hover,
+.sf-menu.sf-style-toolshed li.sfHover 
+  background: $green 
+
+// Import custom styles.
+@import _custom.sass
+
+// If you want to use the SCSS syntax, use this.
+@import _custom.scss
+
+

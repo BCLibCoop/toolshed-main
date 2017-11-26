@@ -24,7 +24,7 @@ function toolshed_blocks_default_fe_block_boxes() {
   $fe_block_boxes->info = 'TAL Copyright Information';
   $fe_block_boxes->format = 'full_html';
   $fe_block_boxes->machine_name = 'copyright';
-  $fe_block_boxes->body = '<p><span class="copyright">©2016 The Alberta Library &amp; The BC Libraries Cooperative</span></p>
+  $fe_block_boxes->body = '<p><span class="copyright">©2016-[date:custom:Y] The Alberta Library &amp; The BC Libraries Cooperative</span></p>
 ';
 
   $export['copyright'] = $fe_block_boxes;
@@ -64,7 +64,7 @@ function toolshed_blocks_default_fe_block_boxes() {
   $fe_block_boxes->info = 'All the logos for the brought-by section';
   $fe_block_boxes->format = 'full_html';
   $fe_block_boxes->machine_name = 'sponsor_logos';
-  $fe_block_boxes->body = '<p><img alt="" src="/sites/default/files/alberta-library.png" style="width: 181px; height: 39px;" /> <img alt="" src="/sites/default/files/manitoba.png" style="width: 184px; height: 35px;" /> <img alt="" src="/sites/default/files/saskatchewan.png" style="width: 173px; height: 38px;" /> <img alt="" src="/sites/default/files/bcla_logo_small.png" style="width: 99px; height: 93x;" /> <img alt="" src="/sites/default/files/bclibraries.png" style="width: 99px; height: 126px;" /></p>
+  $fe_block_boxes->body = '<div><span id="ab_library"><img alt="The Alberta Library" src="/sites/default/files/alberta-library.png" width="181" height="39p" /></span><span id="mb_library"><img alt="Manitoba" src="/sites/default/files/manitoba.png" width="184" height="35" /></span><span id="sk_library"><img alt="Saskatchewan Libraries" src="/sites/default/files/saskatchewan.png" width="173" height="38" /></span><span id="bc_library"><img alt="British Columbia Library Association" src="/sites/default/files/bcla_logo_small.png" width="99" height="93" /></span><span id="bc_lib_coop"><img alt="BC Libraries Cooperative" src="/sites/default/files/bclibraries.png" width="99" height="126" /></span></div>
 ';
 
   $export['sponsor_logos'] = $fe_block_boxes;

@@ -24,23 +24,17 @@ function toolshed_blocks_default_fe_block_settings() {
       'authenticated user' => 2,
     ),
     'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
       'seven' => array(
         'region' => '',
         'status' => 0,
         'theme' => 'seven',
         'weight' => 0,
       ),
-      'sky' => array(
-        'region' => 'menu_bar',
-        'status' => 1,
-        'theme' => 'sky',
-        'weight' => -30,
+      'toolshed' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'toolshed',
+        'weight' => -52,
       ),
     ),
     'title' => '',
@@ -57,23 +51,17 @@ function toolshed_blocks_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
       'seven' => array(
         'region' => '',
         'status' => 0,
         'theme' => 'seven',
         'weight' => 0,
       ),
-      'sky' => array(
+      'toolshed' => array(
         'region' => 'footer',
         'status' => 1,
-        'theme' => 'sky',
-        'weight' => -35,
+        'theme' => 'toolshed',
+        'weight' => -50,
       ),
     ),
     'title' => '',
@@ -90,23 +78,17 @@ function toolshed_blocks_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
       'seven' => array(
         'region' => '',
         'status' => 0,
         'theme' => 'seven',
         'weight' => 0,
       ),
-      'sky' => array(
+      'toolshed' => array(
         'region' => 'footer',
         'status' => 1,
-        'theme' => 'sky',
-        'weight' => -36,
+        'theme' => 'toolshed',
+        'weight' => -51,
       ),
     ),
     'title' => '',
@@ -123,23 +105,17 @@ function toolshed_blocks_default_fe_block_settings() {
     'pages' => '<front>',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
       'seven' => array(
         'region' => '',
         'status' => 0,
         'theme' => 'seven',
         'weight' => 0,
       ),
-      'sky' => array(
-        'region' => 'menu_bar',
+      'toolshed' => array(
+        'region' => 'header',
         'status' => 1,
-        'theme' => 'sky',
-        'weight' => -32,
+        'theme' => 'toolshed',
+        'weight' => -39,
       ),
     ),
     'title' => '',
@@ -158,23 +134,17 @@ function toolshed_blocks_default_fe_block_settings() {
       'anonymous user' => 1,
     ),
     'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
       'seven' => array(
         'region' => '',
         'status' => 0,
         'theme' => 'seven',
         'weight' => 0,
       ),
-      'sky' => array(
-        'region' => 'menu_bar',
-        'status' => 1,
-        'theme' => 'sky',
-        'weight' => -31,
+      'toolshed' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'toolshed',
+        'weight' => -27,
       ),
     ),
     'title' => 'Login link',
@@ -191,23 +161,17 @@ function toolshed_blocks_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
       'seven' => array(
         'region' => '',
         'status' => 0,
         'theme' => 'seven',
         'weight' => 0,
       ),
-      'sky' => array(
+      'toolshed' => array(
         'region' => 'footer',
         'status' => 1,
-        'theme' => 'sky',
-        'weight' => -37,
+        'theme' => 'toolshed',
+        'weight' => -52,
       ),
     ),
     'title' => 'Brought to you by: ',
@@ -224,23 +188,17 @@ function toolshed_blocks_default_fe_block_settings() {
     'pages' => '<front>',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
       'seven' => array(
         'region' => '',
         'status' => 0,
         'theme' => 'seven',
         'weight' => 0,
       ),
-      'sky' => array(
-        'region' => 'header',
-        'status' => 1,
-        'theme' => 'sky',
-        'weight' => -33,
+      'toolshed' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'toolshed',
+        'weight' => -40,
       ),
     ),
     'title' => '',
@@ -257,26 +215,20 @@ function toolshed_blocks_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
       'seven' => array(
         'region' => '',
         'status' => 0,
         'theme' => 'seven',
         'weight' => 0,
       ),
-      'sky' => array(
-        'region' => 'menu_bar',
+      'toolshed' => array(
+        'region' => 'header',
         'status' => 1,
-        'theme' => 'sky',
-        'weight' => -33,
+        'theme' => 'toolshed',
+        'weight' => -38,
       ),
     ),
-    'title' => '',
+    'title' => '<none>',
     'visibility' => 0,
   );
 
@@ -290,23 +242,17 @@ function toolshed_blocks_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
       'seven' => array(
         'region' => '',
         'status' => 0,
         'theme' => 'seven',
         'weight' => 0,
       ),
-      'sky' => array(
+      'toolshed' => array(
         'region' => '',
         'status' => 0,
-        'theme' => 'sky',
-        'weight' => 0,
+        'theme' => 'toolshed',
+        'weight' => -7,
       ),
     ),
     'title' => '',
@@ -323,23 +269,17 @@ function toolshed_blocks_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
       'seven' => array(
         'region' => '',
         'status' => 0,
         'theme' => 'seven',
         'weight' => 0,
       ),
-      'sky' => array(
+      'toolshed' => array(
         'region' => '',
         'status' => 0,
-        'theme' => 'sky',
-        'weight' => 0,
+        'theme' => 'toolshed',
+        'weight' => -6,
       ),
     ),
     'title' => '',
@@ -356,23 +296,17 @@ function toolshed_blocks_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
       'seven' => array(
         'region' => '',
         'status' => 0,
         'theme' => 'seven',
         'weight' => 0,
       ),
-      'sky' => array(
+      'toolshed' => array(
         'region' => '',
         'status' => 0,
-        'theme' => 'sky',
-        'weight' => 0,
+        'theme' => 'toolshed',
+        'weight' => -5,
       ),
     ),
     'title' => '',
