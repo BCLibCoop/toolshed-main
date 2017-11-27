@@ -439,6 +439,17 @@ div.field.field-name-field-source-library-region {
   background-color: #424242;
   color: white;
 }
+.page-browse .block-facetapi .form-item-facets::after {
+  font-family: "Fontawesome";
+  content: "";
+  font-size: 1.2em;
+  color: #424242;
+  display: inline-block;
+  position: relative;
+  right: 4em;
+  z-index: 1;
+  margin: -0.5em -3em 0 2em;
+}
 
 .form-item-search-api-views-fulltext::before {
   font-family: "Fontawesome";
@@ -496,6 +507,19 @@ div.field.field-name-field-source-library-region {
 }
 .page-search .select2-container .select2-search--inline .select2-search__field {
   margin: 10px 0 0 0;
+}
+.page-search .view-search-solr .form-type-select::after {
+  font-family: "Fontawesome";
+  content: "";
+  font-size: 1.2em;
+  color: #424242;
+  display: inline-block;
+  position: relative;
+  right: 2em;
+  z-index: 1;
+}
+.page-search .view-search-solr .form-item-field-content-type-selector::after {
+  color: white;
 }
 
 .select2-selection--multiple .select2-search--inline .select2-search__field {
