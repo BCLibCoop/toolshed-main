@@ -670,7 +670,7 @@ div.field.field-name-field-source-library-region {
   .block-superfish {
     display: inline-block;
     float: left;
-    width: 75%;
+    width: 31em;
   }
 
   .page-browse-presentations .views-table .views-field-field-conference-name, .page-browse-presentations .views-table .views-field-field-conference-year {
