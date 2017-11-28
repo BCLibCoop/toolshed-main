@@ -823,6 +823,7 @@ function toolshed_ctypes_field_default_field_bases() {
         'Computer Basics' => 'Computer Basics',
         'Content Creation' => 'Content Creation',
         'Data Management' => 'Data Management',
+        'Digital Divide' => 'Digital Divide',
         'English as a Second Language' => 'English as a Second Language',
         'Fund Development' => 'Fund Development',
         'Gamification' => 'Gamification',
