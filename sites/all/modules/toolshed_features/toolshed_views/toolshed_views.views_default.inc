@@ -88,11 +88,10 @@ function toolshed_views_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = 'Resource Title';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Presentation Topic */
+  /* Field: Content: Training Topic */
   $handler->display->display_options['fields']['field_training_topic']['id'] = 'field_training_topic';
   $handler->display->display_options['fields']['field_training_topic']['table'] = 'field_data_field_training_topic';
   $handler->display->display_options['fields']['field_training_topic']['field'] = 'field_training_topic';
-  $handler->display->display_options['fields']['field_training_topic']['label'] = 'Training Topic';
   $handler->display->display_options['fields']['field_training_topic']['delta_offset'] = '0';
   /* Field: Field: Source Library */
   $handler->display->display_options['fields']['field_source_library_region']['id'] = 'field_source_library_region';
@@ -2150,7 +2149,7 @@ function toolshed_views_views_default_views() {
   $handler->display->display_options['fields']['field_authot']['field'] = 'field_authot';
   $handler->display->display_options['fields']['field_authot']['label'] = 'Presenter';
   $handler->display->display_options['fields']['field_authot']['click_sort_column'] = 'format';
-  /* Field: Content: Presentation Topic */
+  /* Field: Content: Training Topic */
   $handler->display->display_options['fields']['field_training_topic']['id'] = 'field_training_topic';
   $handler->display->display_options['fields']['field_training_topic']['table'] = 'field_data_field_training_topic';
   $handler->display->display_options['fields']['field_training_topic']['field'] = 'field_training_topic';
@@ -4625,11 +4624,10 @@ function toolshed_views_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Presentation Topic */
+  /* Field: Content: Training Topic */
   $handler->display->display_options['fields']['field_training_topic']['id'] = 'field_training_topic';
   $handler->display->display_options['fields']['field_training_topic']['table'] = 'field_data_field_training_topic';
   $handler->display->display_options['fields']['field_training_topic']['field'] = 'field_training_topic';
-  $handler->display->display_options['fields']['field_training_topic']['label'] = 'Training Topic';
   $handler->display->display_options['fields']['field_training_topic']['delta_offset'] = '0';
   /* Field: Content: Rating */
   $handler->display->display_options['fields']['field_rating']['id'] = 'field_rating';
@@ -4715,7 +4713,7 @@ function toolshed_views_views_default_views() {
     3 => 0,
   );
   $handler->display->display_options['filters']['field_resource_type_value']['expose']['reduce'] = TRUE;
-  /* Filter criterion: Content: Presentation Topic (field_training_topic) */
+  /* Filter criterion: Content: Training Topic (field_training_topic) */
   $handler->display->display_options['filters']['field_training_topic_value']['id'] = 'field_training_topic_value';
   $handler->display->display_options['filters']['field_training_topic_value']['table'] = 'field_data_field_training_topic';
   $handler->display->display_options['filters']['field_training_topic_value']['field'] = 'field_training_topic_value';
@@ -5023,7 +5021,7 @@ function toolshed_views_views_default_views() {
     3 => 0,
   );
   $handler->display->display_options['filters']['field_resource_type_value']['expose']['reduce'] = TRUE;
-  /* Filter criterion: Content: Presentation Topic (field_training_topic) */
+  /* Filter criterion: Content: Training Topic (field_training_topic) */
   $handler->display->display_options['filters']['field_training_topic_value']['id'] = 'field_training_topic_value';
   $handler->display->display_options['filters']['field_training_topic_value']['table'] = 'field_data_field_training_topic';
   $handler->display->display_options['filters']['field_training_topic_value']['field'] = 'field_training_topic_value';
@@ -5554,7 +5552,7 @@ function toolshed_views_views_default_views() {
     3 => 0,
   );
   $handler->display->display_options['filters']['field_resource_type_value']['expose']['reduce'] = TRUE;
-  /* Filter criterion: Content: Presentation Topic (field_training_topic) */
+  /* Filter criterion: Content: Training Topic (field_training_topic) */
   $handler->display->display_options['filters']['field_training_topic_value']['id'] = 'field_training_topic_value';
   $handler->display->display_options['filters']['field_training_topic_value']['table'] = 'field_data_field_training_topic';
   $handler->display->display_options['filters']['field_training_topic_value']['field'] = 'field_training_topic_value';
@@ -5823,7 +5821,7 @@ function toolshed_views_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Presentation Topic */
+  /* Field: Content: Training Topic */
   $handler->display->display_options['fields']['field_training_topic']['id'] = 'field_training_topic';
   $handler->display->display_options['fields']['field_training_topic']['table'] = 'field_data_field_training_topic';
   $handler->display->display_options['fields']['field_training_topic']['field'] = 'field_training_topic';
@@ -5881,7 +5879,7 @@ function toolshed_views_views_default_views() {
     4 => 0,
     3 => 0,
   );
-  /* Filter criterion: Content: Presentation Topic (field_training_topic) */
+  /* Filter criterion: Content: Training Topic (field_training_topic) */
   $handler->display->display_options['filters']['field_training_topic_value']['id'] = 'field_training_topic_value';
   $handler->display->display_options['filters']['field_training_topic_value']['table'] = 'field_data_field_training_topic';
   $handler->display->display_options['filters']['field_training_topic_value']['field'] = 'field_training_topic_value';
@@ -6198,7 +6196,7 @@ function toolshed_views_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Presentation Topic */
+  /* Field: Content: Training Topic */
   $handler->display->display_options['fields']['field_training_topic']['id'] = 'field_training_topic';
   $handler->display->display_options['fields']['field_training_topic']['table'] = 'field_data_field_training_topic';
   $handler->display->display_options['fields']['field_training_topic']['field'] = 'field_training_topic';
@@ -6364,7 +6362,7 @@ function toolshed_views_views_default_views() {
     4 => 0,
     3 => 0,
   );
-  /* Filter criterion: Content: Presentation Topic (field_training_topic) */
+  /* Filter criterion: Content: Training Topic (field_training_topic) */
   $handler->display->display_options['filters']['field_training_topic_value_1']['id'] = 'field_training_topic_value_1';
   $handler->display->display_options['filters']['field_training_topic_value_1']['table'] = 'field_data_field_training_topic';
   $handler->display->display_options['filters']['field_training_topic_value_1']['field'] = 'field_training_topic_value';
@@ -6413,7 +6411,7 @@ function toolshed_views_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Presentation Topic */
+  /* Field: Content: Training Topic */
   $handler->display->display_options['fields']['field_training_topic']['id'] = 'field_training_topic';
   $handler->display->display_options['fields']['field_training_topic']['table'] = 'field_data_field_training_topic';
   $handler->display->display_options['fields']['field_training_topic']['field'] = 'field_training_topic';
@@ -6497,7 +6495,7 @@ function toolshed_views_views_default_views() {
     1 => 0,
     3 => 0,
   );
-  /* Filter criterion: Content: Presentation Topic (field_training_topic) */
+  /* Filter criterion: Content: Training Topic (field_training_topic) */
   $handler->display->display_options['filters']['field_training_topic_value']['id'] = 'field_training_topic_value';
   $handler->display->display_options['filters']['field_training_topic_value']['table'] = 'field_data_field_training_topic';
   $handler->display->display_options['filters']['field_training_topic_value']['field'] = 'field_training_topic_value';
@@ -6539,7 +6537,7 @@ function toolshed_views_views_default_views() {
   $handler->display->display_options['fields']['title']['element_type'] = '0';
   $handler->display->display_options['fields']['title']['element_label_type'] = '0';
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Content: Presentation Topic */
+  /* Field: Content: Training Topic */
   $handler->display->display_options['fields']['field_training_topic']['id'] = 'field_training_topic';
   $handler->display->display_options['fields']['field_training_topic']['table'] = 'field_data_field_training_topic';
   $handler->display->display_options['fields']['field_training_topic']['field'] = 'field_training_topic';
@@ -6629,7 +6627,7 @@ function toolshed_views_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Presentation Topic */
+  /* Field: Content: Training Topic */
   $handler->display->display_options['fields']['field_training_topic']['id'] = 'field_training_topic';
   $handler->display->display_options['fields']['field_training_topic']['table'] = 'field_data_field_training_topic';
   $handler->display->display_options['fields']['field_training_topic']['field'] = 'field_training_topic';
@@ -6709,7 +6707,7 @@ function toolshed_views_views_default_views() {
     4 => 0,
     3 => 0,
   );
-  /* Filter criterion: Content: Presentation Topic (field_training_topic) */
+  /* Filter criterion: Content: Training Topic (field_training_topic) */
   $handler->display->display_options['filters']['field_training_topic_value']['id'] = 'field_training_topic_value';
   $handler->display->display_options['filters']['field_training_topic_value']['table'] = 'field_data_field_training_topic';
   $handler->display->display_options['filters']['field_training_topic_value']['field'] = 'field_training_topic_value';
