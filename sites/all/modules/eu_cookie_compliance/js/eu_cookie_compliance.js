@@ -91,9 +91,7 @@
       // For some reason, the tab outerHeight is -10 if we don't use a timeout
       // function to reveal the tab.
       setTimeout(function () {
-        var tabHeight = $('.eu-cookie-withdraw-tab').outerHeight();
-
-        $html.animate({ top: -1 * (height - tabHeight) }, Drupal.settings.eu_cookie_compliance.popup_delay, null, function () {
+        $html.animate({ top: -1 * height }, Drupal.settings.eu_cookie_compliance.popup_delay, null, function () {
           $html.trigger('eu_cookie_compliance_popup_open');
         });
       }.bind($html, height), 0);
@@ -110,11 +108,9 @@
       // For some reason, the tab outerHeight is -10 if we don't use a timeout
       // function to reveal the tab.
       setTimeout(function () {
-        var tabHeight = $('.eu-cookie-withdraw-tab').outerHeight();
-
-            $html.animate({ bottom: -1 * (height - tabHeight) }, Drupal.settings.eu_cookie_compliance.popup_delay, null, function () {
-              $html.trigger('eu_cookie_compliance_popup_open');
-            });
+        $html.animate({ bottom: -1 * height }, Drupal.settings.eu_cookie_compliance.popup_delay, null, function () {
+          $html.trigger('eu_cookie_compliance_popup_open');
+        });
       }.bind($html, height), 0);
     }
   };
@@ -124,11 +120,10 @@
     var $tab = $('.eu-cookie-withdraw-tab');
     var $bannerIsShowing = Drupal.settings.eu_cookie_compliance.popup_position ? parseInt($wrapper.css('top')) === 0 : parseInt($wrapper.css('bottom')) === 0;
     var topBottom = (Drupal.settings.eu_cookie_compliance.popup_position ? 'top' : 'bottom');
-    var tabHeight = $tab.outerHeight();
     var height = $wrapper.outerHeight();
     if (Drupal.settings.eu_cookie_compliance.popup_position) {
       if ($bannerIsShowing) {
-        $wrapper.animate({'top' : -1 * (height - tabHeight)}, Drupal.settings.eu_cookie_compliance.popup_delay);
+        $wrapper.animate({'top' : -1 * height}, Drupal.settings.eu_cookie_compliance.popup_delay);
       }
       else {
         $wrapper.animate({'top' : 0}, Drupal.settings.eu_cookie_compliance.popup_delay);
@@ -136,7 +131,7 @@
     }
     else {
       if ($bannerIsShowing) {
-        $wrapper.animate({'bottom' : -1 * (height - tabHeight)}, Drupal.settings.eu_cookie_compliance.popup_delay);
+        $wrapper.animate({'bottom' : -1 * height}, Drupal.settings.eu_cookie_compliance.popup_delay);
       }
       else {
         $wrapper.animate({'bottom' : 0}, Drupal.settings.eu_cookie_compliance.popup_delay);
@@ -255,7 +250,13 @@
 
   Drupal.eu_cookie_compliance.declineAction = function () {
     Drupal.eu_cookie_compliance.setStatus(0);
-    $('#sliding-popup').animate({ bottom: $('#sliding-popup').outerHeight() * -1 }).trigger('eu_cookie_compliance_popup_close');
+    let popup = $('#sliding-popup');
+    if (popup.hasClass('sliding-popup-top')) {
+      popup.animate({ top: popup.outerHeight() * -1 }).trigger('eu_cookie_compliance_popup_close');
+    }
+    else {
+      popup.animate({ bottom: popup.outerHeight() * -1 }).trigger('eu_cookie_compliance_popup_close');
+    }
   };
 
   Drupal.eu_cookie_compliance.withdrawAction = function () {
@@ -266,7 +267,7 @@
   Drupal.eu_cookie_compliance.moreInfoAction = function () {
     if (Drupal.settings.eu_cookie_compliance.disagree_do_not_show_popup) {
       Drupal.eu_cookie_compliance.setStatus(0);
-      $('#sliding-popup').remove().trigger('eu_cookie_compliance_popup_close');
+      $('#sliding-popup').trigger('eu_cookie_compliance_popup_close').remove();
     } else {
       if (Drupal.settings.eu_cookie_compliance.popup_link_new_window) {
         window.open(Drupal.settings.eu_cookie_compliance.popup_link);
@@ -300,7 +301,7 @@
           $('#sliding-popup').html(Drupal.settings.eu_cookie_compliance.popup_html_agreed).animate({ top: 0 }, Drupal.settings.eu_cookie_compliance.popup_delay);
           Drupal.eu_cookie_compliance.attachHideEvents();
         } else if (status === 1) {
-          $('#sliding-popup').remove().trigger('eu_cookie_compliance_popup_close');
+          $('#sliding-popup').trigger('eu_cookie_compliance_popup_close').remove();
         }
       });
     } else {
@@ -309,7 +310,7 @@
           $('#sliding-popup').html(Drupal.settings.eu_cookie_compliance.popup_html_agreed).animate({ bottom: 0 }, Drupal.settings.eu_cookie_compliance.popup_delay);
           Drupal.eu_cookie_compliance.attachHideEvents();
         } else if (status === 1) {
-          $('#sliding-popup').remove().trigger('eu_cookie_compliance_popup_close');
+          $('#sliding-popup').trigger('eu_cookie_compliance_popup_close').remove();
         }
       });
     }

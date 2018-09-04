@@ -23,7 +23,7 @@ function eu_cookie_compliance_menu() {
     'file' => 'eu_cookie_compliance.admin.inc',
   );
   $items['eu-cookie-compliance/store_consent/%'] = array(
-    'title' => 'EU Cookie Compliance STore Consent',
+    'title' => 'EU Cookie Compliance store consent',
     'page callback' => 'eu_cookie_compliance_store_consent',
     'page arguments' => array(2),
     'access arguments' => array('display EU Cookie Compliance popup'),
@@ -31,7 +31,7 @@ function eu_cookie_compliance_menu() {
   );
   if (module_exists('geoip') || module_exists('smart_ip') || extension_loaded('geoip')) {
     $items['eu-cookie-compliance-check'] = array(
-      'title' => 'Check if visit is in EU',
+      'title' => 'Check if visit is from EU',
       'page callback' => 'eu_cookie_compliance_json',
       'type' => MENU_CALLBACK,
       'access arguments' => array('display EU Cookie Compliance popup'),
@@ -176,11 +176,11 @@ function eu_cookie_compliance_page_build(&$page) {
         $show_disagree_buttons = FALSE;
       }
 
-      $method = !empty($popup_settings['method']) ? $popup_settings['method'] : 'default';
+      $method = !empty($popup_settings['method']) ? $popup_settings['method'] : 'opt_in';
 
       if ($method == 'auto') {
-        $dnt = !empty($_SERVER['HTTP_DNT']) ? $_SERVER['HTTP_DNT'] : NULL;
-        if ($dnt === 0) {
+        $dnt = isset($_SERVER['HTTP_DNT']) ? $_SERVER['HTTP_DNT'] : NULL;
+        if ((int) $dnt === 0 && $dnt !== NULL) {
           $method = 'default';
         }
         else {
@@ -309,14 +309,12 @@ function eu_cookie_compliance_page_build(&$page) {
       $load_disabled_scripts = '';
       $disabled_javascripts = _eu_cookie_compliance_explode_multiple_lines($disabled_javascripts);
       foreach ($disabled_javascripts as $script) {
-        if (substr($script, 0, 4) !== 'http') {
+        if (substr($script, 0, 4) !== 'http' && substr($script, 0, 2) !== '//') {
           $script = '/' . $script;
         }
-        $load_disabled_scripts .= '
-          var scriptTag = document.createElement(\'script\');
-          scriptTag.src = \'' . $script . '\';
-          document.body.appendChild(scriptTag);
-        ';
+        $load_disabled_scripts .= 'var scriptTag = document.createElement("script");';
+        $load_disabled_scripts .= 'scriptTag.src = ' . drupal_json_encode($script) . ';';
+        $load_disabled_scripts .= 'document.body.appendChild(scriptTag);';
       }
     }
 
@@ -324,7 +322,7 @@ function eu_cookie_compliance_page_build(&$page) {
 
     // Add the cookie name inline, since Drupal.settings will not be available
     // if the script is loaded in the header.
-    drupal_add_js('var eu_cookie_compliance_cookie_name = "' . (!empty($popup_settings['cookie_name']) ? $popup_settings['cookie_name'] : '') . '";', array('type' => 'inline', 'scope' => $script_scope));
+    drupal_add_js('var eu_cookie_compliance_cookie_name = ' . drupal_json_encode(!empty($popup_settings['cookie_name']) ? $popup_settings['cookie_name'] : '') . ';', array('type' => 'inline', 'scope' => $script_scope));
 
     drupal_add_js(array('eu_cookie_compliance' => $data['variables']), array('type' => 'setting', 'scope' => $script_scope));
     if (!isset($popup_settings['use_bare_css']) || $popup_settings['use_bare_css'] == 0) {
@@ -403,12 +401,23 @@ function eu_cookie_compliance_theme() {
 function eu_cookie_compliance_get_settings($setting = 'all') {
   $popup_settings = variable_get('eu_cookie_compliance', array());
 
+  // Certain settings are required, so make sure they always return a valid
+  // value. For example, this might not be set properly for all translations
+  // when using translations of the variables.
+  $required_settings = array(
+    'consent_storage_method' => 'do_not_store',
+    'show_disagree_button' => TRUE,
+  );
+
   if ($setting == 'all') {
     return $popup_settings;
   }
 
   if (isset($popup_settings[$setting])) {
     return $popup_settings[$setting];
+  }
+  elseif (isset($required_settings[$setting])) {
+    return $required_settings[$setting];
   }
   else {
     return NULL;
