@@ -319,10 +319,10 @@ function toolshed_ctypes_field_group_info() {
     'label' => 'Evaluation',
     'weight' => '10',
     'children' => array(
-      0 => 'field_program_goals',
+      0 => 'field_feedback_from_participants',
       1 => 'field_highlights',
-      2 => 'field_what_would_you_change',
-      3 => 'field_feedback_from_participants',
+      2 => 'field_program_goals',
+      3 => 'field_what_would_you_change',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -410,11 +410,11 @@ function toolshed_ctypes_field_group_info() {
     'label' => 'Resources',
     'weight' => '9',
     'children' => array(
-      0 => 'field_resources_required_materia',
-      1 => 'field_guest_speakers',
-      2 => 'field_funding_grants_foundations',
+      0 => 'field_community_partners_',
+      1 => 'field_funding_grants_foundations',
+      2 => 'field_guest_speakers',
       3 => 'field_program_budget',
-      4 => 'field_community_partners_',
+      4 => 'field_resources_required_materia',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

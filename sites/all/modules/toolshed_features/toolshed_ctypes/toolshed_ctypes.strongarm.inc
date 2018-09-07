@@ -355,13 +355,13 @@ function toolshed_ctypes_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '1',
+          'weight' => '0',
         ),
         'mollom' => array(
-          'weight' => '14',
+          'weight' => '12',
         ),
         'path' => array(
-          'weight' => '15',
+          'weight' => '13',
         ),
       ),
       'display' => array(

@@ -387,6 +387,84 @@ function toolshed_ctypes_field_default_field_bases() {
     'type' => 'piwik_stats',
   );
 
+  // Exported field_base: 'field_presentation_audience'.
+  $field_bases['field_presentation_audience'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_presentation_audience',
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'audience',
+          'parent' => 0,
+        ),
+      ),
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
+  );
+
+  // Exported field_base: 'field_presentation_format'.
+  $field_bases['field_presentation_format'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_presentation_format',
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'resource_type',
+          'parent' => 0,
+        ),
+      ),
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
+  );
+
+  // Exported field_base: 'field_presentation_topic'.
+  $field_bases['field_presentation_topic'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_presentation_topic',
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'resource_topics',
+          'parent' => 0,
+        ),
+      ),
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
+  );
+
   // Exported field_base: 'field_presenter_s_'.
   $field_bases['field_presenter_s_'] = array(
     'active' => 1,
@@ -458,6 +536,32 @@ function toolshed_ctypes_field_default_field_bases() {
     'type' => 'fivestar',
   );
 
+  // Exported field_base: 'field_program_audience'.
+  $field_bases['field_program_audience'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_program_audience',
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'audience',
+          'parent' => 0,
+        ),
+      ),
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
+  );
+
   // Exported field_base: 'field_program_budget'.
   $field_bases['field_program_budget'] = array(
     'active' => 1,
@@ -496,6 +600,32 @@ function toolshed_ctypes_field_default_field_bases() {
     'settings' => array(),
     'translatable' => 0,
     'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_program_format'.
+  $field_bases['field_program_format'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_program_format',
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'resource_type',
+          'parent' => 0,
+        ),
+      ),
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
   );
 
   // Exported field_base: 'field_program_goals'.
@@ -563,6 +693,32 @@ function toolshed_ctypes_field_default_field_bases() {
     'type' => 'file',
   );
 
+  // Exported field_base: 'field_program_topic'.
+  $field_bases['field_program_topic'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_program_topic',
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'resource_topics',
+          'parent' => 0,
+        ),
+      ),
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
+  );
+
   // Exported field_base: 'field_project_link'.
   $field_bases['field_project_link'] = array(
     'active' => 1,
@@ -609,6 +765,58 @@ function toolshed_ctypes_field_default_field_bases() {
     'type' => 'fivestar',
   );
 
+  // Exported field_base: 'field_resource_audience'.
+  $field_bases['field_resource_audience'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_resource_audience',
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'audience',
+          'parent' => 0,
+        ),
+      ),
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
+  );
+
+  // Exported field_base: 'field_resource_topic'.
+  $field_bases['field_resource_topic'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_resource_topic',
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'resource_topics',
+          'parent' => 0,
+        ),
+      ),
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
+  );
+
   // Exported field_base: 'field_resource_type'.
   $field_bases['field_resource_type'] = array(
     'active' => 1,
@@ -638,6 +846,32 @@ function toolshed_ctypes_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'list_text',
+  );
+
+  // Exported field_base: 'field_resource_type_taxonomy'.
+  $field_bases['field_resource_type_taxonomy'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_resource_type_taxonomy',
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'resource_type',
+          'parent' => 0,
+        ),
+      ),
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
   );
 
   // Exported field_base: 'field_resources_required_materia'.
@@ -812,46 +1046,67 @@ function toolshed_ctypes_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
+        'Academic Libraries' => 'Academic Libraries',
         'Accessibility' => 'Accessibility',
         'Adult Programming' => 'Adult Programming',
+        'Animation' => 'Animation',
+        'Board Governance' => 'Board Governance',
+        'Board Management' => 'Board Management',
         'Cataloging' => 'Cataloging',
         'Children\'s Programming' => 'Children\'s Programming',
         'Coding' => 'Coding',
         'Collection Development' => 'Collection Development',
+        'Comics' => 'Comics',
         'Communications' => 'Communications',
         'Computer Applications' => 'Computer Applications',
         'Computer Basics' => 'Computer Basics',
         'Content Creation' => 'Content Creation',
         'Data Management' => 'Data Management',
         'Digital Divide' => 'Digital Divide',
+        'Digital Literacy' => 'Digital Literacy',
+        'eBooks' => 'eBooks',
         'English as a Second Language' => 'English as a Second Language',
+        'Fitness' => 'Fitness',
+        'FNMI' => 'FNMI',
+        'Formats' => 'Formats',
         'Fund Development' => 'Fund Development',
         'Gamification' => 'Gamification',
+        'Genres' => 'Genres',
+        'Graphic Novels' => 'Graphic Novels',
         'Indigenous People\'s Programming' => 'Indigenous People\'s Programming',
         'Information Literacy' => 'Information Literacy',
         'Internet' => 'Internet',
         'Internet of Things' => 'internet of Things',
         'Interlibrary Loans' => 'Interlibrary Loans',
-        'eBooks' => 'eBooks',
         'ILS' => 'ILS',
         'K-12' => 'K-12',
         'LGBTQ*' => 'LGBTQ*',
+        'Librarianship' => 'Librarianship',
+        'Libraries' => 'Libraries',
         'Library Advocacy' => 'Library Advocacy',
+        'Library Automation' => 'Library Automation',
+        'Library Careers' => 'Library Careers',
         'Library Databases' => 'Library Databases',
         'Library Education' => 'Library Education',
         'Library Governance' => 'Library Governance',
+        'Library Programs' => 'Library Programs',
         'Library Information' => 'Library Information',
         'Library Policy' => 'Library Policy',
         'Library Trustees' => 'Library Trustees',
         'Makerspace' => 'Makerspace',
+        'Manga' => 'Manga',
         'New TAL Online' => 'New TAL Online',
         'Open Education Resources' => 'Open Education Resources',
+        'Patrons' => 'Patrons',
+        'Physical' => 'Literacy',
         'Poster Presentation' => 'Poster Presentation',
         'Privacy' => 'Privacy',
         'Public Speaking' => 'Public Speaking',
         'Reader\'s Advisory' => 'Reader\'s Advisory',
         'Reconciliation' => 'Reconciliation',
+        'Reluctant Readers' => 'Reluctant Readers',
         'School Library Programming' => 'School Library Programming',
+        'Self Check Out' => 'Self Check Out',
         'Senior\'s Programming' => 'Senior\'s Programming',
         'Social Media' => 'Social Media',
         'Storytelling' => 'Storytelling',
@@ -859,12 +1114,14 @@ function toolshed_ctypes_field_default_field_bases() {
         'Staff Development' => 'Staff Development',
         'Story Time' => 'Story Time',
         'Summer Reading Club' => 'Summer Reading Club',
+        'Teaching' => 'Teaching',
         'Technology Training' => 'Technology Training',
         'Teen' => 'Teen',
         'Truth and Reconciliation' => 'Truth and Reconciliation',
         'Tween' => 'Tween',
         'User Experience' => 'User Experience',
         'Video Conference' => 'Video Conference',
+        'Virtual Reality' => 'Virtual Reality',
         'Web Development' => 'Web Development',
       ),
       'allowed_values_function' => '',
