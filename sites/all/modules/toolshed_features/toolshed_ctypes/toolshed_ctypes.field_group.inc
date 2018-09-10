@@ -340,6 +340,36 @@ function toolshed_ctypes_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_policy_source|node|policy|form';
+  $field_group->group_name = 'group_policy_source';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'policy';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Policy URL or File Upload',
+    'weight' => '6',
+    'children' => array(
+      0 => 'field_policy_file',
+      1 => 'field_policy_link',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Policy URL or File Upload',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-policy-source field-group-fieldset',
+        'description' => 'Please provide a link to the policy or upload it as a file',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_presenters|node|program_info|default';
   $field_group->group_name = 'group_presenters';
   $field_group->entity_type = 'node';
@@ -468,6 +498,7 @@ function toolshed_ctypes_field_group_info() {
   t('Evaluation');
   t('File Rating');
   t('Materials');
+  t('Policy URL or File Upload');
   t('Presenters');
   t('Resources');
   t('Stats');
