@@ -1216,7 +1216,7 @@ function toolshed_ctypes_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_source_library_region',
-    'label' => 'Subbmitting Library',
+    'label' => 'Submitting Library',
     'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -3520,7 +3520,7 @@ function toolshed_ctypes_field_default_field_instances() {
   t('Resources required (materials/supplies; food/refreshments, etc.)');
   t('Secondary Audience');
   t('Source Library');
-  t('Subbmitting Library');
+  t('Submitting Library');
   t('Tags');
   t('Training Guide File');
   t('Training Topic');
