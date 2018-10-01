@@ -4,6 +4,9 @@
  * Allow uploading of files directly to AmazonS3 via the browser using CORS.
  */
 
+use Drupal\amazons3\S3Client;
+use Aws\S3\Model\PostObject;
+
 /**
  * Implements hook_menu().
  */
@@ -53,15 +56,13 @@ function amazons3_cors_element_info() {
 
 /**
  * Implements hook_libraries_info_alter().
+ * NNELS custom
  */
-function amazons3_cors_libraries_info_alter(&$libraries) {
-  // Include the s3browserupload.class.php file with the rest of the AWSSDK
-  // files. We need this in order to generate a signature for our CORS request.
-  $libraries['awssdk']['files']['php'][] = 'extensions/s3browserupload.class.php';
-  // Include our custom modification of the above class, because it hardcodes
-  // the S3 hostname.
-  $libraries['awssdk']['files']['php'][] = 'customs3browserupload.class.php';
-}
+//function amazons3_cors_libraries_info_alter(&$libraries) {
+//  // Include the s3browserupload.class.php file with the rest of the AWSSDK
+//  // files. We need this in order to generate a signature for our CORS request.
+//  $libraries['awssdk']['files']['php'][] = 'extensions/s3browserupload.class.php';
+//}
 
 /**
  * Implements hook_field_widget_info().
@@ -278,6 +279,11 @@ function amazons3_cors_upload_process($element, &$form_state, &$form) {
     $form['#' . $element['upload_button']['#name'] . '_s3_acl'] = $element['#s3_acl'];
   }
 
+  // And always store the field name, entity type and bundle.
+  $form['#' . $element['upload_button']['#name'] . '_field_name'] = $element['#field_name'];
+  $form['#' . $element['upload_button']['#name'] . '_entity_type'] = $element['#entity_type'];
+  $form['#' . $element['upload_button']['#name'] . '_bundle'] = $element['#bundle'];
+
   if ($fid && $element['#file']) {
     $element['filelink'] = array(
       '#type' => 'markup',
@@ -364,13 +370,19 @@ function amazons3_cors_upload_value(&$element, $input = FALSE, $form_state = NUL
     $file->filename = $input['filename'];
     $file->filesize = $input['filesize'];
     $file->filemime = $input['filemime'];
-    $base_dir = (!empty($element['#upload_location']) && $element['#upload_location'] != 's3://') ? str_replace('s3://', '', $element['#upload_location']) . '/' : '';
-    $file->uri = 's3://' . $base_dir . $file->filename;
+
+    //Nab the triggering element again from global
+    $triggering_element = $_POST['_triggering_element_name'];
+
+    //Re-run for the object path once more
+    $object_path = amazons3_cors_reconstruct_object_path($form_state, $triggering_element, $element);
+    $file->uri = 's3://' . variable_get('amazons3_bucket') . '/' . $object_path
+      . '/' . $file->filename;
     $file->status = 0;
     $file->timestamp = REQUEST_TIME;
 
     // Save the uploaded file to the file_managed table.
-    if ($file = file_save($file)) {
+    if ($file = _amazons3_cors_file_save($file)) {
       $return['fid'] = $file->fid;
     }
     else {
@@ -450,6 +462,7 @@ function amazons3_cors_upload_validate(&$element, &$form_state) {
   if (!$element['#extended']) {
     form_set_value($element, $element['fid']['#value'], $form_state);
   }
+
 }
 
 function amazons3_cors_upload_js($form, &$form_state) {
@@ -511,77 +524,72 @@ function amazons3_cors_sign_request() {
   // Careful what you do with these. Who knows what kind of garbage someone may
   // have POSTed to this callback. Gross!
   $filename = $_POST['filename'];
-  $filesize = (int) $_POST['filesize'];
   $filemime = $_POST['filemime'];
   $triggering_element = $_POST['triggering_element'];
+  // @todo: make this configurable?
+  $expires = '+5 minutes';
 
   // Get the actual form from the form cache.
   list($form, $form_state) = ajax_get_form();
   drupal_process_form($form['#form_id'], $form, $form_state);
 
-  // Check for an upload location and make use of it.
-  $base_dir = '';
-  if (isset($form['#' . $triggering_element . '_location'])) {
-    $base_dir = str_replace('s3://', '', $form['#' . $triggering_element . '_location']);
-  }
-
   $acl = isset($form['#' . $triggering_element . '_s3_acl']) ? $form['#' . $triggering_element . '_s3_acl'] : 'private';
 
-  if (!libraries_load('awssdk')) {
-    $error = t('Unable to load the AWS SDK. Please check you have installed the library correctly and configured your S3 credentials.');
-    // @todo: How do you send an ajax error?
-  }
-  else if (!class_exists('CustomS3BrowserUpload')) {
-    // @todo: improve this error message
-    $error = t('Cannot load AmazonS3 class. Please check the awssdk is installed correctly');
-  }
+  //Hand off object path construction to a helper function given the form_state
+  $file_directory = amazons3_cors_reconstruct_object_path($form_state,
+    $triggering_element);
+  $field_info = field_info_field($form_state['complete form']['#' .
+  $triggering_element . '_field_name']);
+
+  // Determine the bucket from the field info settings.
+  $bucket = !empty($field_info['settings']['amazons3_bucket']) ? $field_info['settings']['amazons3_bucket'] : variable_get('amazons3_bucket', '');
+
+  //Build a suitable URI for POST object to S3
+  $file_directory_uri = "{$field_info['settings']['uri_scheme']}://$bucket/$file_directory";
+
+  // Determine the cid prefix match for common cache entries.
+  $path_info = pathinfo($filename);
+  $cid = 'doctrine:[metadata:' . $file_directory_uri . '/' . $path_info['filename'];
+
+  // Clear the cache for any common entries to make sure file_create_filename
+  // returns an unused filepath.
+  cache_clear_all($cid, 'cache_amazons3_metadata', TRUE);
+
+  // Use file_create_filename() to avoid overwriting an existing file.
+  $uri = file_create_filename($filename, $file_directory_uri);
+  $s3_key = str_replace($bucket . '/', '', file_uri_target($uri));
 
   try {
-    #printf("DEBUG:%s:%d:%s\n",__FILE__,__LINE__,"Start block");
-    $bucket = variable_get('amazons3_bucket', '');
-    // Make sure we're not overwritting an existing file.
-    $directory = 's3://';
-    $directory .= !empty($base_dir) ? ($base_dir . '/') : '';
-    #printf("DEBUG:%s:%d:%s\n",__FILE__,__LINE__,"Create filename");
-    $filename = str_replace($directory, '', file_create_filename($filename, $directory));
-    #printf("DEBUG:%s:%d:%s\n",__FILE__,__LINE__,"Done create filename");
+    $s3_client = S3Client::factory(array('signature' => 'v4'));
 
-    #printf("DEBUG:%s:%d:%s\n",__FILE__,__LINE__,"Init class");
-    $s3 = new CustomS3BrowserUpload();
-    #printf("DEBUG:%s:%d:%s\n",__FILE__,__LINE__,"Start variable");
-    $hostname = variable_get('amazons3_hostname', '');
-    if (!empty($hostname)) {
-        $s3->set_hostname($hostname);
-        $s3->allow_hostname_override(FALSE);
-    }
-    if (variable_get('amazons3_ssl', 1) === 0) { 
-	    //$s3->disable_ssl(); 
-	    $s3->use_ssl = false; // disable_ssl spews a warning
-    }
-    if (variable_get('amazons3_path_style', 0)) { $s3->enable_path_style(); }
-    #printf("DEBUG:%s:%d:%s\n",__FILE__,__LINE__,"Done variables");
-
-    $opts = array(
-      'key' => !empty($base_dir) ? $base_dir . '/' . $filename : $filename,
-      'Content-Type' => '^' . $filemime,
+    $options = array(
       'acl' => $acl,
+      // Use a "starts-with" comparison instead of "equals" for Content-Type.
+      // Not sure this is actually needed, but the old code did it.
+      'Content-Type' => "^$filemime",
+      // The root folder is not part of a file's URI, so we don't add it until
+      // we're setting up the final s3 parameters.
+      'key' => $s3_key,
+      'ttd' => $expires,
     );
-    #printf("DEBUG:%s:%d:%s\n",__FILE__,__LINE__,"opts");
+    //Always use Signature V4 here
+    module_load_include('php', 'amazons3_cors', 'src/amazons3Cors/awssdk.postobject-v4.class');
+    $post_object = new Drupal\amazons3Cors\PostObjectV4($s3_client, $bucket, $options);
+    $post_object->prepareData();
 
-    // @todo: make this configurable.
-    $expires = '+5 minutes';
-    $params = $s3->generate_upload_parameters($bucket, $expires, $opts);
-    $params['file_real'] = $filename;
-    #printf("DEBUG:%s:%d:%s\n",__FILE__,__LINE__,"params");
+    $data = array(
+      'inputs' => $post_object->getFormInputs(),
+      'form' => $post_object->getFormAttributes(),
+      // Tell our javascript the filename that Drupal ended up giving us.
+      'file_real' => drupal_basename($s3_key),
+    );
   }
   catch(Exception $e) {
     // Do something w/ errors.
-    printf("DEBUG:%s:%d:%s\n",__FILE__,__LINE__,"Exception: ".$e);
-    var_dump($e->getTrace());
   }
 
   drupal_add_http_header('Content-Type', 'application/json; charset=utf-8');
-  print json_encode($params);
+  print json_encode($data);
   exit;
 }
 
@@ -609,4 +617,63 @@ function _amazons3_cors_acl_options() {
     'bucket-owner-read' => t('Bucket owner gets READ access. (bucket-owner-read)'),
     'bucket-owner-full-control' => t('Bucket owner has full control. (bucket-owner-full-control)'),
   );
+}
+
+/**
+ * Custom version of drupal's file_save() function.
+ *
+ * This function exists because we need to call file_save() before saving the
+ * file's s3 metadata to the cache. Which means that the filesize() function
+ * will fail. So we skip it in this version, since we already know the size.
+ *
+ * @param $file
+ *   A file object returned by file_load().
+ *
+ * @return
+ *   The updated file object.
+ *
+ * @see hook_file_insert()
+ * @see hook_file_update()
+ */
+function _amazons3_cors_file_save(stdClass $file) {
+  module_invoke_all('file_presave', $file);
+  module_invoke_all('entity_presave', $file, 'file');
+
+  drupal_write_record('file_managed', $file);
+  // Inform modules about the newly added file.
+  module_invoke_all('file_insert', $file);
+  module_invoke_all('entity_insert', $file, 'file');
+
+  // Clear the static loading cache.
+  entity_get_controller('file')->resetCache(array($file->fid));
+
+  return $file;
+}
+
+/**
+ * Helper function to get around the lack of persistance of the Filefield
+ * Path enabled URI after AJAX upload.
+ * @param $form_state
+ * @param $triggering_element
+ * @param array $element
+ * @return mixed
+ */
+function amazons3_cors_reconstruct_object_path(&$form_state, $triggering_element, $element = array()) {
+  $field_name = isset($form_state['complete form']['#' . $triggering_element .
+    '_field_name']) ? $form_state['complete form']['#' . $triggering_element .
+  '_field_name'] : $element['#field_name'];
+  $entity_type = isset($form_state['complete form']['#' . $triggering_element .
+  '_entity_type']) ? $form_state['complete form']['#' . $triggering_element .
+  '_entity_type'] : $element['#entity_type'];
+  $bundle = isset($form_state['complete form']['#' . $triggering_element .
+    '_bundle']) ? $form_state['complete form']['#' . $triggering_element .
+  '_bundle'] : $element['#bundle'];
+
+  $instance_info = field_info_instance($entity_type, $field_name, $bundle);
+
+  //if file field paths exist, use them - allows node, field collection tokens
+  if ($instance_info['settings']['filefield_paths']) $object_path =
+    token_replace($instance_info['settings']['filefield_paths']['file_path']['value'], array('field_collection_item' => $form_state['field_collection_item']));
+  else $object_path = token_replace($instance_info['settings']['file_directory']);
+  return $object_path;
 }
