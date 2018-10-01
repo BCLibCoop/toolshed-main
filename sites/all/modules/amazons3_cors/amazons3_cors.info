@@ -1,16 +1,17 @@
 name = Amazon S3 CORS
 description = Provides support for uploading files directly to S3
 core = 7.x
-files[] = amazons3_cors.module
-files[] = CustomS3BrowserUpload.class.php
 
 dependencies[] = amazons3
+dependencies[] = filefield_paths
 ; Requires jQuery 1.5.1+ for xhr.withCredentials.
 dependencies[] = jquery_update
 
-; Information added by Drupal.org packaging script on 2014-11-04
-version = "7.x-1.x-dev"
+#files[] = awssdk.postobject-v4.class.php
+
+; Information added by Drupal.org packaging script on 2016-01-21
+version = "7.x-2.x-dev"
 core = "7.x"
 project = "amazons3_cors"
-datestamp = "1415079481"
+datestamp = "1453341243"
 

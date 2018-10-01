@@ -1,0 +1,26 @@
+diff --git a/amazons3_cors.module b/amazons3_cors.module
+index 36644b1..b0e2480 100644
+--- a/amazons3_cors.module
++++ b/amazons3_cors.module
+@@ -526,11 +526,19 @@ function amazons3_cors_sign_request() {
+   $field_info = field_info_field($field_name);
+   // "File directory" supports tokens, so we have to do the replacement ourselves.
+   $file_directory = token_replace($instance_info['settings']['file_directory']);
+-  $file_directory_uri = "{$field_info['settings']['uri_scheme']}://$file_directory";
++  $file_directory_uri = "{$field_info['settings']['uri_scheme']}://$bucket/$file_directory";
++
++  // Determine the cid prefix match for common cache entries.
++  $path_info = pathinfo($filename);
++  $cid = 'doctrine:[metadata:' . $file_directory_uri . '/' . $path_info['filename'];
++
++  // Clear the cache for any common entries to make sure file_create_filename
++  // returns an unused filepath.
++  cache_clear_all($cid, 'cache_amazons3_metadata', TRUE);
+ 
+   // Use file_create_filename() to avoid overwriting an existing file.
+   $uri = file_create_filename($filename, $file_directory_uri);
+-  $s3_key = file_uri_target($uri);
++  $s3_key = str_replace($bucket . '/', '', file_uri_target($uri));
+ 
+   try {
+     $s3_client = S3Client::factory();
