@@ -137,9 +137,7 @@ function toolshed_ctypes_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 6,
     ),
@@ -181,9 +179,7 @@ function toolshed_ctypes_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 7,
     ),
@@ -327,126 +323,6 @@ function toolshed_ctypes_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance:
-  // 'node-conference_presentation-field_presentation_audience'.
-  $field_instances['node-conference_presentation-field_presentation_audience'] = array(
-    'bundle' => 'conference_presentation',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 13,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_presentation_audience',
-    'label' => 'Presentation Audience',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-      ),
-      'type' => 'options_select',
-      'weight' => 16,
-    ),
-  );
-
-  // Exported field_instance:
-  // 'node-conference_presentation-field_presentation_format'.
-  $field_instances['node-conference_presentation-field_presentation_format'] = array(
-    'bundle' => 'conference_presentation',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 14,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_presentation_format',
-    'label' => 'Presentation Format',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-      ),
-      'type' => 'options_select',
-      'weight' => 17,
-    ),
-  );
-
-  // Exported field_instance:
-  // 'node-conference_presentation-field_presentation_topic'.
-  $field_instances['node-conference_presentation-field_presentation_topic'] = array(
-    'bundle' => 'conference_presentation',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 12,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_presentation_topic',
-    'label' => 'Presentation Topic',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-      ),
-      'type' => 'options_select',
-      'weight' => 15,
-    ),
-  );
-
   // Exported field_instance: 'node-conference_presentation-field_rating'.
   $field_instances['node-conference_presentation-field_rating'] = array(
     'bundle' => 'conference_presentation',
@@ -548,9 +424,7 @@ function toolshed_ctypes_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 3,
     ),
@@ -642,9 +516,7 @@ function toolshed_ctypes_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 1,
     ),
@@ -759,476 +631,6 @@ function toolshed_ctypes_field_default_field_instances() {
       ),
       'type' => 'url_external',
       'weight' => 10,
-    ),
-  );
-
-  // Exported field_instance: 'node-policy-body'.
-  $field_instances['node-policy-body'] = array(
-    'bundle' => 'policy',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'body',
-    'label' => 'Description',
-    'required' => 1,
-    'settings' => array(
-      'display_summary' => 1,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 10,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 2,
-    ),
-  );
-
-  // Exported field_instance: 'node-policy-field_audience'.
-  $field_instances['node-policy-field_audience'] = array(
-    'bundle' => 'policy',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 6,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_audience',
-    'label' => 'Policy Focused On',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 10,
-    ),
-  );
-
-  // Exported field_instance: 'node-policy-field_date_policy_came_into_effe'.
-  $field_instances['node-policy-field_date_policy_came_into_effe'] = array(
-    'bundle' => 'policy',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-          'show_remaining_days' => FALSE,
-          'show_repeat_rule' => 'show',
-        ),
-        'type' => 'date_default',
-        'weight' => 9,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_date_policy_came_into_effe',
-    'label' => 'Date Policy Came into Effect',
-    'required' => 0,
-    'settings' => array(
-      'default_value' => 'now',
-      'default_value2' => 'same',
-      'default_value_code' => '',
-      'default_value_code2' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'date',
-      'settings' => array(
-        'display_all_day' => 0,
-        'increment' => 15,
-        'input_format' => 'M j Y - g:i:sa',
-        'input_format_custom' => '',
-        'label_position' => 'above',
-        'no_fieldset' => 0,
-        'repeat_collapsed' => 0,
-        'text_parts' => array(),
-        'year_range' => '-20:+3',
-      ),
-      'type' => 'date_popup',
-      'weight' => 13,
-    ),
-  );
-
-  // Exported field_instance: 'node-policy-field_department_generating_poli'.
-  $field_instances['node-policy-field_department_generating_poli'] = array(
-    'bundle' => 'policy',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 5,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_department_generating_poli',
-    'label' => 'Department Generating Policy',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => 0,
-      ),
-      'type' => 'options_buttons',
-      'weight' => 9,
-    ),
-  );
-
-  // Exported field_instance: 'node-policy-field_library_type'.
-  $field_instances['node-policy-field_library_type'] = array(
-    'bundle' => 'policy',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 10,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_library_type',
-    'label' => 'Library Type',
-    'required' => 1,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-      ),
-      'type' => 'options_select',
-      'weight' => 4,
-    ),
-  );
-
-  // Exported field_instance: 'node-policy-field_policy_audience'.
-  $field_instances['node-policy-field_policy_audience'] = array(
-    'bundle' => 'policy',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 8,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_policy_audience',
-    'label' => 'Audience',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 12,
-    ),
-  );
-
-  // Exported field_instance: 'node-policy-field_policy_author'.
-  $field_instances['node-policy-field_policy_author'] = array(
-    'bundle' => 'policy',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 2,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_policy_author',
-    'label' => 'Policy Author',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 5,
-    ),
-  );
-
-  // Exported field_instance: 'node-policy-field_policy_file'.
-  $field_instances['node-policy-field_policy_file'] = array(
-    'bundle' => 'policy',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'file',
-        'settings' => array(),
-        'type' => 'file_default',
-        'weight' => 3,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_policy_file',
-    'label' => 'Policy File',
-    'required' => 0,
-    'settings' => array(
-      'description_field' => 0,
-      'file_directory' => 'policy',
-      'file_extensions' => 'pdf doc docx ppt pptx pub rtf xls xlsx txt',
-      'max_filesize' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'amazons3_cors',
-      'settings' => array(
-        's3_acl' => 'public-read',
-      ),
-      'type' => 'amazons3_cors',
-      'weight' => 9,
-    ),
-  );
-
-  // Exported field_instance: 'node-policy-field_policy_link'.
-  $field_instances['node-policy-field_policy_link'] = array(
-    'bundle' => 'policy',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'link',
-        'settings' => array(),
-        'type' => 'link_default',
-        'weight' => 4,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_policy_link',
-    'label' => 'Policy URL',
-    'required' => 0,
-    'settings' => array(
-      'absolute_url' => 1,
-      'attributes' => array(
-        'class' => '',
-        'configurable_class' => 0,
-        'configurable_title' => 0,
-        'rel' => '',
-        'target' => '_blank',
-        'title' => '',
-      ),
-      'display' => array(
-        'url_cutoff' => 80,
-      ),
-      'enable_tokens' => 1,
-      'rel_remove' => 'default',
-      'title' => 'none',
-      'title_label_use_field_label' => 0,
-      'title_maxlength' => 128,
-      'title_value' => 'Link to Policy',
-      'url' => 0,
-      'user_register_form' => FALSE,
-      'validate_url' => 1,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'link',
-      'settings' => array(),
-      'type' => 'link_field',
-      'weight' => 8,
-    ),
-  );
-
-  // Exported field_instance: 'node-policy-field_policy_type'.
-  $field_instances['node-policy-field_policy_type'] = array(
-    'bundle' => 'policy',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 7,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_policy_type',
-    'label' => 'Policy Type',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 11,
-    ),
-  );
-
-  // Exported field_instance: 'node-policy-field_source_library_region'.
-  $field_instances['node-policy-field_source_library_region'] = array(
-    'bundle' => 'policy',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 1,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_source_library_region',
-    'label' => 'Submitting Library',
-    'required' => 1,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-      ),
-      'type' => 'options_select',
-      'weight' => 3,
     ),
   );
 
@@ -1620,9 +1022,7 @@ function toolshed_ctypes_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 6,
     ),
@@ -1889,51 +1289,6 @@ function toolshed_ctypes_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-program_info-field_program_audience'.
-  $field_instances['node-program_info-field_program_audience'] = array(
-    'bundle' => 'program_info',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 16,
-      ),
-      'search_result' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_program_audience',
-    'label' => 'Program Audience',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-      ),
-      'type' => 'options_select',
-      'weight' => 37,
-    ),
-  );
-
   // Exported field_instance: 'node-program_info-field_program_budget'.
   $field_instances['node-program_info-field_program_budget'] = array(
     'bundle' => 'program_info',
@@ -2023,51 +1378,6 @@ function toolshed_ctypes_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 2,
-    ),
-  );
-
-  // Exported field_instance: 'node-program_info-field_program_format'.
-  $field_instances['node-program_info-field_program_format'] = array(
-    'bundle' => 'program_info',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 17,
-      ),
-      'search_result' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_program_format',
-    'label' => 'Program Format',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-      ),
-      'type' => 'options_select',
-      'weight' => 38,
     ),
   );
 
@@ -2211,51 +1521,6 @@ function toolshed_ctypes_field_default_field_instances() {
       ),
       'type' => 'amazons3_cors',
       'weight' => 13,
-    ),
-  );
-
-  // Exported field_instance: 'node-program_info-field_program_topic'.
-  $field_instances['node-program_info-field_program_topic'] = array(
-    'bundle' => 'program_info',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 15,
-      ),
-      'search_result' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_program_topic',
-    'label' => 'Program Topic',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-      ),
-      'type' => 'options_select',
-      'weight' => 36,
     ),
   );
 
@@ -2450,9 +1715,7 @@ function toolshed_ctypes_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 8,
     ),
@@ -2675,7 +1938,7 @@ function toolshed_ctypes_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -2721,7 +1984,7 @@ function toolshed_ctypes_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -2767,7 +2030,7 @@ function toolshed_ctypes_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -2814,7 +2077,7 @@ function toolshed_ctypes_field_default_field_instances() {
         'rows' => 10,
       ),
       'type' => 'text_textarea',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -2882,7 +2145,7 @@ function toolshed_ctypes_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 14,
+      'weight' => 18,
     ),
   );
 
@@ -2924,7 +2187,7 @@ function toolshed_ctypes_field_default_field_instances() {
       'module' => 'piwik_stats',
       'settings' => array(),
       'type' => 'piwik_stats_hidden',
-      'weight' => 15,
+      'weight' => 20,
     ),
   );
 
@@ -2991,98 +2254,6 @@ function toolshed_ctypes_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-training_resource-field_resource_audience'.
-  $field_instances['node-training_resource-field_resource_audience'] = array(
-    'bundle' => 'training_resource',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 17,
-      ),
-      'rss' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_resource_audience',
-    'label' => 'Resource Audience',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-      ),
-      'type' => 'options_select',
-      'weight' => 18,
-    ),
-  );
-
-  // Exported field_instance: 'node-training_resource-field_resource_topic'.
-  $field_instances['node-training_resource-field_resource_topic'] = array(
-    'bundle' => 'training_resource',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 15,
-      ),
-      'rss' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_resource_topic',
-    'label' => 'Resource Topic',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
-      ),
-      'type' => 'options_select',
-      'weight' => 17,
-    ),
-  );
-
   // Exported field_instance: 'node-training_resource-field_resource_type'.
   $field_instances['node-training_resource-field_resource_type'] = array(
     'bundle' => 'training_resource',
@@ -3120,59 +2291,9 @@ function toolshed_ctypes_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-      ),
+      'settings' => array(),
       'type' => 'options_select',
-      'weight' => 2,
-    ),
-  );
-
-  // Exported field_instance:
-  // 'node-training_resource-field_resource_type_taxonomy'.
-  $field_instances['node-training_resource-field_resource_type_taxonomy'] = array(
-    'bundle' => 'training_resource',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 18,
-      ),
-      'rss' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_resource_type_taxonomy',
-    'label' => 'Resource Type',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
-      ),
-      'type' => 'options_select',
-      'weight' => 19,
+      'weight' => 3,
     ),
   );
 
@@ -3214,11 +2335,9 @@ function toolshed_ctypes_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-      ),
+      'settings' => array(),
       'type' => 'options_select',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -3267,7 +2386,7 @@ function toolshed_ctypes_field_default_field_instances() {
         's3_acl' => 'public-read',
       ),
       'type' => 'amazons3_cors',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -3307,11 +2426,9 @@ function toolshed_ctypes_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-      ),
+      'settings' => array(),
       'type' => 'options_select',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -3420,59 +2537,12 @@ function toolshed_ctypes_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'url_external',
-      'weight' => 4,
-    ),
-  );
-
-  // Exported field_instance:
-  // 'node-training_resource-field_what_would_you_change'.
-  $field_instances['node-training_resource-field_what_would_you_change'] = array(
-    'bundle' => 'training_resource',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 16,
-      ),
-      'rss' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_what_would_you_change',
-    'label' => 'What would you change about this program?',
-    'required' => FALSE,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 16,
+      'weight' => 5,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Audience');
   t('Author');
   t('Author E-Mail');
   t('Body');
@@ -3482,8 +2552,6 @@ function toolshed_ctypes_field_default_field_instances() {
   t('Conference Year');
   t('Content');
   t('Copies of program publicity (newspaper articles, letters of appreciation, participant feedback, etc.)');
-  t('Date Policy Came into Effect');
-  t('Department Generating Policy');
   t('Description');
   t('Feedback from Participants');
   t('Frequency');
@@ -3492,35 +2560,21 @@ function toolshed_ctypes_field_default_field_instances() {
   t('Guest speaker(s) - include name and organization');
   t('Highlights - what worked well?');
   t('Length of program session');
-  t('Library Type');
   t('Number of sessions');
   t('Piwik Node Views');
   t('Please select your Library Organization here.');
-  t('Policy Author');
-  t('Policy File');
-  t('Policy Focused On');
-  t('Policy Type');
-  t('Policy URL');
-  t('Presentation Audience');
   t('Presentation File');
-  t('Presentation Format');
   t('Presentation Topic');
   t('Presenter(s)');
   t('Primary Audience');
-  t('Program Audience');
-  t('Program Format');
-  t('Program Topic');
   t('Program photos');
   t('Program promotional materials');
   t('Project Link');
   t('Rating');
-  t('Resource Audience');
-  t('Resource Topic');
   t('Resource Type');
   t('Resources required (materials/supplies; food/refreshments, etc.)');
   t('Secondary Audience');
   t('Source Library');
-  t('Submitting Library');
   t('Tags');
   t('Training Guide File');
   t('Training Topic');

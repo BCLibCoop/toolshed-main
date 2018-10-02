@@ -156,15 +156,6 @@ function piwik_reports_menu() {
     'weight' => 4,
     'type' => MENU_LOCAL_TASK,
   );
-  $items['admin/reports/piwik_reports/actions/action_paths'] = array(
-    'title' => 'Actions by Path',
-    'page callback' => 'drupal_get_form',
-    'page arguments' => array('piwik_reports_reports', 'actions_by_path'),
-    'access arguments' => array('access piwik reports'),
-    'file' => 'piwik_reports.pages.inc',
-    'weight' => 4,
-    'type' => MENU_LOCAL_TASK,
-  );
   $items['admin/reports/piwik_reports/referers'] = array(
     'title' => 'Referers',
     'page callback' => 'drupal_get_form',
@@ -438,7 +429,6 @@ function piwik_reports_admin_settings_form($form_state) {
     '#maxlength' => 40,
     '#description' => t('Leave blank if you prefer each user setting his own, or paste it here to have a global <strong>token_auth</strong>. If anonymous users have view permissions in Piwik you can set this value to <strong>anonymous</strong>. Users still need "Access Piwik reports" permission to see the reports in Drupal.'),
   );
-
   $form['piwik_reports_sites'] = array(
     '#type' => 'fieldset',
     '#title' => t('Allowed sites'),
@@ -490,20 +480,6 @@ function piwik_reports_get_sites($token_auth) {
     $sites = drupal_json_decode($result->data);
   }
   return $sites;
-}
-
-function piwik_reports_get_segments() {
-  //Return a list of segment codes for use
-  $segments = array(
-    'None' => 'None',
-    'AB' => 'Alberta',
-    'BC' => 'British Columbia',
-    'MB' => 'Manitoba',
-    'SK' => 'Saskatchewan',
-    'YT' => 'Yukon',
-  );
-
-  return $segments;
 }
 /**
  * Return a list of goals active on selected site.

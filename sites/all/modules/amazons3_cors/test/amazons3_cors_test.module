@@ -22,7 +22,7 @@ function amazons3_cors_test_upload_form($form, &$form_state) {
   $form['upload'] = array(
     '#type' => 'amazons3_cors_upload',
     '#title' => t('Upload test'),
-    '#upload_location' => 'demo',
+    '#upload_location' => '',
   );
   $form['submit'] = array(
     '#type' => 'submit',

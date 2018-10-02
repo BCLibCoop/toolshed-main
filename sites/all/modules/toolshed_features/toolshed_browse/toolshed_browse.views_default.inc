@@ -22,7 +22,7 @@ function toolshed_browse_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Browse All Policies';
+  $handler->display->display_options['title'] = 'Solr Test';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -82,31 +82,30 @@ function toolshed_browse_views_default_views() {
   $handler->display->display_options['fields']['field_session_frequency']['id'] = 'field_session_frequency';
   $handler->display->display_options['fields']['field_session_frequency']['table'] = 'search_api_index_node_index';
   $handler->display->display_options['fields']['field_session_frequency']['field'] = 'field_session_frequency';
-  /* Field: Indexed Node: Submitting Library */
+  /* Field: Indexed Node: Rating */
+  $handler->display->display_options['fields']['field_prog_rating']['id'] = 'field_prog_rating';
+  $handler->display->display_options['fields']['field_prog_rating']['table'] = 'search_api_index_node_index';
+  $handler->display->display_options['fields']['field_prog_rating']['field'] = 'field_prog_rating';
+  $handler->display->display_options['fields']['field_prog_rating']['click_sort_column'] = 'rating';
+  $handler->display->display_options['fields']['field_prog_rating']['settings'] = array(
+    'widget' => array(
+      'fivestar_widget' => 'default',
+    ),
+    'expose' => 1,
+    'style' => 'average',
+    'text' => 'average',
+  );
+  /* Field: Indexed Node: Source Library */
   $handler->display->display_options['fields']['field_source_library_region']['id'] = 'field_source_library_region';
   $handler->display->display_options['fields']['field_source_library_region']['table'] = 'search_api_index_node_index';
   $handler->display->display_options['fields']['field_source_library_region']['field'] = 'field_source_library_region';
   $handler->display->display_options['fields']['field_source_library_region']['link_to_entity'] = 1;
   $handler->display->display_options['fields']['field_source_library_region']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_source_library_region']['bypass_access'] = 0;
-  /* Field: Indexed Node: Audience */
-  $handler->display->display_options['fields']['field_policy_audience']['id'] = 'field_policy_audience';
-  $handler->display->display_options['fields']['field_policy_audience']['table'] = 'search_api_index_node_index';
-  $handler->display->display_options['fields']['field_policy_audience']['field'] = 'field_policy_audience';
-  $handler->display->display_options['fields']['field_policy_audience']['link_to_entity'] = 0;
-  $handler->display->display_options['fields']['field_policy_audience']['view_mode'] = 'full';
-  $handler->display->display_options['fields']['field_policy_audience']['bypass_access'] = 0;
-  /* Field: Indexed Node: Policy Focused On */
-  $handler->display->display_options['fields']['field_audience']['id'] = 'field_audience';
-  $handler->display->display_options['fields']['field_audience']['table'] = 'search_api_index_node_index';
-  $handler->display->display_options['fields']['field_audience']['field'] = 'field_audience';
-  $handler->display->display_options['fields']['field_audience']['link_to_entity'] = 0;
-  $handler->display->display_options['fields']['field_audience']['view_mode'] = 'full';
-  $handler->display->display_options['fields']['field_audience']['bypass_access'] = 0;
-  /* Field: Indexed Node: Policy Type */
-  $handler->display->display_options['fields']['field_policy_type']['id'] = 'field_policy_type';
-  $handler->display->display_options['fields']['field_policy_type']['table'] = 'search_api_index_node_index';
-  $handler->display->display_options['fields']['field_policy_type']['field'] = 'field_policy_type';
+  /* Field: Indexed Node: Author */
+  $handler->display->display_options['fields']['field_authot']['id'] = 'field_authot';
+  $handler->display->display_options['fields']['field_authot']['table'] = 'search_api_index_node_index';
+  $handler->display->display_options['fields']['field_authot']['field'] = 'field_authot';
   /* Filter criterion: Indexed Node: Status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_node_index';
@@ -227,59 +226,6 @@ function toolshed_browse_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['exposed_block'] = TRUE;
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Indexed Node: URL */
-  $handler->display->display_options['fields']['url']['id'] = 'url';
-  $handler->display->display_options['fields']['url']['table'] = 'search_api_index_node_index';
-  $handler->display->display_options['fields']['url']['field'] = 'url';
-  $handler->display->display_options['fields']['url']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['url']['link_to_entity'] = 0;
-  /* Field: Indexed Node: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'search_api_index_node_index';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['path'] = '[url]';
-  $handler->display->display_options['fields']['title']['link_to_entity'] = 0;
-  /* Field: Indexed Node: Primary Audience */
-  $handler->display->display_options['fields']['field_primary_audience']['id'] = 'field_primary_audience';
-  $handler->display->display_options['fields']['field_primary_audience']['table'] = 'search_api_index_node_index';
-  $handler->display->display_options['fields']['field_primary_audience']['field'] = 'field_primary_audience';
-  $handler->display->display_options['fields']['field_primary_audience']['delta_offset'] = '0';
-  /* Field: Indexed Node: Length of program session */
-  $handler->display->display_options['fields']['field_length_of_program_session2']['id'] = 'field_length_of_program_session2';
-  $handler->display->display_options['fields']['field_length_of_program_session2']['table'] = 'search_api_index_node_index';
-  $handler->display->display_options['fields']['field_length_of_program_session2']['field'] = 'field_length_of_program_session2';
-  /* Field: Indexed Node: Frequency */
-  $handler->display->display_options['fields']['field_session_frequency']['id'] = 'field_session_frequency';
-  $handler->display->display_options['fields']['field_session_frequency']['table'] = 'search_api_index_node_index';
-  $handler->display->display_options['fields']['field_session_frequency']['field'] = 'field_session_frequency';
-  /* Field: Indexed Node: Rating */
-  $handler->display->display_options['fields']['field_prog_rating']['id'] = 'field_prog_rating';
-  $handler->display->display_options['fields']['field_prog_rating']['table'] = 'search_api_index_node_index';
-  $handler->display->display_options['fields']['field_prog_rating']['field'] = 'field_prog_rating';
-  $handler->display->display_options['fields']['field_prog_rating']['click_sort_column'] = 'rating';
-  $handler->display->display_options['fields']['field_prog_rating']['settings'] = array(
-    'widget' => array(
-      'fivestar_widget' => 'default',
-    ),
-    'expose' => 1,
-    'style' => 'average',
-    'text' => 'average',
-  );
-  /* Field: Indexed Node: Submitting Library */
-  $handler->display->display_options['fields']['field_source_library_region']['id'] = 'field_source_library_region';
-  $handler->display->display_options['fields']['field_source_library_region']['table'] = 'search_api_index_node_index';
-  $handler->display->display_options['fields']['field_source_library_region']['field'] = 'field_source_library_region';
-  $handler->display->display_options['fields']['field_source_library_region']['label'] = 'Source Library';
-  $handler->display->display_options['fields']['field_source_library_region']['link_to_entity'] = 1;
-  $handler->display->display_options['fields']['field_source_library_region']['view_mode'] = 'full';
-  $handler->display->display_options['fields']['field_source_library_region']['bypass_access'] = 0;
-  /* Field: Indexed Node: Author */
-  $handler->display->display_options['fields']['field_authot']['id'] = 'field_authot';
-  $handler->display->display_options['fields']['field_authot']['table'] = 'search_api_index_node_index';
-  $handler->display->display_options['fields']['field_authot']['field'] = 'field_authot';
   $handler->display->display_options['path'] = 'browse/programs';
 
   /* Display: Training Resources */
@@ -297,7 +243,7 @@ function toolshed_browse_views_default_views() {
     'created' => 'created',
     'field_source_library_region' => 'field_source_library_region',
   );
-  $handler->display->display_options['style_options']['default'] = 'created';
+  $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
     'url' => array(
       'sortable' => 0,
@@ -330,7 +276,7 @@ function toolshed_browse_views_default_views() {
     ),
     'created' => array(
       'sortable' => 1,
-      'default_sort_order' => 'desc',
+      'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
@@ -394,7 +340,7 @@ function toolshed_browse_views_default_views() {
   $handler->display->display_options['fields']['created']['date_format'] = 'time ago';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'search_api_facetapi_YEAR';
   $handler->display->display_options['fields']['created']['link_to_entity'] = 0;
-  /* Field: Indexed Node: Submitting Library */
+  /* Field: Indexed Node: Source Library */
   $handler->display->display_options['fields']['field_source_library_region']['id'] = 'field_source_library_region';
   $handler->display->display_options['fields']['field_source_library_region']['table'] = 'search_api_index_node_index';
   $handler->display->display_options['fields']['field_source_library_region']['field'] = 'field_source_library_region';
@@ -468,7 +414,7 @@ function toolshed_browse_views_default_views() {
     'field_conference_name' => 'field_conference_name',
     'field_conference_year' => 'field_conference_year',
   );
-  $handler->display->display_options['style_options']['default'] = 'field_conference_year';
+  $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
     'url' => array(
       'sortable' => 0,
@@ -508,7 +454,7 @@ function toolshed_browse_views_default_views() {
     ),
     'field_conference_year' => array(
       'sortable' => 1,
-      'default_sort_order' => 'desc',
+      'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
@@ -542,7 +488,7 @@ function toolshed_browse_views_default_views() {
   $handler->display->display_options['fields']['field_training_topic']['id'] = 'field_training_topic';
   $handler->display->display_options['fields']['field_training_topic']['table'] = 'search_api_index_node_index';
   $handler->display->display_options['fields']['field_training_topic']['field'] = 'field_training_topic';
-  /* Field: Indexed Node: Submitting Library */
+  /* Field: Indexed Node: Source Library */
   $handler->display->display_options['fields']['field_source_library_region']['id'] = 'field_source_library_region';
   $handler->display->display_options['fields']['field_source_library_region']['table'] = 'search_api_index_node_index';
   $handler->display->display_options['fields']['field_source_library_region']['field'] = 'field_source_library_region';
@@ -611,96 +557,6 @@ function toolshed_browse_views_default_views() {
     'title' => 'title',
   );
   $handler->display->display_options['path'] = 'browse/presentations';
-
-  /* Display: Policies */
-  $handler = $view->new_display('page', 'Policies', 'policies');
-  $handler->display->display_options['exposed_block'] = TRUE;
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Indexed Node: URL */
-  $handler->display->display_options['fields']['url']['id'] = 'url';
-  $handler->display->display_options['fields']['url']['table'] = 'search_api_index_node_index';
-  $handler->display->display_options['fields']['url']['field'] = 'url';
-  $handler->display->display_options['fields']['url']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['url']['link_to_entity'] = 0;
-  /* Field: Indexed Node: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'search_api_index_node_index';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['path'] = '[url]';
-  $handler->display->display_options['fields']['title']['link_to_entity'] = 0;
-  /* Field: Indexed Node: The main body text */
-  $handler->display->display_options['fields']['body']['id'] = 'body';
-  $handler->display->display_options['fields']['body']['table'] = 'search_api_index_node_index';
-  $handler->display->display_options['fields']['body']['field'] = 'body';
-  $handler->display->display_options['fields']['body']['label'] = 'Policy Description';
-  $handler->display->display_options['fields']['body']['alter']['max_length'] = '200';
-  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
-  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
-  /* Field: Indexed Node: Policy Type */
-  $handler->display->display_options['fields']['field_policy_type']['id'] = 'field_policy_type';
-  $handler->display->display_options['fields']['field_policy_type']['table'] = 'search_api_index_node_index';
-  $handler->display->display_options['fields']['field_policy_type']['field'] = 'field_policy_type';
-  $handler->display->display_options['fields']['field_policy_type']['link_to_entity'] = 0;
-  $handler->display->display_options['fields']['field_policy_type']['view_mode'] = 'full';
-  $handler->display->display_options['fields']['field_policy_type']['bypass_access'] = 0;
-  /* Field: Indexed Node: Policy Focused On */
-  $handler->display->display_options['fields']['field_audience']['id'] = 'field_audience';
-  $handler->display->display_options['fields']['field_audience']['table'] = 'search_api_index_node_index';
-  $handler->display->display_options['fields']['field_audience']['field'] = 'field_audience';
-  $handler->display->display_options['fields']['field_audience']['link_to_entity'] = 0;
-  $handler->display->display_options['fields']['field_audience']['view_mode'] = 'full';
-  $handler->display->display_options['fields']['field_audience']['bypass_access'] = 0;
-  /* Field: Indexed Node: Audience */
-  $handler->display->display_options['fields']['field_policy_audience']['id'] = 'field_policy_audience';
-  $handler->display->display_options['fields']['field_policy_audience']['table'] = 'search_api_index_node_index';
-  $handler->display->display_options['fields']['field_policy_audience']['field'] = 'field_policy_audience';
-  $handler->display->display_options['fields']['field_policy_audience']['link_to_entity'] = 0;
-  $handler->display->display_options['fields']['field_policy_audience']['view_mode'] = 'full';
-  $handler->display->display_options['fields']['field_policy_audience']['bypass_access'] = 0;
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Node: Status */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'search_api_index_node_index';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = array(
-    1 => '1',
-  );
-  /* Filter criterion: Indexed Node: Content type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'search_api_index_node_index';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'policy' => 'policy',
-  );
-  /* Filter criterion: Search: Fulltext search */
-  $handler->display->display_options['filters']['search_api_views_fulltext']['id'] = 'search_api_views_fulltext';
-  $handler->display->display_options['filters']['search_api_views_fulltext']['table'] = 'search_api_index_node_index';
-  $handler->display->display_options['filters']['search_api_views_fulltext']['field'] = 'search_api_views_fulltext';
-  $handler->display->display_options['filters']['search_api_views_fulltext']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['operator_id'] = 'search_api_views_fulltext_op';
-  $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['label'] = 'Filter by Keyword';
-  $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['operator'] = 'search_api_views_fulltext_op';
-  $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['identifier'] = 'search_api_views_fulltext';
-  $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    4 => 0,
-    3 => 0,
-    6 => 0,
-    9 => 0,
-  );
-  $handler->display->display_options['filters']['search_api_views_fulltext']['fields'] = array(
-    'author:field_first_name' => 'author:field_first_name',
-    'author:field_last_name' => 'author:field_last_name',
-    'field_policy_author' => 'field_policy_author',
-    'field_source_library_region:name' => 'field_source_library_region:name',
-    'field_source_library_region:parents_all:name' => 'field_source_library_region:parents_all:name',
-    'title' => 'title',
-  );
-  $handler->display->display_options['path'] = 'browse/policies';
   $export['browse'] = $view;
 
   return $export;

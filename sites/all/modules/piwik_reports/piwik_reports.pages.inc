@@ -31,14 +31,12 @@ function piwik_reports_dateselect_form() {
     2 => t('Last week'),
     3 => t('Last month'),
     4 => t('Last year'),
-    5 => t('From beginning'),
-    6 => t('Last quarter')
   );
 
   $form['#attributes'] = array('class' => array('search-form'));
   $form['basic'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Select site, time period and regional segment'),
+    '#title' => t('Select site and time period'),
   );
   $form['basic']['inline'] = array(
     '#prefix' => '<div class="container-inline">',
@@ -49,34 +47,6 @@ function piwik_reports_dateselect_form() {
     '#title' => '',
     '#default_value' => isset($_SESSION['piwik_reports_period']) ? $_SESSION['piwik_reports_period'] : 0,
     '#options' => $period,
-  );
-  $form['basic']['inline']['submit'] = array(
-    '#type' => 'submit',
-    '#value' => t('Filter'),
-    '#weight' => 15,
-  );
-  return $form;
-}
-
-function piwik_reports_segmentselect_form() {
-
-  $segments = piwik_reports_get_segments();
-
-  $form['#attributes'] = array('class' => array('search-form'));
-  $form['basic'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('Select a regional segment'),
-  );
-  $form['basic']['inline'] = array(
-    '#prefix' => '<div class="container-inline">',
-    '#suffix' => '</div>',
-  );
-  $form['basic']['inline']['segment'] = array(
-    '#type' => 'select',
-    '#title' => '',
-    '#default_value' => isset($_SESSION['piwik_reports_segment']) ?
-      $_SESSION['piwik_reports_segment'] : 0,
-    '#options' => $segments,
   );
   $form['basic']['inline']['submit'] = array(
     '#type' => 'submit',
@@ -150,30 +120,15 @@ function piwik_reports_reports($form, &$form_state, $report) {
     return;
   }
   $form = piwik_reports_dateselect_form();
-  $segform = piwik_reports_segmentselect_form();
-  $form['basic']['inline']['segment'] = $segform['basic']['inline']['segment'];
   $form = piwik_reports_siteselect_form($form, $sites);
   $piwik_site_id = $_SESSION['piwik_reports_site'];
   $period = isset($_SESSION['piwik_reports_period']) ? $_SESSION['piwik_reports_period'] : 0;
-
-  switch($piwik_site_id) {
-    case 61:
-      $dim_id = 1;
-      break;
-    default:
-      $dim_id = FALSE;
-      break;
-  }
-
-  $segment = isset($_SESSION['piwik_reports_segment']) ? $_SESSION['piwik_reports_segment'] : 0;
 
   if ($period == 1) {
     // Special handling for "yesterday" = 1.
     // The yesterday date value is required.
     $date = _piwik_reports_select_period($period);
   }
-  //Custom periods
-  elseif ($period >= 5) $date = _piwik_reports_select_period($period);
   else {
     // Otherwise it returns the today date value.
     $date = _piwik_reports_select_period(0);
@@ -190,7 +145,6 @@ function piwik_reports_reports($form, &$form_state, $report) {
   $data_params[0]['action'] = 'iframe';
   $data_params[0]['disableLink'] = 1;
   $data_params[0]['widget'] = 1;
-
  // $data_params[0]['loading'] = t('Loading data...');
   if (!empty($piwik_auth)) {
     $data_params[0]['token_auth'] = $piwik_auth;
@@ -274,14 +228,6 @@ function piwik_reports_reports($form, &$form_state, $report) {
       $data_params[0]['actionToWidgetize'] = 'getDownloads';
       $data_params[0]['filter_limit'] = 15;
     break;
-    case 'actions_by_path':
-      $title[0] = '';
-      $data_params[0]['moduleToWidgetize'] = 'CustomDimensions';
-      $data_params[0]['actionToWidgetize'] = 'getCustomDimension';
-      $data_params[0]['idDimension'] = $dim_id;
-      $data_params[0]['filter_limit'] = 50;
-      $data_params[0]['segment'] .= "actionType!=pageviews,actionType!=sitesearches,actionType!=contents";
-      break;
     case 'referers_evolution':
       $title[0] = '';
       $data_params[0]['moduleToWidgetize'] = 'Referers';
@@ -323,14 +269,6 @@ function piwik_reports_reports($form, &$form_state, $report) {
       }
     break;
   }
-
-
-  //Finally add given segments - should append if key exists
-  if ($segment != 'None') {
-    if (isset($data_params[0]['segment'])) $data_params[0]['segment'] .= ',';
-    $data_params[0]['segment'] .= "regionCode==$segment";
-  }
-
   // Build the data URL with all params and urlencode it.
   foreach ($data_params as $key => $data) {
     $theme_args['data_url'][] = array('url' => $piwik_url . 'index.php?' . drupal_http_build_query($data), 
@@ -352,7 +290,6 @@ function piwik_reports_reports($form, &$form_state, $report) {
  * Reports form submit function
  */
 function piwik_reports_reports_submit($form, &$form_state) {
-  $_SESSION['piwik_reports_segment'] = $form_state['values']['segment'];
   $_SESSION['piwik_reports_period'] = $form_state['values']['period'];
   $_SESSION['piwik_reports_site'] = $form_state['values']['site'];
 }
@@ -391,24 +328,6 @@ function _piwik_reports_select_period($period) {
       $d = mktime(0, 0, 0, date("m"), date("d"), date("Y") - 1);
       $date = date("Y-m-d", $d);
       break;
-
-    case 5: //Range launch through today
-      $launch = date("Y-m-d", 1430438400);
-      $today = date("Y-m-d");
-      $date = $launch . ',' . $today;
-      break;
-
-    case 6:
-      $curMonth = (int) date("m", time());
-      $year = (int) date("Y", time());
-      $lastMonth = $curMonth == 1 ? 12 : $curMonth - 1;
-      $year = $lastMonth == 12 ? $year - 1 : $year; //if last month was
-      // December, bump year back
-      $lastQstartMonth = ($lastMonth - 3) + 1;
-      $lastQstartDate = date("Y-m-d", strtotime("$year".'-'."$lastQstartMonth"
-        .'-'.'01'));
-      $lastQendDate = date("Y-m-t", strtotime("$year".'-'."$lastMonth"));
-      $date = $lastQstartDate . ',' . $lastQendDate;
   }
   return $date;
 }
@@ -442,11 +361,6 @@ function _piwik_reports_get_period_name($period) {
 
     case 4:
       $p = "year";
-      break;
-
-    case 5:
-    case 6:
-      $p = "range";
       break;
   }
   return $p;

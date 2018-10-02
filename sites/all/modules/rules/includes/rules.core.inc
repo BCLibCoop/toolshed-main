@@ -113,9 +113,8 @@ class RulesEntityController extends EntityAPIControllerExportable {
       $error_msg = t('Unable to parse the pasted export.');
       return FALSE;
     }
-    // The key is the configuration name and the value the actual export.
-    $name = key($export);
-    $export = current($export);
+    // The key ist the configuration name and the value the actual export.
+    list($name, $export) = each($export);
     if (!isset($export['PLUGIN'])) {
       $error_msg = t('Export misses plugin information.');
       return FALSE;
