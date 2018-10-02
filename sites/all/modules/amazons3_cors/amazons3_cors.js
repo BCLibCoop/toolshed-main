@@ -7,28 +7,15 @@
   AmazonS3corsUpload = {};
   Drupal.behaviors.amazonS3corsUpload = {};
 
-  // delete X-Requested-With
-  function removeXRequestedWith(xhr) {
-    xhr.setRequestHeader('X-Requested-With', {toString: function(){ return ''; }}); 
-  }
-  // fudge Access-Control-Allow-Headers for Ceph
-  function fudgeAccessControlAllowHeaders(xhr) {
-    //h = xhr.headers['Access-Control-Request-Headers'];
-    //if(h) {
-     xhr.setRequestHeader('Access-Control-Allow-Headers', 'x-requested-with,accept,content-type'); 
-     xhr.setRequestHeader('Foobar', 'test'); 
-    //}
-  }
-
-  AmazonS3corsUpload.handleUpload = function(file_selector, $form, triggering_element) {
+  AmazonS3corsUpload.handleUpload = function(file_selector, $form, triggering_element, submit_on_complete) {
     // Retrieve the file object.
-    $file = $(file_selector);
-    f = $file[0].files[0];
+    var $file = $(file_selector);
+    var f = $file[0].files[0];
     // And the form_build_id which we need to lookup the form during our AJAX
     // request.
-    form_build_id = $form.find('input[name="form_build_id"]').val();
+    var form_build_id = $form.find('input[name="form_build_id"]').val();
     if (typeof f != 'undefined') {
-      // Add a placholder for our progress bar.
+      // Add a placeholder for our progress bar.
       $file.hide().after('<div id="amazons3-cors-progress" style="width: 270px; float: left;">' + Drupal.t('Preparing upload ...') + '</div>');
 
       // Use the file object and ask Drupal to generate the appropriate signed
@@ -65,18 +52,15 @@
           // This works with jQuery 1.5.1+, however the withCredentials doesn't
           // stick w/ older versions. So we handle it in the beforeSend method.
           xhrFields: {
-            //withCredentials: true
+            withCredentials: true
           },
           // This can be removed when Drupal upgrades to a version of jQuery
           // that is > 1.5.1.
           beforeSend: function(xhr) {
-            //xhr.withCredentials = true;
-	    //removeXRequestedWith(xhr);
-	    //fudgeAccessControlAllowHeaders(xhr);
+            xhr.withCredentials = true;
           },
           xhr: function() {
             myXhr = $.ajaxSettings.xhr();
-	    //fudgeAccessControlAllowHeaders(myXhr);
             if(myXhr.upload){
               $file.hide();
               $('#amazons3-cors-progress').html('');
@@ -84,12 +68,10 @@
                 return AmazonS3corsUpload.displayProgress($file, e);
               }), false);
             }
-	    //removeXRequestedWith(myXhr);
             return myXhr;
           },
           error: function() {
             // todo: deal w/ upload errors.
-            console.log(arguments);
           },
           complete: function() {
             // Update the hidden fields to tell Drupal about the file that
@@ -104,12 +86,28 @@
             // Find trigger the #ajax method for the upload button that was
             // initially clicked to upload the file.
             var button_id = $file.parent().find('input.cors-form-submit').attr('id');
-            ajax = Drupal.ajax[button_id];
+            var ajax = Drupal.ajax[button_id];
             // Prevent Drupal from transferring the file twice as part of the
             // form rebuild.
             var file_selector_id = $file.attr('id');
             $(ajax.form[0]).find('#' + file_selector_id).remove();
 
+            // Optionally submit the parent $form element after a response is
+            // received. This is used when someone clicks the primary submit
+            // button on a form and we need to halt execution while we upload
+            // any non-uploaded files. This way the behaviour of clicking the
+            // submit button is preserved.
+            if (submit_on_complete) {
+              ajax.options.complete = function (response, status) {
+                ajax.ajaxing = false;
+                if (status == 'error' || status == 'parsererror') {
+                  return ajax.error(response, ajax.url);
+                }
+                $form.submit();
+              }
+            }
+
+            // Submit the AJAX element.
             ajax.form.ajaxSubmit(ajax.options);
           }
         };
@@ -155,7 +153,45 @@
       $form.find('input[type="submit"]').attr('disabled', 'disabled');
 
       var triggering_element = $(this).attr('name');
-      AmazonS3corsUpload.handleUpload($(this).siblings('.amazons3-cors-upload-file'), $form, triggering_element);
+
+      // If the button clicked to submit the form was "op", than this is likely
+      // the main submit button for the form. In this case, we need to check any
+      // CORS upload fields for files that have been attached, but net yet
+      // uploaded. And then upload the files if we find any. This provides more
+      // consistent behavior of the users.
+      if (triggering_element == 'op') {
+        var upload_required = false;
+
+        $('input.amazons3-cors-upload-file').each(function(key, value) {
+          var $file_input = $(value);
+          if (typeof $file_input.val() != 'undefined' && $file_input.val() != "") {
+            upload_required = true;
+
+            // Find the upload button associated with this input element.
+            var trigger = $file_input.parent().find('input.cors-form-submit').attr('name');
+
+            // Scroll the upload element into view so that the user gets some
+            // indicator of why the form hasn't submitted yet.
+            $('html, body').animate({
+              scrollTop: $file_input.offset().top + 180
+            }, 500);
+
+            // Handle CORS upload.
+            AmazonS3corsUpload.handleUpload('.amazons3-cors-upload-file', $form, trigger, true);
+          }
+        });
+
+        if (upload_required == false) {
+          // No upload was required, so just submit the form.
+          $form.submit();
+        }
+      }
+      else {
+        // The trigger was the upload button associated with the file field so
+        // we can just handle uploading the file directly.
+        AmazonS3corsUpload.handleUpload($(this).siblings('.amazons3-cors-upload-file'), $form, triggering_element);
+      }
+
       return false;
     });
   };

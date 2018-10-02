@@ -28,7 +28,7 @@ function toolshed_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -43,
+    'weight' => -42,
     'customized' => 1,
   );
   // Exported menu link: main-menu_add-a-conference-presentation:node/add/conference-presentation.
@@ -93,7 +93,7 @@ function toolshed_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 1,
     'expanded' => 0,
-    'weight' => -47,
+    'weight' => -49,
     'customized' => 1,
   );
   // Exported menu link: main-menu_add-resource:node/add/training-resource.
@@ -136,7 +136,7 @@ function toolshed_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -46,
+    'weight' => -45,
     'customized' => 1,
   );
   // Exported menu link: main-menu_browse:<nolink>.
@@ -157,7 +157,7 @@ function toolshed_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 1,
     'expanded' => 0,
-    'weight' => -49,
+    'weight' => -47,
     'customized' => 1,
   );
   // Exported menu link: main-menu_guides:guides.
@@ -178,7 +178,7 @@ function toolshed_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -47,
+    'weight' => -46,
     'customized' => 1,
     'parent_identifier' => 'main-menu_browse:<nolink>',
   );
@@ -197,7 +197,7 @@ function toolshed_menus_menu_default_menu_links() {
     'external' => 1,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -50,
+    'weight' => -48,
     'customized' => 1,
   );
   // Exported menu link: main-menu_new-tal-online:node/264.
@@ -216,7 +216,7 @@ function toolshed_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -42,
+    'weight' => -41,
     'customized' => 1,
   );
   // Exported menu link: main-menu_q--a:questions.
@@ -237,7 +237,7 @@ function toolshed_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -45,
+    'weight' => -44,
     'customized' => 1,
   );
   // Exported menu link: main-menu_summer-reading-contest-2016:http://librarytoolshed.ca/content/library-toolshed-src-2016-contest.
@@ -258,7 +258,7 @@ function toolshed_menus_menu_default_menu_links() {
     'external' => 1,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -44,
+    'weight' => -43,
     'customized' => 1,
   );
   // Exported menu link: main-menu_videos:videos.
@@ -279,7 +279,7 @@ function toolshed_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -46,
+    'weight' => -45,
     'customized' => 1,
     'parent_identifier' => 'main-menu_browse:<nolink>',
   );
