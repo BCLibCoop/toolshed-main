@@ -39,7 +39,7 @@
         },
         {
             "type": "vcs",
-            "url": "https://https://github.com/BCLibCoop/aws-sdk-php.git"
+            "url": "https://github.com/BCLibCoop/aws-sdk-php.git"
         }
     ]
 }
