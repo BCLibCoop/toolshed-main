@@ -20,3 +20,7 @@ LICENSE.txt
 MAINTAINERS.txt
 README.txt
 UPGRADE.txt
+
+# Ignore composer vendor install, too deep for git and represented by 
+# Composer Manager's compiled composer.json in sites/default/files/composer
+sites/all/vendor
