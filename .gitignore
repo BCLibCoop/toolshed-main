@@ -1,15 +1,6 @@
 # Ignore configuration files that may contain sensitive information.
 sites/*/settings*.php
 
-# Ignore paths that contain user-generated content.
-sites/*/files
-sites/*/private
-tmp/*
-
-# Ignore txt files we don't want on production. Note that we *do* want
-# C63708BF4C8197E90B3514508108A213.txt, which is used by Comodo for
-# domain ownership confirmation on the SSL certificate 
-robots.txt
 CHANGELOG.txt
 COPYRIGHT.txt
 INSTALL.mysql.txt
@@ -21,6 +12,6 @@ MAINTAINERS.txt
 README.txt
 UPGRADE.txt
 
-# Ignore composer vendor install, too deep for git and represented by 
-# Composer Manager's compiled composer.json in sites/default/files/composer
-sites/all/vendor
+# Ignore paths that contain user-generated content.
+sites/*/files
+sites/*/private
