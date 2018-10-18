@@ -35,6 +35,14 @@ function toolshed_ctypes_node_info() {
 You are able to upload the following document types: .doc, .docx, .ppt, .pptx, .pdf, .txt. You are also able to embed YouTube and Vimeo videos. 
 When uploading content, please do not include any personal information in the resource [e.g. screen shots of account information]. '),
     ),
+    'policy' => array(
+      'name' => t('Policy Resource'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Policy Title'),
+      'help' => '',
+    ),
     'program_info' => array(
       'name' => t('Program Info'),
       'base' => 'node_content',
