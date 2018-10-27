@@ -53,6 +53,28 @@ function toolshed_menus_menu_default_menu_links() {
     'customized' => 1,
     'parent_identifier' => 'main-menu_add-content:<nolink>',
   );
+  // Exported menu link: main-menu_add-a-policy:node/add/policy.
+  $menu_links['main-menu_add-a-policy:node/add/policy'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => 'node/add/policy',
+    'router_path' => 'node/add/policy',
+    'link_title' => 'Add a Policy',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'main-menu_add-a-policy:node/add/policy',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+    'customized' => 1,
+    'parent_identifier' => 'main-menu_add-content:<nolink>',
+  );
   // Exported menu link: main-menu_add-a-program:node/add/program-info.
   $menu_links['main-menu_add-a-program:node/add/program-info'] = array(
     'menu_name' => 'main-menu',
@@ -118,26 +140,93 @@ function toolshed_menus_menu_default_menu_links() {
     'customized' => 1,
     'parent_identifier' => 'main-menu_add-content:<nolink>',
   );
-  // Exported menu link: main-menu_blog:toolshed-blog.
-  $menu_links['main-menu_blog:toolshed-blog'] = array(
+  // Exported menu link: main-menu_all-policies:browse/policies.
+  $menu_links['main-menu_all-policies:browse/policies'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'toolshed-blog',
-    'router_path' => 'toolshed-blog',
-    'link_title' => 'Blog',
+    'link_path' => 'browse/policies',
+    'router_path' => 'browse/policies',
+    'link_title' => 'All Policies',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'main-menu_blog:toolshed-blog',
+      'identifier' => 'main-menu_all-policies:browse/policies',
     ),
     'module' => 'menu',
-    'hidden' => 1,
+    'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -45,
+    'weight' => -47,
     'customized' => 1,
+    'parent_identifier' => 'main-menu_browse:<nolink>',
+  );
+  // Exported menu link: main-menu_all-presentations:browse/presentations.
+  $menu_links['main-menu_all-presentations:browse/presentations'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => 'browse/presentations',
+    'router_path' => 'browse/presentations',
+    'link_title' => 'All Presentations',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'main-menu_all-presentations:browse/presentations',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -48,
+    'customized' => 1,
+    'parent_identifier' => 'main-menu_browse:<nolink>',
+  );
+  // Exported menu link: main-menu_all-programs:browse/programs.
+  $menu_links['main-menu_all-programs:browse/programs'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => 'browse/programs',
+    'router_path' => 'browse/programs',
+    'link_title' => 'All Programs',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'main-menu_all-programs:browse/programs',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -49,
+    'customized' => 1,
+    'parent_identifier' => 'main-menu_browse:<nolink>',
+  );
+  // Exported menu link: main-menu_all-resources:browse/resources.
+  $menu_links['main-menu_all-resources:browse/resources'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => 'browse/resources',
+    'router_path' => 'browse/resources',
+    'link_title' => 'All Resources',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'main-menu_all-resources:browse/resources',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -50,
+    'customized' => 1,
+    'parent_identifier' => 'main-menu_browse:<nolink>',
   );
   // Exported menu link: main-menu_browse:<nolink>.
   $menu_links['main-menu_browse:<nolink>'] = array(
@@ -160,128 +249,68 @@ function toolshed_menus_menu_default_menu_links() {
     'weight' => -47,
     'customized' => 1,
   );
-  // Exported menu link: main-menu_guides:guides.
-  $menu_links['main-menu_guides:guides'] = array(
+  // Exported menu link: main-menu_log-in:user/login.
+  $menu_links['main-menu_log-in:user/login'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'guides',
-    'router_path' => 'guides',
-    'link_title' => 'Guides',
+    'link_path' => 'user/login',
+    'router_path' => 'user/login',
+    'link_title' => 'Log In',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'main-menu_guides:guides',
+      'identifier' => 'main-menu_log-in:user/login',
     ),
     'module' => 'menu',
-    'hidden' => 1,
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -38,
+    'customized' => 1,
+  );
+  // Exported menu link: main-menu_log-out:user/logout.
+  $menu_links['main-menu_log-out:user/logout'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => 'user/logout',
+    'router_path' => 'user/logout',
+    'link_title' => 'Log Out',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'main-menu_log-out:user/logout',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -37,
+    'customized' => 1,
+  );
+  // Exported menu link: main-menu_toolshed-blog:toolshed-blog.
+  $menu_links['main-menu_toolshed-blog:toolshed-blog'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => 'toolshed-blog',
+    'router_path' => 'toolshed-blog',
+    'link_title' => 'Toolshed Blog',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'main-menu_toolshed-blog:toolshed-blog',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
     'weight' => -46,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_browse:<nolink>',
-  );
-  // Exported menu link: main-menu_home:<front>.
-  $menu_links['main-menu_home:<front>'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => '<front>',
-    'router_path' => '',
-    'link_title' => 'Home',
-    'options' => array(
-      'identifier' => 'main-menu_home:<front>',
-      'alter' => TRUE,
-    ),
-    'module' => 'menu',
-    'hidden' => 1,
-    'external' => 1,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -48,
-    'customized' => 1,
-  );
-  // Exported menu link: main-menu_new-tal-online:node/264.
-  $menu_links['main-menu_new-tal-online:node/264'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/264',
-    'router_path' => 'node/%',
-    'link_title' => 'New TAL Online',
-    'options' => array(
-      'attributes' => array(),
-      'alter' => TRUE,
-      'identifier' => 'main-menu_new-tal-online:node/264',
-    ),
-    'module' => 'menu',
-    'hidden' => 1,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -41,
-    'customized' => 1,
-  );
-  // Exported menu link: main-menu_q--a:questions.
-  $menu_links['main-menu_q--a:questions'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'questions',
-    'router_path' => 'questions',
-    'link_title' => 'Q & A',
-    'options' => array(
-      'attributes' => array(
-        'title' => 'Have a question? Get and answer.',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'main-menu_q--a:questions',
-    ),
-    'module' => 'menu',
-    'hidden' => 1,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -44,
-    'customized' => 1,
-  );
-  // Exported menu link: main-menu_summer-reading-contest-2016:http://librarytoolshed.ca/content/library-toolshed-src-2016-contest.
-  $menu_links['main-menu_summer-reading-contest-2016:http://librarytoolshed.ca/content/library-toolshed-src-2016-contest'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'http://librarytoolshed.ca/content/library-toolshed-src-2016-contest',
-    'router_path' => '',
-    'link_title' => 'Summer Reading Contest 2016',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'main-menu_summer-reading-contest-2016:http://librarytoolshed.ca/content/library-toolshed-src-2016-contest',
-    ),
-    'module' => 'menu',
-    'hidden' => 1,
-    'external' => 1,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -43,
-    'customized' => 1,
-  );
-  // Exported menu link: main-menu_videos:videos.
-  $menu_links['main-menu_videos:videos'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'videos',
-    'router_path' => 'videos',
-    'link_title' => 'Videos',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'main-menu_videos:videos',
-    ),
-    'module' => 'menu',
-    'hidden' => 1,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -45,
-    'customized' => 1,
-    'parent_identifier' => 'main-menu_browse:<nolink>',
   );
 
   // Translatables
@@ -289,16 +318,17 @@ function toolshed_menus_menu_default_menu_links() {
   t('About');
   t('Add Resource');
   t('Add a Conference Presentation');
+  t('Add a Policy');
   t('Add a Program');
   t('Add content');
-  t('Blog');
+  t('All Policies');
+  t('All Presentations');
+  t('All Programs');
+  t('All Resources');
   t('Browse');
-  t('Guides');
-  t('Home');
-  t('New TAL Online');
-  t('Q & A');
-  t('Summer Reading Contest 2016');
-  t('Videos');
+  t('Log In');
+  t('Log Out');
+  t('Toolshed Blog');
 
   return $menu_links;
 }
