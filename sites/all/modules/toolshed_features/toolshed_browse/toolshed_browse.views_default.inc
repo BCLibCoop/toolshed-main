@@ -362,11 +362,10 @@ function toolshed_browse_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['path'] = '[url]';
   $handler->display->display_options['fields']['title']['link_to_entity'] = 0;
-  /* Field: Indexed Node: Presentation Topic */
+  /* Field: Indexed Node: Training Topic */
   $handler->display->display_options['fields']['field_training_topic']['id'] = 'field_training_topic';
   $handler->display->display_options['fields']['field_training_topic']['table'] = 'search_api_index_node_index';
   $handler->display->display_options['fields']['field_training_topic']['field'] = 'field_training_topic';
-  $handler->display->display_options['fields']['field_training_topic']['label'] = 'Training Topic';
   $handler->display->display_options['fields']['field_training_topic']['delta_offset'] = '0';
   /* Field: Indexed Node: Rating */
   $handler->display->display_options['fields']['field_rating']['id'] = 'field_rating';
@@ -538,7 +537,7 @@ function toolshed_browse_views_default_views() {
   $handler->display->display_options['fields']['field_authot']['table'] = 'search_api_index_node_index';
   $handler->display->display_options['fields']['field_authot']['field'] = 'field_authot';
   $handler->display->display_options['fields']['field_authot']['label'] = 'Presenter';
-  /* Field: Indexed Node: Presentation Topic */
+  /* Field: Indexed Node: Training Topic */
   $handler->display->display_options['fields']['field_training_topic']['id'] = 'field_training_topic';
   $handler->display->display_options['fields']['field_training_topic']['table'] = 'search_api_index_node_index';
   $handler->display->display_options['fields']['field_training_topic']['field'] = 'field_training_topic';
