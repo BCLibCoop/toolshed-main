@@ -319,10 +319,10 @@ function toolshed_ctypes_field_group_info() {
     'label' => 'Evaluation',
     'weight' => '10',
     'children' => array(
-      0 => 'field_program_goals',
+      0 => 'field_feedback_from_participants',
       1 => 'field_highlights',
-      2 => 'field_what_would_you_change',
-      3 => 'field_feedback_from_participants',
+      2 => 'field_program_goals',
+      3 => 'field_what_would_you_change',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -333,6 +333,36 @@ function toolshed_ctypes_field_group_info() {
         'description' => '',
       ),
       'formatter' => 'collapsible',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_policy_source|node|policy|form';
+  $field_group->group_name = 'group_policy_source';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'policy';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Policy URL or File Upload',
+    'weight' => '6',
+    'children' => array(
+      0 => 'field_policy_file',
+      1 => 'field_policy_link',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Policy URL or File Upload',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-policy-source field-group-fieldset',
+        'description' => 'Please provide a link to the policy or upload it as a file',
+      ),
+      'formatter' => 'open',
     ),
   );
   $field_groups[''] = $field_group;
@@ -410,11 +440,11 @@ function toolshed_ctypes_field_group_info() {
     'label' => 'Resources',
     'weight' => '9',
     'children' => array(
-      0 => 'field_resources_required_materia',
-      1 => 'field_guest_speakers',
-      2 => 'field_funding_grants_foundations',
+      0 => 'field_community_partners_',
+      1 => 'field_funding_grants_foundations',
+      2 => 'field_guest_speakers',
       3 => 'field_program_budget',
-      4 => 'field_community_partners_',
+      4 => 'field_resources_required_materia',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -468,6 +498,7 @@ function toolshed_ctypes_field_group_info() {
   t('Evaluation');
   t('File Rating');
   t('Materials');
+  t('Policy URL or File Upload');
   t('Presenters');
   t('Resources');
   t('Stats');
