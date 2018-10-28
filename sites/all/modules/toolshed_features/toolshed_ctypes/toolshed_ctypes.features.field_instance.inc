@@ -937,7 +937,7 @@ function toolshed_ctypes_field_default_field_instances() {
         'apply_chosen' => 0,
       ),
       'type' => 'options_buttons',
-      'weight' => 9,
+      'weight' => 8,
     ),
   );
 
@@ -1095,7 +1095,7 @@ function toolshed_ctypes_field_default_field_instances() {
         's3_acl' => 'public-read',
       ),
       'type' => 'amazons3_cors',
-      'weight' => 9,
+      'weight' => 8,
     ),
   );
 
@@ -1152,7 +1152,7 @@ function toolshed_ctypes_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 8,
+      'weight' => 7,
     ),
   );
 

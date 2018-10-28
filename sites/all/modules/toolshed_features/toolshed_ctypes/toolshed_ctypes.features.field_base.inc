@@ -210,6 +210,7 @@ function toolshed_ctypes_field_default_field_bases() {
     'locked' => 0,
     'module' => 'file',
     'settings' => array(
+      'amazons3_bucket' => 'toolshed-data-prod',
       'display_default' => 0,
       'display_field' => 0,
       'uri_scheme' => 's3',
@@ -388,6 +389,7 @@ function toolshed_ctypes_field_default_field_bases() {
     'locked' => 0,
     'module' => 'image',
     'settings' => array(
+      'amazons3_bucket' => 'toolshed-data-prod',
       'default_image' => 0,
       'uri_scheme' => 'public',
     ),
@@ -557,6 +559,7 @@ function toolshed_ctypes_field_default_field_bases() {
     'locked' => 0,
     'module' => 'file',
     'settings' => array(
+      'amazons3_bucket' => 'toolshed-data-prod',
       'display_default' => 0,
       'display_field' => 0,
       'uri_scheme' => 's3',
@@ -895,6 +898,7 @@ function toolshed_ctypes_field_default_field_bases() {
     'locked' => 0,
     'module' => 'file',
     'settings' => array(
+      'amazons3_bucket' => 'toolshed-data-prod',
       'display_default' => 1,
       'display_field' => 1,
       'uri_scheme' => 's3',
@@ -918,6 +922,7 @@ function toolshed_ctypes_field_default_field_bases() {
     'locked' => 0,
     'module' => 'file',
     'settings' => array(
+      'amazons3_bucket' => 'toolshed-data-prod',
       'display_default' => 0,
       'display_field' => 0,
       'uri_scheme' => 's3',
@@ -1255,6 +1260,7 @@ function toolshed_ctypes_field_default_field_bases() {
     'locked' => 0,
     'module' => 'file',
     'settings' => array(
+      'amazons3_bucket' => 'toolshed-data-prod',
       'display_default' => 1,
       'display_field' => 0,
       'uri_scheme' => 's3',

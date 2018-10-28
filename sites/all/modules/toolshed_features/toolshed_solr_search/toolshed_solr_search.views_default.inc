@@ -65,7 +65,7 @@ function toolshed_solr_search_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Presentation Topic */
+  /* Field: Content: Training Topic */
   $handler->display->display_options['fields']['field_training_topic']['id'] = 'field_training_topic';
   $handler->display->display_options['fields']['field_training_topic']['table'] = 'field_data_field_training_topic';
   $handler->display->display_options['fields']['field_training_topic']['field'] = 'field_training_topic';
@@ -142,7 +142,7 @@ function toolshed_solr_search_views_default_views() {
     4 => 0,
     3 => 0,
   );
-  /* Filter criterion: Content: Presentation Topic (field_training_topic) */
+  /* Filter criterion: Content: Training Topic (field_training_topic) */
   $handler->display->display_options['filters']['field_training_topic_value']['id'] = 'field_training_topic_value';
   $handler->display->display_options['filters']['field_training_topic_value']['table'] = 'field_data_field_training_topic';
   $handler->display->display_options['filters']['field_training_topic_value']['field'] = 'field_training_topic_value';
@@ -1582,7 +1582,7 @@ function toolshed_solr_search_views_default_views() {
     4 => 0,
     3 => 0,
   );
-  /* Filter criterion: Content: Presentation Topic (field_training_topic) */
+  /* Filter criterion: Content: Training Topic (field_training_topic) */
   $handler->display->display_options['filters']['field_training_topic_value']['id'] = 'field_training_topic_value';
   $handler->display->display_options['filters']['field_training_topic_value']['table'] = 'field_data_field_training_topic';
   $handler->display->display_options['filters']['field_training_topic_value']['field'] = 'field_training_topic_value';
@@ -1970,7 +1970,7 @@ function toolshed_solr_search_views_default_views() {
   $handler->display->display_options['fields']['node_title']['field'] = 'node_title';
   $handler->display->display_options['fields']['node_title']['label'] = 'Title';
   $handler->display->display_options['fields']['node_title']['link_to_entity'] = 0;
-  /* Field: Node: Presentation Topic */
+  /* Field: Node: Training Topic */
   $handler->display->display_options['fields']['field_training_topic']['id'] = 'field_training_topic';
   $handler->display->display_options['fields']['field_training_topic']['table'] = 'entity_node';
   $handler->display->display_options['fields']['field_training_topic']['field'] = 'field_training_topic';
@@ -2006,7 +2006,7 @@ function toolshed_solr_search_views_default_views() {
   $handler->display->display_options['fields']['created']['date_format'] = 'time ago';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
   $handler->display->display_options['fields']['created']['link_to_entity'] = 0;
-  /* Field: Node: Source Library (indexed) */
+  /* Field: Node: Submitting Library (indexed) */
   $handler->display->display_options['fields']['node_field_source_library_region']['id'] = 'node_field_source_library_region';
   $handler->display->display_options['fields']['node_field_source_library_region']['table'] = 'search_api_index_toolshed_content';
   $handler->display->display_options['fields']['node_field_source_library_region']['field'] = 'node_field_source_library_region';
@@ -2121,7 +2121,7 @@ function toolshed_solr_search_views_default_views() {
     3 => 0,
     5 => 0,
   );
-  /* Filter criterion: Node: Presentation Topic (indexed) */
+  /* Filter criterion: Node: Training Topic (indexed) */
   $handler->display->display_options['filters']['node_field_training_topic']['id'] = 'node_field_training_topic';
   $handler->display->display_options['filters']['node_field_training_topic']['table'] = 'search_api_index_toolshed_content';
   $handler->display->display_options['filters']['node_field_training_topic']['field'] = 'node_field_training_topic';
@@ -2431,7 +2431,7 @@ function toolshed_solr_search_views_default_views() {
   $handler->display->display_options['fields']['node_title']['field'] = 'node_title';
   $handler->display->display_options['fields']['node_title']['label'] = 'Title';
   $handler->display->display_options['fields']['node_title']['link_to_entity'] = 1;
-  /* Field: Node: Presentation Topic */
+  /* Field: Node: Training Topic */
   $handler->display->display_options['fields']['field_training_topic']['id'] = 'field_training_topic';
   $handler->display->display_options['fields']['field_training_topic']['table'] = 'entity_node';
   $handler->display->display_options['fields']['field_training_topic']['field'] = 'field_training_topic';
@@ -2467,7 +2467,7 @@ function toolshed_solr_search_views_default_views() {
   $handler->display->display_options['fields']['created']['date_format'] = 'time ago';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
   $handler->display->display_options['fields']['created']['link_to_entity'] = 0;
-  /* Field: Node: Source Library (indexed) */
+  /* Field: Node: Submitting Library (indexed) */
   $handler->display->display_options['fields']['node_field_source_library_region']['id'] = 'node_field_source_library_region';
   $handler->display->display_options['fields']['node_field_source_library_region']['table'] = 'search_api_index_toolshed_content';
   $handler->display->display_options['fields']['node_field_source_library_region']['field'] = 'node_field_source_library_region';
@@ -2509,7 +2509,7 @@ function toolshed_solr_search_views_default_views() {
     'node:field_project_description' => 'node:field_project_description',
     'node:title' => 'node:title',
   );
-  /* Filter criterion: Node » Source Library: All parent terms (indexed) */
+  /* Filter criterion: Node » Submitting Library: All parent terms (indexed) */
   $handler->display->display_options['filters']['node_field_source_library_region_parents_all']['id'] = 'node_field_source_library_region_parents_all';
   $handler->display->display_options['filters']['node_field_source_library_region_parents_all']['table'] = 'search_api_index_toolshed_content';
   $handler->display->display_options['filters']['node_field_source_library_region_parents_all']['field'] = 'node_field_source_library_region_parents_all';
@@ -2525,7 +2525,7 @@ function toolshed_solr_search_views_default_views() {
     1 => 0,
     4 => 0,
     3 => 0,
-    6 => 0,
+    5 => 0,
   );
   $handler->display->display_options['filters']['node_field_source_library_region_parents_all']['expose']['reduce'] = 0;
   $handler->display->display_options['filters']['node_field_source_library_region_parents_all']['type'] = 'select';
@@ -2561,7 +2561,7 @@ function toolshed_solr_search_views_default_views() {
     2 => array(),
     3 => array(),
   );
-  /* Filter criterion: Node: Presentation Topic (indexed) */
+  /* Filter criterion: Node: Training Topic (indexed) */
   $handler->display->display_options['filters']['node_field_training_topic']['id'] = 'node_field_training_topic';
   $handler->display->display_options['filters']['node_field_training_topic']['table'] = 'search_api_index_toolshed_content';
   $handler->display->display_options['filters']['node_field_training_topic']['field'] = 'node_field_training_topic';
@@ -2577,7 +2577,7 @@ function toolshed_solr_search_views_default_views() {
     1 => 0,
     4 => 0,
     3 => 0,
-    6 => 0,
+    5 => 0,
   );
   $handler->display->display_options['filters']['node_field_training_topic']['expose']['reduce'] = 0;
   /* Filter criterion: Node: Primary Audience (indexed) */
@@ -2596,7 +2596,7 @@ function toolshed_solr_search_views_default_views() {
     1 => 0,
     4 => 0,
     3 => 0,
-    6 => 0,
+    5 => 0,
   );
   $handler->display->display_options['filters']['node_field_primary_audience']['expose']['reduce'] = 0;
   /* Filter criterion: Node: Length of program session (indexed) */
@@ -2679,7 +2679,7 @@ function toolshed_solr_search_views_default_views() {
   $handler->display->display_options['fields']['node_title']['field'] = 'node_title';
   $handler->display->display_options['fields']['node_title']['label'] = 'Title';
   $handler->display->display_options['fields']['node_title']['link_to_entity'] = 0;
-  /* Field: Node: Presentation Topic (indexed) */
+  /* Field: Node: Training Topic (indexed) */
   $handler->display->display_options['fields']['node_field_training_topic']['id'] = 'node_field_training_topic';
   $handler->display->display_options['fields']['node_field_training_topic']['table'] = 'search_api_index_toolshed_content';
   $handler->display->display_options['fields']['node_field_training_topic']['field'] = 'node_field_training_topic';
@@ -2692,7 +2692,7 @@ function toolshed_solr_search_views_default_views() {
   $handler->display->display_options['fields']['node_type']['label'] = 'Type';
   $handler->display->display_options['fields']['node_type']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['node_type']['format_name'] = 1;
-  /* Field: Node: Source Library (indexed) */
+  /* Field: Node: Submitting Library (indexed) */
   $handler->display->display_options['fields']['node_field_source_library_region']['id'] = 'node_field_source_library_region';
   $handler->display->display_options['fields']['node_field_source_library_region']['table'] = 'search_api_index_toolshed_content';
   $handler->display->display_options['fields']['node_field_source_library_region']['field'] = 'node_field_source_library_region';
