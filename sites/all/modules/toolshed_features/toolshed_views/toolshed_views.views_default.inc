@@ -58,7 +58,7 @@ function toolshed_views_views_default_views() {
 
 <p><strong>More about <a href="http://www.thealbertalibrary.ab.ca/">The Alberta Library</a></strong></p>
 <p><strong>More about <a href="http://abcpld.org/">The Association of BC Public Library Directors</a></strong></p>
-<p><strong>More about the <a href="http://sils.sk.ca.campusguides.com/mlb/index">Saskatchewan Multitype Library Board</a></strong></p>
+<p><strong>More about the <a href="https://mlb.libguides.com">Saskatchewan Multitype Library Board</a></strong></p>
 <p><strong>More about the <a href="http://www.gov.mb.ca/chc/pls">Manitoba Public Library Services Branch</a></strong></p>
 
 
