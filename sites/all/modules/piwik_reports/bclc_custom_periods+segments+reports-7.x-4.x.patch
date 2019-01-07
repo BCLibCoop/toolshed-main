@@ -1,0 +1,388 @@
+diff --git a/piwik_reports.module b/piwik_reports.module
+index 1887fb4..e3cb141 100644
+--- a/piwik_reports.module
++++ b/piwik_reports.module
+@@ -67,24 +67,24 @@ function piwik_reports_menu() {
+     'weight' => 1,
+     'type' => MENU_DEFAULT_LOCAL_TASK,
+   );
+-  $items['admin/reports/piwik_reports/visitors/settings'] = array(
+-    'title' => 'Settings',
+-    'page callback' => 'drupal_get_form',
+-    'page arguments' => array('piwik_reports_reports', 'visitors_settings'),
+-    'access arguments' => array('access piwik reports'),
+-    'file' => 'piwik_reports.pages.inc',
+-    'weight' => 2,
+-    'type' => MENU_LOCAL_TASK,
+-  );
+-  $items['admin/reports/piwik_reports/visitors/times'] = array(
+-    'title' => 'Times',
+-    'page callback' => 'drupal_get_form',
+-    'page arguments' => array('piwik_reports_reports', 'visitors_times'),
+-    'access arguments' => array('access piwik reports'),
+-    'file' => 'piwik_reports.pages.inc',
+-    'weight' => 3,
+-    'type' => MENU_LOCAL_TASK,
+-  );
++//  $items['admin/reports/piwik_reports/visitors/settings'] = array(
++//    'title' => 'Settings',
++//    'page callback' => 'drupal_get_form',
++//    'page arguments' => array('piwik_reports_reports', 'visitors_settings'),
++//    'access arguments' => array('access piwik reports'),
++//    'file' => 'piwik_reports.pages.inc',
++//    'weight' => 2,
++//    'type' => MENU_LOCAL_TASK,
++//  );
++//  $items['admin/reports/piwik_reports/visitors/times'] = array(
++//    'title' => 'Times',
++//    'page callback' => 'drupal_get_form',
++//    'page arguments' => array('piwik_reports_reports', 'visitors_times'),
++//    'access arguments' => array('access piwik reports'),
++//    'file' => 'piwik_reports.pages.inc',
++//    'weight' => 3,
++//    'type' => MENU_LOCAL_TASK,
++//  );
+   $items['admin/reports/piwik_reports/visitors/locations'] = array(
+     'title' => 'Locations Provider',
+     'page callback' => 'drupal_get_form',
+@@ -94,15 +94,15 @@ function piwik_reports_menu() {
+     'weight' => 4,
+     'type' => MENU_LOCAL_TASK,
+   );
+-  $items['admin/reports/piwik_reports/visitors/variables'] = array(
+-    'title' => 'Custom Variables',
+-    'page callback' => 'drupal_get_form',
+-    'page arguments' => array('piwik_reports_reports', 'custom_variables'),
+-    'access arguments' => array('access piwik reports'),
+-    'file' => 'piwik_reports.pages.inc',
+-    'weight' => 5,
+-    'type' => MENU_LOCAL_TASK,
+-  );
++//  $items['admin/reports/piwik_reports/visitors/variables'] = array(
++//    'title' => 'Custom Variables',
++//    'page callback' => 'drupal_get_form',
++//    'page arguments' => array('piwik_reports_reports', 'custom_variables'),
++//    'access arguments' => array('access piwik reports'),
++//    'file' => 'piwik_reports.pages.inc',
++//    'weight' => 5,
++//    'type' => MENU_LOCAL_TASK,
++//  );
+   $items['admin/reports/piwik_reports/actions'] = array(
+     'title' => 'Actions',
+     'page callback' => 'drupal_get_form',
+@@ -121,24 +121,24 @@ function piwik_reports_menu() {
+     'weight' => 1,
+     'type' => MENU_DEFAULT_LOCAL_TASK,
+   );
+-  $items['admin/reports/piwik_reports/actions/entrypages'] = array(
+-    'title' => 'Entry Pages',
+-    'page callback' => 'drupal_get_form',
+-    'page arguments' => array('piwik_reports_reports', 'actions_entryurls'),
+-    'access arguments' => array('access piwik reports'),
+-    'file' => 'piwik_reports.pages.inc',
+-    'weight' => 2,
+-    'type' => MENU_LOCAL_TASK,
+-  );
+-  $items['admin/reports/piwik_reports/actions/exitpages'] = array(
+-    'title' => 'Exit Pages',
+-    'page callback' => 'drupal_get_form',
+-    'page arguments' => array('piwik_reports_reports', 'actions_exiturls'),
+-    'access arguments' => array('access piwik reports'),
+-    'file' => 'piwik_reports.pages.inc',
+-    'weight' => 2,
+-    'type' => MENU_LOCAL_TASK,
+-  );
++//  $items['admin/reports/piwik_reports/actions/entrypages'] = array(
++//    'title' => 'Entry Pages',
++//    'page callback' => 'drupal_get_form',
++//    'page arguments' => array('piwik_reports_reports', 'actions_entryurls'),
++//    'access arguments' => array('access piwik reports'),
++//    'file' => 'piwik_reports.pages.inc',
++//    'weight' => 2,
++//    'type' => MENU_LOCAL_TASK,
++//  );
++//  $items['admin/reports/piwik_reports/actions/exitpages'] = array(
++//    'title' => 'Exit Pages',
++//    'page callback' => 'drupal_get_form',
++//    'page arguments' => array('piwik_reports_reports', 'actions_exiturls'),
++//    'access arguments' => array('access piwik reports'),
++//    'file' => 'piwik_reports.pages.inc',
++//    'weight' => 2,
++//    'type' => MENU_LOCAL_TASK,
++//  );
+   $items['admin/reports/piwik_reports/actions/sitesearch'] = array(
+     'title' => 'Site Search',
+     'page callback' => 'drupal_get_form',
+@@ -148,15 +148,15 @@ function piwik_reports_menu() {
+     'weight' => 3,
+     'type' => MENU_LOCAL_TASK,
+   );
+-  $items['admin/reports/piwik_reports/actions/outlinks'] = array(
+-    'title' => 'Outlinks',
+-    'page callback' => 'drupal_get_form',
+-    'page arguments' => array('piwik_reports_reports', 'actions_outlinks'),
+-    'access arguments' => array('access piwik reports'),
+-    'file' => 'piwik_reports.pages.inc',
+-    'weight' => 3,
+-    'type' => MENU_LOCAL_TASK,
+-  );
++//  $items['admin/reports/piwik_reports/actions/outlinks'] = array(
++//    'title' => 'Outlinks',
++//    'page callback' => 'drupal_get_form',
++//    'page arguments' => array('piwik_reports_reports', 'actions_outlinks'),
++//    'access arguments' => array('access piwik reports'),
++//    'file' => 'piwik_reports.pages.inc',
++//    'weight' => 3,
++//    'type' => MENU_LOCAL_TASK,
++//  );
+   $items['admin/reports/piwik_reports/actions/downloads'] = array(
+     'title' => 'Downloads',
+     'page callback' => 'drupal_get_form',
+@@ -211,6 +211,15 @@ function piwik_reports_menu() {
+     'weight' => 4,
+     'type' => MENU_LOCAL_TASK,
+   );
++  $items['admin/reports/piwik_reports/actions/action_paths'] = array(
++    'title' => 'Actions by Path',
++    'page callback' => 'drupal_get_form',
++    'page arguments' => array('piwik_reports_reports', 'actions_by_path'),
++    'access arguments' => array('access piwik reports'),
++    'file' => 'piwik_reports.pages.inc',
++    'weight' => 4,
++    'type' => MENU_LOCAL_TASK,
++  );
+   // If piwik is installed, group with it, otherwise not.
+   if (module_exists('piwik')) {
+     $items['admin/config/system/piwik/tracking'] = array(
+@@ -526,6 +535,23 @@ function piwik_reports_get_sites($token_auth) {
+ }
+ 
+ /**
++ * Return a list of segment codes corresponding to participating provinces
++ * @return array
++ */
++function piwik_reports_get_segments() {
++  $segments = array(
++    'None' => 'None',
++    'AB' => 'Alberta',
++    'BC' => 'British Columbia',
++    'MB' => 'Manitoba',
++    'SK' => 'Saskatchewan',
++    'YT' => 'Yukon',
++  );
++
++  return $segments;
++}
++
++/**
+  * Return a list of goals active on selected site.
+  *
+  * @param string $token_auth
+diff --git a/piwik_reports.pages.inc b/piwik_reports.pages.inc
+index 40fbdb4..a04f0b5 100644
+--- a/piwik_reports.pages.inc
++++ b/piwik_reports.pages.inc
+@@ -41,10 +41,13 @@ function piwik_reports_reports($form, &$form_state, $report) {
+     2 => t('Last week'),
+     3 => t('Last month'),
+     4 => t('Last year'),
++    5 => t('Last quarter'),
++    6 => t('Year-to-date'),
++    7 => t('From beginning')
+   );
+   $form['piwik_filters'] = array(
+     '#type' => 'fieldset',
+-    '#title' => t('Select site and time period'),
++    '#title' => t('Select site, time period and regional segment'),
+   );
+   $form['piwik_filters']['period'] = array(
+     '#type' => 'select',
+@@ -52,6 +55,10 @@ function piwik_reports_reports($form, &$form_state, $report) {
+     '#default_value' => isset($_SESSION['piwik_reports_period']) ? $_SESSION['piwik_reports_period'] : 0,
+     '#options' => $period,
+   );
++
++  $segform = piwik_reports_segment_select_form();
++  $form['piwik_filters']['segment'] = $segform['basic']['inline']['segment'];
++
+   $options = array();
+   $allowed_keys = explode(',', variable_get('piwik_reports_allowed_sites', ''));
+   $session_site_exists = FALSE;
+@@ -103,17 +110,22 @@ function piwik_reports_reports($form, &$form_state, $report) {
+   $piwik_site_id = $_SESSION['piwik_reports_site'];
+   $period = isset($_SESSION['piwik_reports_period']) ? $_SESSION['piwik_reports_period'] : 0;
+ 
++  $download_dimId = variable_get('piwik_download_dim_id') ? variable_get('piwik_download_dim_id') : FALSE;
++  $segment = isset($_SESSION['piwik_reports_segment']) ? $_SESSION['piwik_reports_segment'] : 0;
++
+   if ($period == 1) {
+     // Special handling for "yesterday" = 1.
+     // The yesterday date value is required.
+     $date = _piwik_reports_select_period($period);
+   }
++  //Custom periods
++  elseif ($period >= 5) $date = _piwik_reports_select_period($period);
+   else {
+     // Otherwise it returns the today date value.
+     $date = _piwik_reports_select_period(0);
+   }
+   $period_name = _piwik_reports_get_period_name($period);
+-
++  
+   // Create an array of URL parameters for easier maintenance.
+   $data_params[0] = array();
+   $data_params[0]['idSite'] = $piwik_site_id;
+@@ -125,6 +137,11 @@ function piwik_reports_reports($form, &$form_state, $report) {
+   $data_params[0]['disableLink'] = 1;
+   $data_params[0]['widget'] = 1;
+ 
++  if ($segment != 'None') {
++    if (isset($data_params[0]['segment']) ) $data_params[0]['segment'] .= ',';
++    $data_params[0]['segment'] .= "regionCode==$segment";
++  }
++
+   if (!empty($piwik_auth)) {
+     $data_params[0]['token_auth'] = $piwik_auth;
+   }
+@@ -248,6 +265,15 @@ function piwik_reports_reports($form, &$form_state, $report) {
+       $data_params[0]['filter_limit'] = 15;
+       break;
+ 
++    case 'actions_by_path':
++      $title[0] = '';
++      $data_params[0]['moduleToWidgetize'] = 'CustomDimensions';
++      $data_params[0]['actionToWidgetize'] = 'getCustomDimension';
++      $data_params[0]['idDimension'] = $download_dimId;
++      $data_params[0]['filter_limit'] = 50;
++      $data_params[0]['segment'] .= "actionType!=pageviews,actionType!=sitesearches,actionType!=contents";
++      break;
++
+     case 'referrers_overview':
+       $data_params[1] = $data_params[0];
+       // Types.
+@@ -321,10 +347,39 @@ function piwik_reports_reports($form, &$form_state, $report) {
+   return $form;
+ }
+ 
++function piwik_reports_segment_select_form() {
++
++  $segments = piwik_reports_get_segments();
++
++  $form['#attributes'] = array('class' => array('search-form'));
++  $form['basic'] = array(
++    '#type' => 'fieldset',
++    '#title' => t('Select a regional segment'),
++  );
++  $form['basic']['inline'] = array(
++    '#prefix' => '<div class="container-inline">',
++    '#suffix' => '</div>',
++  );
++  $form['basic']['inline']['segment'] = array(
++    '#type' => 'select',
++    '#title' => '',
++    '#default_value' => isset($_SESSION['piwik_reports_segment']) ?
++      $_SESSION['piwik_reports_segment'] : 0,
++    '#options' => $segments,
++  );
++  $form['basic']['inline']['submit'] = array(
++    '#type' => 'submit',
++    '#value' => t('Filter'),
++    '#weight' => 15,
++  );
++  return $form;
++}
++
+ /**
+  * Reports form submit function.
+  */
+ function piwik_reports_reports_submit($form, &$form_state) {
++  $_SESSION['piwik_reports_segment'] = $form_state['values']['segment'];
+   $_SESSION['piwik_reports_period'] = $form_state['values']['period'];
+   $_SESSION['piwik_reports_site'] = $form_state['values']['site'];
+ }
+@@ -341,29 +396,58 @@ function piwik_reports_reports_submit($form, &$form_state) {
+  */
+ function _piwik_reports_select_period($period) {
+   switch ($period) {
+-    case 0:
++
++    case 0: //Today
+       $date = date("Y-m-d");
+       break;
+ 
+-    case 1:
++    case 1: //Yesterday
++    default:
+       $d = mktime(0, 0, 0, date("m"), date("d") - 1, date("Y"));
+       $date = date("Y-m-d", $d);
+       break;
+ 
+-    case 2:
++    case 2: //Last week
+       $d = mktime(0, 0, 0, date("m"), date("d") - 7, date("Y"));
+       $date = date("Y-m-d", $d);
+       break;
+ 
+-    case 3:
++    case 3: //Last month
+       $d = mktime(0, 0, 0, date("m") - 1, date("d"), date("Y"));
+       $date = date("Y-m-d", $d);
+       break;
+ 
+-    case 4:
++    case 4: //Last year
+       $d = mktime(0, 0, 0, date("m"), date("d"), date("Y") - 1);
+       $date = date("Y-m-d", $d);
+       break;
++
++    case 5: //Last quarter
++      $curMonth = (int) date("m", time());
++      $year = (int) date("Y", time());
++      $lastMonth = $curMonth == 1 ? 12 : $curMonth - 1;
++      //if last month == December, bump -1 year
++      $year = $lastMonth == 12 ? $year - 1 : $year;
++      $lastQstartMonth = ($lastMonth - 3) + 1;
++      $lastQstartDate = date("Y-m-d", strtotime("$year".'-'."$lastQstartMonth"
++        .'-'.'01'));
++      $lastQendDate = date("Y-m-t", strtotime("$year".'-'."$lastMonth"));
++      $date = $lastQstartDate . ',' . $lastQendDate;
++      break;
++
++    case 6: //Year-to-date
++      $today = date("Y-m-d");
++      $one_year_prior = mktime(0, 0, 0, date("m"), date("d"), date("Y") - 1);
++      $ytd = date("Y-m-d", $one_year_prior);
++      $date = $ytd . ',' . $today;
++      break;
++
++    case 7: //From beginning
++      //Launch of Toolshed in Unix epoch
++      $launch = date("Y-m-d", 1430438400);
++      $today = date("Y-m-d");
++      $date = $launch . ',' . $today;
++      break;
+   }
+   return $date;
+ }
+@@ -378,7 +462,7 @@ function _piwik_reports_select_period($period) {
+  *   Name of period.
+  */
+ function _piwik_reports_get_period_name($period) {
+-  // Possible periods are day, week, month, year.
++  // Possible periods are day, week, month, year, range.
+   switch ($period) {
+     case 0:
+       $p = "day";
+@@ -399,6 +483,12 @@ function _piwik_reports_get_period_name($period) {
+     case 4:
+       $p = "year";
+       break;
++
++    case 5:
++    case 6:
++    case 7:
++      $p = "range";
++      break;
+   }
+   return $p;
+ }

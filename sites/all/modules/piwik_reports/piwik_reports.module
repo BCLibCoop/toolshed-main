@@ -67,24 +67,24 @@ function piwik_reports_menu() {
     'weight' => 1,
     'type' => MENU_DEFAULT_LOCAL_TASK,
   );
-  $items['admin/reports/piwik_reports/visitors/settings'] = array(
-    'title' => 'Settings',
-    'page callback' => 'drupal_get_form',
-    'page arguments' => array('piwik_reports_reports', 'visitors_settings'),
-    'access arguments' => array('access piwik reports'),
-    'file' => 'piwik_reports.pages.inc',
-    'weight' => 2,
-    'type' => MENU_LOCAL_TASK,
-  );
-  $items['admin/reports/piwik_reports/visitors/times'] = array(
-    'title' => 'Times',
-    'page callback' => 'drupal_get_form',
-    'page arguments' => array('piwik_reports_reports', 'visitors_times'),
-    'access arguments' => array('access piwik reports'),
-    'file' => 'piwik_reports.pages.inc',
-    'weight' => 3,
-    'type' => MENU_LOCAL_TASK,
-  );
+//  $items['admin/reports/piwik_reports/visitors/settings'] = array(
+//    'title' => 'Settings',
+//    'page callback' => 'drupal_get_form',
+//    'page arguments' => array('piwik_reports_reports', 'visitors_settings'),
+//    'access arguments' => array('access piwik reports'),
+//    'file' => 'piwik_reports.pages.inc',
+//    'weight' => 2,
+//    'type' => MENU_LOCAL_TASK,
+//  );
+//  $items['admin/reports/piwik_reports/visitors/times'] = array(
+//    'title' => 'Times',
+//    'page callback' => 'drupal_get_form',
+//    'page arguments' => array('piwik_reports_reports', 'visitors_times'),
+//    'access arguments' => array('access piwik reports'),
+//    'file' => 'piwik_reports.pages.inc',
+//    'weight' => 3,
+//    'type' => MENU_LOCAL_TASK,
+//  );
   $items['admin/reports/piwik_reports/visitors/locations'] = array(
     'title' => 'Locations Provider',
     'page callback' => 'drupal_get_form',
@@ -94,15 +94,15 @@ function piwik_reports_menu() {
     'weight' => 4,
     'type' => MENU_LOCAL_TASK,
   );
-  $items['admin/reports/piwik_reports/visitors/variables'] = array(
-    'title' => 'Custom Variables',
-    'page callback' => 'drupal_get_form',
-    'page arguments' => array('piwik_reports_reports', 'custom_variables'),
-    'access arguments' => array('access piwik reports'),
-    'file' => 'piwik_reports.pages.inc',
-    'weight' => 5,
-    'type' => MENU_LOCAL_TASK,
-  );
+//  $items['admin/reports/piwik_reports/visitors/variables'] = array(
+//    'title' => 'Custom Variables',
+//    'page callback' => 'drupal_get_form',
+//    'page arguments' => array('piwik_reports_reports', 'custom_variables'),
+//    'access arguments' => array('access piwik reports'),
+//    'file' => 'piwik_reports.pages.inc',
+//    'weight' => 5,
+//    'type' => MENU_LOCAL_TASK,
+//  );
   $items['admin/reports/piwik_reports/actions'] = array(
     'title' => 'Actions',
     'page callback' => 'drupal_get_form',
@@ -121,24 +121,24 @@ function piwik_reports_menu() {
     'weight' => 1,
     'type' => MENU_DEFAULT_LOCAL_TASK,
   );
-  $items['admin/reports/piwik_reports/actions/entrypages'] = array(
-    'title' => 'Entry Pages',
-    'page callback' => 'drupal_get_form',
-    'page arguments' => array('piwik_reports_reports', 'actions_entryurls'),
-    'access arguments' => array('access piwik reports'),
-    'file' => 'piwik_reports.pages.inc',
-    'weight' => 2,
-    'type' => MENU_LOCAL_TASK,
-  );
-  $items['admin/reports/piwik_reports/actions/exitpages'] = array(
-    'title' => 'Exit Pages',
-    'page callback' => 'drupal_get_form',
-    'page arguments' => array('piwik_reports_reports', 'actions_exiturls'),
-    'access arguments' => array('access piwik reports'),
-    'file' => 'piwik_reports.pages.inc',
-    'weight' => 2,
-    'type' => MENU_LOCAL_TASK,
-  );
+//  $items['admin/reports/piwik_reports/actions/entrypages'] = array(
+//    'title' => 'Entry Pages',
+//    'page callback' => 'drupal_get_form',
+//    'page arguments' => array('piwik_reports_reports', 'actions_entryurls'),
+//    'access arguments' => array('access piwik reports'),
+//    'file' => 'piwik_reports.pages.inc',
+//    'weight' => 2,
+//    'type' => MENU_LOCAL_TASK,
+//  );
+//  $items['admin/reports/piwik_reports/actions/exitpages'] = array(
+//    'title' => 'Exit Pages',
+//    'page callback' => 'drupal_get_form',
+//    'page arguments' => array('piwik_reports_reports', 'actions_exiturls'),
+//    'access arguments' => array('access piwik reports'),
+//    'file' => 'piwik_reports.pages.inc',
+//    'weight' => 2,
+//    'type' => MENU_LOCAL_TASK,
+//  );
   $items['admin/reports/piwik_reports/actions/sitesearch'] = array(
     'title' => 'Site Search',
     'page callback' => 'drupal_get_form',
@@ -148,15 +148,15 @@ function piwik_reports_menu() {
     'weight' => 3,
     'type' => MENU_LOCAL_TASK,
   );
-  $items['admin/reports/piwik_reports/actions/outlinks'] = array(
-    'title' => 'Outlinks',
-    'page callback' => 'drupal_get_form',
-    'page arguments' => array('piwik_reports_reports', 'actions_outlinks'),
-    'access arguments' => array('access piwik reports'),
-    'file' => 'piwik_reports.pages.inc',
-    'weight' => 3,
-    'type' => MENU_LOCAL_TASK,
-  );
+//  $items['admin/reports/piwik_reports/actions/outlinks'] = array(
+//    'title' => 'Outlinks',
+//    'page callback' => 'drupal_get_form',
+//    'page arguments' => array('piwik_reports_reports', 'actions_outlinks'),
+//    'access arguments' => array('access piwik reports'),
+//    'file' => 'piwik_reports.pages.inc',
+//    'weight' => 3,
+//    'type' => MENU_LOCAL_TASK,
+//  );
   $items['admin/reports/piwik_reports/actions/downloads'] = array(
     'title' => 'Downloads',
     'page callback' => 'drupal_get_form',
@@ -206,6 +206,15 @@ function piwik_reports_menu() {
     'title' => 'Goals',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('piwik_reports_reports', 'goals'),
+    'access arguments' => array('access piwik reports'),
+    'file' => 'piwik_reports.pages.inc',
+    'weight' => 4,
+    'type' => MENU_LOCAL_TASK,
+  );
+  $items['admin/reports/piwik_reports/actions/action_paths'] = array(
+    'title' => 'Actions by Path',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('piwik_reports_reports', 'actions_by_path'),
     'access arguments' => array('access piwik reports'),
     'file' => 'piwik_reports.pages.inc',
     'weight' => 4,
@@ -523,6 +532,23 @@ function piwik_reports_get_sites($token_auth) {
     $sites = drupal_json_decode($result->data);
   }
   return $sites;
+}
+
+/**
+ * Return a list of segment codes corresponding to participating provinces
+ * @return array
+ */
+function piwik_reports_get_segments() {
+  $segments = array(
+    'None' => 'None',
+    'AB' => 'Alberta',
+    'BC' => 'British Columbia',
+    'MB' => 'Manitoba',
+    'SK' => 'Saskatchewan',
+    'YT' => 'Yukon',
+  );
+
+  return $segments;
 }
 
 /**
